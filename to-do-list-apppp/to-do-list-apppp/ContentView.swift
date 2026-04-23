@@ -17,21 +17,38 @@ struct ContentView: View {
     // SwiftUI akan membuat instance ViewModel sekali dan menjaganya
     // agar tidak di-reset selama view ini hidup.
     @StateObject private var viewModel = TodoViewModel()
+    @StateObject private var authService = AuthService()
 
     var body: some View {
-        NavigationStack {
-            // Meneruskan viewModel ke child view.
-            // TodoListView akan menggunakannya dengan @ObservedObject.
-            TodoListView(viewModel: viewModel)
-                .navigationBarHidden(true)
-                .animation(.easeInOut(duration: 0.25), value: viewModel.showThemePicker)
-        }
-        .sheet(isPresented: $viewModel.showAddSheet) {
-            AddTodoSheet(isPresented: $viewModel.showAddSheet, theme: viewModel.theme) { title, note, dueDate in
-                viewModel.addTodo(title: title, note: note, dueDate: dueDate)
+        Group {
+            if authService.currentUser == nil {
+                LoginPage(authService: authService)
+            } else {
+                NavigationStack {
+                    TodoListView(viewModel: viewModel, authService: authService)
+                        .navigationBarHidden(true)
+                        .animation(.easeInOut(duration: 0.25), value: viewModel.showThemePicker)
+                }
+                .sheet(isPresented: $viewModel.showAddSheet) {
+                    AddTodoSheet(isPresented: $viewModel.showAddSheet, theme: viewModel.theme) { title, note, dueDate in
+                        viewModel.addTodo(title: title, note: note, dueDate: dueDate)
+                    }
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.hidden)
+                }
             }
-            .presentationDetents([.medium, .large])
-            .presentationDragIndicator(.hidden)
+        }
+        .onChange(of: authService.currentUser?.uid) { uid in
+            if uid == nil {
+                viewModel.endUserSession()
+            } else {
+                viewModel.startUserSession()
+            }
+        }
+        .task {
+            if authService.currentUser?.uid != nil {
+                viewModel.startUserSession()
+            }
         }
     }
 }

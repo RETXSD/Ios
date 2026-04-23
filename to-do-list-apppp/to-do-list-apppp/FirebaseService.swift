@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -25,24 +26,39 @@ class FirebaseService: NSObject, ObservableObject {
     override init() {
         self.db = Firestore.firestore()
         super.init()
-        Task {
-            await startRealtimeListener()
-        }
     }
     
     deinit {
         listener?.remove()
+    }
+
+    @MainActor
+    func stopRealtimeListener() {
+        listener?.remove()
+        listener = nil
+        todos = []
+        isLoading = false
+        errorMessage = nil
     }
     
     // MARK: - Real-time Sync
     
     /// Sets up a real-time listener to sync todos from Firestore.
     @MainActor
-    private func startRealtimeListener() async {
+    func startRealtimeListener() async {
         listener?.remove()
         isLoading = true
+
+        guard let uid = Auth.auth().currentUser?.uid else {
+            isLoading = false
+            todos = []
+            errorMessage = "Please login first."
+            return
+        }
         
-        let todosRef = db.collection(collectionName)
+        let todosRef = db
+            .collection(collectionName)
+            .whereField("userId", isEqualTo: uid)
         
         listener = todosRef.addSnapshotListener { [weak self] querySnapshot, error in
             DispatchQueue.main.async {
@@ -75,19 +91,36 @@ class FirebaseService: NSObject, ObservableObject {
     }
     
     // MARK: - CRUD Operations
+
+    private func assertCurrentUserOwns(documentId: String) async throws {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            throw NSError(domain: "Auth", code: 401, userInfo: [NSLocalizedDescriptionKey: "User not authenticated"])
+        }
+
+        let doc = try await db.collection(collectionName).document(documentId).getDocument()
+        guard let ownerUid = doc.data()?["userId"] as? String, ownerUid == uid else {
+            throw NSError(domain: "Firestore", code: 403, userInfo: [NSLocalizedDescriptionKey: "Permission denied"])
+        }
+    }
     
     /// Adds a new todo to Firestore.
     func addTodo(title: String, note: String, dueDate: Date) async throws {
-        let todoItem = TodoItem(title: title, note: note, dueDate: dueDate)
+        guard let uid = Auth.auth().currentUser?.uid else {
+            throw NSError(domain: "Auth", code: 401, userInfo: [NSLocalizedDescriptionKey: "User not authenticated"])
+        }
+
+        let todoItem = TodoItem(userId: uid, title: title, note: note, dueDate: dueDate)
         let todosRef = db.collection(collectionName)
         
-        try await todosRef.document((todoItem.id.uuidString) ?? UUID().uuidString).setData(from: todoItem)
+        try await todosRef.document(todoItem.id.uuidString).setData(from: todoItem)
         print("✅ Added todo: \(title)")
     }
     
     /// Updates an existing todo in Firestore.
     func updateTodo(id: UUID, title: String, note: String, dueDate: Date) async throws {
         let todosRef = db.collection(collectionName)
+
+        try await assertCurrentUserOwns(documentId: id.uuidString)
         
         try await todosRef.document(id.uuidString).updateData([
             "title": title,
@@ -100,6 +133,8 @@ class FirebaseService: NSObject, ObservableObject {
     /// Toggles the completion status of a todo.
     func toggleTodo(id: UUID, isCompleted: Bool) async throws {
         let todosRef = db.collection(collectionName)
+
+        try await assertCurrentUserOwns(documentId: id.uuidString)
         
         try await todosRef.document(id.uuidString).updateData([
             "isCompleted": isCompleted,
@@ -111,6 +146,8 @@ class FirebaseService: NSObject, ObservableObject {
     /// Deletes a todo from Firestore.
     func deleteTodo(id: UUID) async throws {
         let todosRef = db.collection(collectionName)
+
+        try await assertCurrentUserOwns(documentId: id.uuidString)
         
         try await todosRef.document(id.uuidString).delete()
         print("✅ Deleted todo: \(id)")
@@ -118,11 +155,16 @@ class FirebaseService: NSObject, ObservableObject {
     
     /// Deletes all completed todos from previous days.
     func deleteCompletedFromPreviousDays() async throws {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            throw NSError(domain: "Auth", code: 401, userInfo: [NSLocalizedDescriptionKey: "User not authenticated"])
+        }
+
         let today = Calendar.current.startOfDay(for: Date())
         let todosRef = db.collection(collectionName)
         
         // Query for completed tasks from before today
         let query = todosRef
+            .whereField("userId", isEqualTo: uid)
             .whereField("isCompleted", isEqualTo: true)
             .whereField("completedAt", isLessThan: today)
         

@@ -123,6 +123,18 @@ class TodoViewModel: ObservableObject {
     }
     
     // MARK: - Actions
+
+    func startUserSession() {
+        Task {
+            await firebaseService.startRealtimeListener()
+        }
+    }
+
+    func endUserSession() {
+        Task { @MainActor in
+            firebaseService.stopRealtimeListener()
+        }
+    }
     
     func addTodo(title: String, note: String, dueDate: Date) {
         Task {

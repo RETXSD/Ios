@@ -16,6 +16,7 @@ struct TodoListView: View {
     // ViewModel dibuat di parent (ContentView) dan diteruskan ke sini.
     // Setiap kali ViewModel berubah, view ini akan di-render ulang.
     @ObservedObject var viewModel: TodoViewModel
+    @ObservedObject var authService: AuthService
 
     var body: some View {
         VStack(spacing: 0) {
@@ -57,7 +58,7 @@ struct TodoListView: View {
     private var headerView: some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text("My Tasks")
+                Text(authService.displayName.map { "Hi, \($0) 👋" } ?? "My Tasks")
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(viewModel.theme.cardText)
                 Text("\(viewModel.completedCount) of \(viewModel.todos.count) completed")
@@ -65,18 +66,48 @@ struct TodoListView: View {
                     .foregroundColor(viewModel.theme.secondaryText)
             }
             Spacer()
-            Button(action: { viewModel.showThemePicker.toggle() }) {
-                Image(systemName: "paintpalette.fill")
-                    .font(.system(size: 20))
-                    .foregroundColor(viewModel.theme.accent)
-                    .padding(8)
-                    .background(viewModel.theme.buttonBackground)
-                    .cornerRadius(10)
+            HStack(spacing: 8) {
+                // Profile button
+                NavigationLink(destination: ProfileView(
+                    authService: authService,
+                    theme: viewModel.theme
+                )) {
+                    ZStack {
+                        Circle()
+                            .fill(
+                                LinearGradient(
+                                    colors: [viewModel.theme.accent, viewModel.theme.accent.opacity(0.5)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .frame(width: 36, height: 36)
+                        Text(avatarLetter)
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                }
+
+                // Theme picker button
+                Button(action: { viewModel.showThemePicker.toggle() }) {
+                    Image(systemName: "paintpalette.fill")
+                        .font(.system(size: 20))
+                        .foregroundColor(viewModel.theme.accent)
+                        .padding(8)
+                        .background(viewModel.theme.buttonBackground)
+                        .cornerRadius(10)
+                }
             }
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
         .padding(.bottom, 12)
+    }
+
+    // Avatar initial letter derived from auth service
+    private var avatarLetter: String {
+        let name = authService.displayName ?? authService.userEmail ?? "?"
+        return String(name.prefix(1)).uppercased()
     }
 
     private var themePicker: some View {
@@ -174,6 +205,12 @@ struct TodoListView: View {
                                     TodoDetailView(
                                         item: $viewModel.todos[idx],
                                         theme: viewModel.theme,
+                                        onSave: { id, title, note, dueDate in
+                                            viewModel.updateTodo(id: id, title: title, note: note, dueDate: dueDate)
+                                        },
+                                        onToggle: { id in
+                                            viewModel.toggleTodo(id: id)
+                                        },
                                         onDelete: { viewModel.deleteTodo(id: viewModel.todos[idx].id) }
                                     )
                                 }

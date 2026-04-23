@@ -10,6 +10,8 @@ import SwiftUI
 struct TodoDetailView: View {
     @Binding var item: TodoItem
     let theme: AppTheme
+    let onSave: (UUID, String, String, Date) -> Void
+    let onToggle: (UUID) -> Void
     let onDelete: () -> Void
 
     @Environment(\.dismiss) private var dismiss
@@ -179,7 +181,9 @@ struct TodoDetailView: View {
 
                         // Action buttons (view mode only)
                         if !isEditing {
-                            Button(action: { item.isCompleted.toggle() }) {
+                            Button(action: {
+                                onToggle(item.id)
+                            }) {
                                 HStack {
                                     Image(systemName: item.isCompleted ? "arrow.uturn.backward.circle" : "checkmark.circle")
                                         .font(.system(size: 16))
@@ -232,9 +236,11 @@ struct TodoDetailView: View {
     private func saveEdits() {
         let trimmed = editingTitle.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
+        let trimmedNote = editingNote.trimmingCharacters(in: .whitespacesAndNewlines)
         item.title = trimmed
-        item.note = editingNote.trimmingCharacters(in: .whitespacesAndNewlines)
+        item.note = trimmedNote
         item.dueDate = editingDate
+        onSave(item.id, trimmed, trimmedNote, editingDate)
         isEditing = false
     }
 }

@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 
 struct TodoItem: Identifiable, Codable {
     var id: UUID
+    var userId: String?
     var title: String
     var note: String
     var isCompleted: Bool
@@ -19,8 +20,16 @@ struct TodoItem: Identifiable, Codable {
     /// nil means the task is not completed (or was uncompleted).
     var completedAt: Date?
 
-    init(id: UUID = UUID(), title: String, note: String = "", isCompleted: Bool = false, dueDate: Date = Date()) {
+    init(
+        id: UUID = UUID(),
+        userId: String? = nil,
+        title: String,
+        note: String = "",
+        isCompleted: Bool = false,
+        dueDate: Date = Date()
+    ) {
         self.id = id
+        self.userId = userId
         self.title = title
         self.note = note
         self.isCompleted = isCompleted
