@@ -35,7 +35,7 @@ struct LoginPage: View {
                         Text("Task Manager")
                             .font(.system(size: 32, weight: .bold, design: .rounded))
                             .foregroundColor(theme.cardText)
-                        Text(isSignUpMode ? "Buat akun untuk melanjutkan" : "Login untuk kelola tugasmu")
+                        Text(isSignUpMode ? "Sign up to continue" : "Log in to manage your tasks")
                             .font(.system(size: 14, weight: .medium))
                             .foregroundColor(theme.secondaryText)
                     }
@@ -100,7 +100,7 @@ struct LoginPage: View {
                     VStack(spacing: 16) {
                         // Email
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Alamat Email", systemImage: "envelope.fill")
+                            Label("Email Addrees", systemImage: "envelope.fill")
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundColor(theme.secondaryText)
 
@@ -124,7 +124,7 @@ struct LoginPage: View {
                                 .font(.system(size: 13, weight: .semibold))
                                 .foregroundColor(theme.secondaryText)
 
-                            SecureField("Masukkan password", text: $password)
+                            SecureField("Input password", text: $password)
                                 .padding(14)
                                 .background(theme.cardBackground)
                                 .cornerRadius(10)
@@ -160,7 +160,7 @@ struct LoginPage: View {
                             if authService.isLoading {
                                 ProgressView().tint(theme.buttonText)
                             }
-                            Text(isSignUpMode ? "Buat Akun" : "Login")
+                            Text(isSignUpMode ? "Sign In" : "Login")
                                 .font(.system(size: 16, weight: .semibold))
                         }
                         .frame(maxWidth: .infinity)
@@ -178,7 +178,7 @@ struct LoginPage: View {
                         authService.errorMessage = nil
                         isSignUpMode.toggle()
                     }) {
-                        Text(isSignUpMode ? "Sudah punya akun? Login" : "Belum punya akun? Daftar")
+                        Text(isSignUpMode ? "Alredy have an account" : "Not have an account? Sign In")
                             .font(.system(size: 14, weight: .medium))
                             .foregroundColor(theme.accent)
                     }
@@ -195,7 +195,7 @@ struct LoginPage: View {
         let trimmedPassword = password.trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard !trimmedEmail.isEmpty, !trimmedPassword.isEmpty else {
-            authService.errorMessage = "Email dan password wajib diisi."
+            authService.errorMessage = "Please input email and password."
             return
         }
 
