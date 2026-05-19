@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "skills": {
+    "fullstack-agent": {
+      "source": "/Users/a11/Documents/ADRIAN/.agents/skills/swiftui-pro/skills/fullstack-agent",
+      "sourceType": "local",
+      "computedHash": "29b00c8dd11614bd7065abe453dc2972e763ecb80194a7e7235dbb771e692a4e"
+    },
+    "healthkit-agent": {
+      "source": "/Users/a11/Documents/ADRIAN/.agents/skills/swiftui-pro/skills/healthkit-agent",
+      "sourceType": "local",
+      "computedHash": "46596e1e9f42f2d2f496b7a11a62448288083d06314a0e6628d040d599ca16d8"
+    },
+    "qa-agent": {
+      "source": "/Users/a11/Documents/ADRIAN/.agents/skills/swiftui-pro/skills/qa-agent",
+      "sourceType": "local",
+      "computedHash": "9fedebfb94dacc9d35e4c450defae2db9cf0fb745c03f4fe3be971256dfa9b5f"
+    },
+    "swiftui-pro": {
+      "source": "twostraws/swiftui-agent-skill",
+      "sourceType": "github",
+      "skillPath": "swiftui-pro/SKILL.md",
+      "computedHash": "07033426e384295a4b49cf0b2ffdefd4098cae4af53fef16bc1f2d9281118c41"
+    },
+    "uiux-agent": {
+      "source": "/Users/a11/Documents/ADRIAN/.agents/skills/swiftui-pro/skills/uiux-agent",
+      "sourceType": "local",
+      "computedHash": "5a43c6bb64a651202954a1db347105a54becb96d9a708d3524dbf5aff9788e63"
+    }
+  }
+}

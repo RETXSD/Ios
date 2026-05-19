@@ -13,6 +13,43 @@
 		0F33CA482FAD80B5001C74FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F33CA472FAD80B5001C74FE /* Preview Assets.xcassets */; };
 		0F33CA4A2FAD80B5001C74FE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA492FAD80B5001C74FE /* Persistence.swift */; };
 		0F33CA4D2FAD80B5001C74FE /* Fitnessapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA4B2FAD80B5001C74FE /* Fitnessapp.xcdatamodeld */; };
+		0F33CA612FAD9001001C74FE /* FitnessEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA602FAD9001001C74FE /* FitnessEnums.swift */; };
+		0F33CA632FAD9001001C74FE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA622FAD9001001C74FE /* UserProfile.swift */; };
+		0F33CA652FAD9001001C74FE /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA642FAD9001001C74FE /* Exercise.swift */; };
+		0F33CA672FAD9001001C74FE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA662FAD9001001C74FE /* Workout.swift */; };
+		0F33CA692FAD9001001C74FE /* CalorieLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA682FAD9001001C74FE /* CalorieLog.swift */; };
+		0F33CA6B2FAD9001001C74FE /* FormFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA6A2FAD9001001C74FE /* FormFeedback.swift */; };
+		0F33CA6D2FAD9001001C74FE /* CompletedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA6C2FAD9001001C74FE /* CompletedWorkout.swift */; };
+		0F33CA6F2FAD9001001C74FE /* CalorieProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */; };
+		0F33CA712FAD9001001C74FE /* AppReadinessItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */; };
+		0F33CA832FAD9101001C74FE /* FitnessDashboardSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */; };
+		0F33CA752FAD9001001C74FE /* CalorieGoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */; };
+		0F33CA772FAD9001001C74FE /* WorkoutRecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */; };
+		0F33CA792FAD9001001C74FE /* AppReadinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA782FAD9001001C74FE /* AppReadinessService.swift */; };
+		0F33CA7D2FAD9001001C74FE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA7C2FAD9001001C74FE /* HealthKitManager.swift */; };
+		0F33CA7F2FAD9001001C74FE /* CameraSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA7E2FAD9001001C74FE /* CameraSessionManager.swift */; };
+		0F33CA812FAD9001001C74FE /* ExerciseFormAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA802FAD9001001C74FE /* ExerciseFormAnalyzer.swift */; };
+		0F33CA852FAD9101001C74FE /* FitnessDashboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA842FAD9101001C74FE /* FitnessDashboardManager.swift */; };
+		0F33CB012FADA001001C74FE /* FitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB002FADA001001C74FE /* FitnessTheme.swift */; };
+		0F33CB032FADA001001C74FE /* FitnessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB022FADA001001C74FE /* FitnessCard.swift */; };
+		0F33CB052FADA001001C74FE /* CalorieProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB042FADA001001C74FE /* CalorieProgressRing.swift */; };
+		0F33CB072FADA001001C74FE /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB062FADA001001C74FE /* StatusBadge.swift */; };
+		0F33CB092FADA001001C74FE /* MetricPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB082FADA001001C74FE /* MetricPill.swift */; };
+		0F33CB0B2FADA001001C74FE /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB0A2FADA001001C74FE /* WorkoutRow.swift */; };
+		0F33CB112FADA001001C74FE /* FitnessTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB102FADA001001C74FE /* FitnessTab.swift */; };
+		0F33CB132FADA001001C74FE /* FitnessAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB122FADA001001C74FE /* FitnessAppTabView.swift */; };
+		0F33CB152FADA001001C74FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB142FADA001001C74FE /* HomeView.swift */; };
+		0F33CB172FADA001001C74FE /* TodayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB162FADA001001C74FE /* TodayHeaderView.swift */; };
+		0F33CB192FADA001001C74FE /* HomeCalorieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB182FADA001001C74FE /* HomeCalorieCard.swift */; };
+		0F33CB1B2FADA001001C74FE /* HomeRecommendationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB1A2FADA001001C74FE /* HomeRecommendationCard.swift */; };
+		0F33CB1D2FADA001001C74FE /* HomeStatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB1C2FADA001001C74FE /* HomeStatusCard.swift */; };
+		0F33CB1F2FADA001001C74FE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB1E2FADA001001C74FE /* WorkoutsView.swift */; };
+		0F33CB212FADA001001C74FE /* CoachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB202FADA001001C74FE /* CoachView.swift */; };
+		0F33CB232FADA001001C74FE /* CoachPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB222FADA001001C74FE /* CoachPreviewCard.swift */; };
+		0F33CB252FADA001001C74FE /* CoachFeedbackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB242FADA001001C74FE /* CoachFeedbackCard.swift */; };
+		0F33CB272FADA001001C74FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB262FADA001001C74FE /* ProfileView.swift */; };
+		0F33CB292FADA001001C74FE /* GoalSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */; };
+		0F33CB2B2FADA001001C74FE /* ProfileReadinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +60,43 @@
 		0F33CA472FAD80B5001C74FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F33CA492FAD80B5001C74FE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0F33CA4C2FAD80B5001C74FE /* Fitnessapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fitnessapp.xcdatamodel; sourceTree = "<group>"; };
+		0F33CA602FAD9001001C74FE /* FitnessEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessEnums.swift; sourceTree = "<group>"; };
+		0F33CA622FAD9001001C74FE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0F33CA642FAD9001001C74FE /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		0F33CA662FAD9001001C74FE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		0F33CA682FAD9001001C74FE /* CalorieLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieLog.swift; sourceTree = "<group>"; };
+		0F33CA6A2FAD9001001C74FE /* FormFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFeedback.swift; sourceTree = "<group>"; };
+		0F33CA6C2FAD9001001C74FE /* CompletedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWorkout.swift; sourceTree = "<group>"; };
+		0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieProgress.swift; sourceTree = "<group>"; };
+		0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReadinessItem.swift; sourceTree = "<group>"; };
+		0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboardSummary.swift; sourceTree = "<group>"; };
+		0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieGoalService.swift; sourceTree = "<group>"; };
+		0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecommendationService.swift; sourceTree = "<group>"; };
+		0F33CA782FAD9001001C74FE /* AppReadinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReadinessService.swift; sourceTree = "<group>"; };
+		0F33CA7C2FAD9001001C74FE /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		0F33CA7E2FAD9001001C74FE /* CameraSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSessionManager.swift; sourceTree = "<group>"; };
+		0F33CA802FAD9001001C74FE /* ExerciseFormAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFormAnalyzer.swift; sourceTree = "<group>"; };
+		0F33CA842FAD9101001C74FE /* FitnessDashboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboardManager.swift; sourceTree = "<group>"; };
+		0F33CB002FADA001001C74FE /* FitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTheme.swift; sourceTree = "<group>"; };
+		0F33CB022FADA001001C74FE /* FitnessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCard.swift; sourceTree = "<group>"; };
+		0F33CB042FADA001001C74FE /* CalorieProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieProgressRing.swift; sourceTree = "<group>"; };
+		0F33CB062FADA001001C74FE /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		0F33CB082FADA001001C74FE /* MetricPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricPill.swift; sourceTree = "<group>"; };
+		0F33CB0A2FADA001001C74FE /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
+		0F33CB102FADA001001C74FE /* FitnessTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTab.swift; sourceTree = "<group>"; };
+		0F33CB122FADA001001C74FE /* FitnessAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppTabView.swift; sourceTree = "<group>"; };
+		0F33CB142FADA001001C74FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0F33CB162FADA001001C74FE /* TodayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeaderView.swift; sourceTree = "<group>"; };
+		0F33CB182FADA001001C74FE /* HomeCalorieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalorieCard.swift; sourceTree = "<group>"; };
+		0F33CB1A2FADA001001C74FE /* HomeRecommendationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendationCard.swift; sourceTree = "<group>"; };
+		0F33CB1C2FADA001001C74FE /* HomeStatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatusCard.swift; sourceTree = "<group>"; };
+		0F33CB1E2FADA001001C74FE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		0F33CB202FADA001001C74FE /* CoachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachView.swift; sourceTree = "<group>"; };
+		0F33CB222FADA001001C74FE /* CoachPreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPreviewCard.swift; sourceTree = "<group>"; };
+		0F33CB242FADA001001C74FE /* CoachFeedbackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachFeedbackCard.swift; sourceTree = "<group>"; };
+		0F33CB262FADA001001C74FE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryCard.swift; sourceTree = "<group>"; };
+		0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReadinessCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +131,89 @@
 			children = (
 				0F33CA402FAD80AF001C74FE /* FitnessappApp.swift */,
 				0F33CA422FAD80AF001C74FE /* ContentView.swift */,
+				0F33CB0C2FADA001001C74FE /* Components */,
+				0F33CB0E2FADA001001C74FE /* Views */,
+				0F33CA5D2FAD9001001C74FE /* Models */,
+				0F33CA722FAD9001001C74FE /* Services */,
+				0F33CA7A2FAD9001001C74FE /* Managers */,
 				0F33CA442FAD80B5001C74FE /* Assets.xcassets */,
 				0F33CA492FAD80B5001C74FE /* Persistence.swift */,
 				0F33CA4B2FAD80B5001C74FE /* Fitnessapp.xcdatamodeld */,
 				0F33CA462FAD80B5001C74FE /* Preview Content */,
 			);
 			path = Fitnessapp;
+			sourceTree = "<group>";
+		};
+		0F33CA5D2FAD9001001C74FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CA602FAD9001001C74FE /* FitnessEnums.swift */,
+				0F33CA622FAD9001001C74FE /* UserProfile.swift */,
+				0F33CA642FAD9001001C74FE /* Exercise.swift */,
+				0F33CA662FAD9001001C74FE /* Workout.swift */,
+				0F33CA682FAD9001001C74FE /* CalorieLog.swift */,
+				0F33CA6A2FAD9001001C74FE /* FormFeedback.swift */,
+				0F33CA6C2FAD9001001C74FE /* CompletedWorkout.swift */,
+				0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */,
+				0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */,
+				0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0F33CA722FAD9001001C74FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */,
+				0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */,
+				0F33CA782FAD9001001C74FE /* AppReadinessService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0F33CA7A2FAD9001001C74FE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CA7C2FAD9001001C74FE /* HealthKitManager.swift */,
+				0F33CA7E2FAD9001001C74FE /* CameraSessionManager.swift */,
+				0F33CA802FAD9001001C74FE /* ExerciseFormAnalyzer.swift */,
+				0F33CA842FAD9101001C74FE /* FitnessDashboardManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0F33CB0C2FADA001001C74FE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CB002FADA001001C74FE /* FitnessTheme.swift */,
+				0F33CB022FADA001001C74FE /* FitnessCard.swift */,
+				0F33CB042FADA001001C74FE /* CalorieProgressRing.swift */,
+				0F33CB062FADA001001C74FE /* StatusBadge.swift */,
+				0F33CB082FADA001001C74FE /* MetricPill.swift */,
+				0F33CB0A2FADA001001C74FE /* WorkoutRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0F33CB0E2FADA001001C74FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CB102FADA001001C74FE /* FitnessTab.swift */,
+				0F33CB122FADA001001C74FE /* FitnessAppTabView.swift */,
+				0F33CB142FADA001001C74FE /* HomeView.swift */,
+				0F33CB162FADA001001C74FE /* TodayHeaderView.swift */,
+				0F33CB182FADA001001C74FE /* HomeCalorieCard.swift */,
+				0F33CB1A2FADA001001C74FE /* HomeRecommendationCard.swift */,
+				0F33CB1C2FADA001001C74FE /* HomeStatusCard.swift */,
+				0F33CB1E2FADA001001C74FE /* WorkoutsView.swift */,
+				0F33CB202FADA001001C74FE /* CoachView.swift */,
+				0F33CB222FADA001001C74FE /* CoachPreviewCard.swift */,
+				0F33CB242FADA001001C74FE /* CoachFeedbackCard.swift */,
+				0F33CB262FADA001001C74FE /* ProfileView.swift */,
+				0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */,
+				0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0F33CA462FAD80B5001C74FE /* Preview Content */ = {
@@ -144,6 +295,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F33CA4D2FAD80B5001C74FE /* Fitnessapp.xcdatamodeld in Sources */,
+				0F33CA612FAD9001001C74FE /* FitnessEnums.swift in Sources */,
+				0F33CA632FAD9001001C74FE /* UserProfile.swift in Sources */,
+				0F33CA652FAD9001001C74FE /* Exercise.swift in Sources */,
+				0F33CA672FAD9001001C74FE /* Workout.swift in Sources */,
+				0F33CA692FAD9001001C74FE /* CalorieLog.swift in Sources */,
+				0F33CA6B2FAD9001001C74FE /* FormFeedback.swift in Sources */,
+				0F33CA6D2FAD9001001C74FE /* CompletedWorkout.swift in Sources */,
+				0F33CA6F2FAD9001001C74FE /* CalorieProgress.swift in Sources */,
+				0F33CA712FAD9001001C74FE /* AppReadinessItem.swift in Sources */,
+				0F33CA832FAD9101001C74FE /* FitnessDashboardSummary.swift in Sources */,
+				0F33CA752FAD9001001C74FE /* CalorieGoalService.swift in Sources */,
+				0F33CA772FAD9001001C74FE /* WorkoutRecommendationService.swift in Sources */,
+				0F33CA792FAD9001001C74FE /* AppReadinessService.swift in Sources */,
+				0F33CA7D2FAD9001001C74FE /* HealthKitManager.swift in Sources */,
+				0F33CA7F2FAD9001001C74FE /* CameraSessionManager.swift in Sources */,
+				0F33CA812FAD9001001C74FE /* ExerciseFormAnalyzer.swift in Sources */,
+				0F33CA852FAD9101001C74FE /* FitnessDashboardManager.swift in Sources */,
+				0F33CB012FADA001001C74FE /* FitnessTheme.swift in Sources */,
+				0F33CB032FADA001001C74FE /* FitnessCard.swift in Sources */,
+				0F33CB052FADA001001C74FE /* CalorieProgressRing.swift in Sources */,
+				0F33CB072FADA001001C74FE /* StatusBadge.swift in Sources */,
+				0F33CB092FADA001001C74FE /* MetricPill.swift in Sources */,
+				0F33CB0B2FADA001001C74FE /* WorkoutRow.swift in Sources */,
+				0F33CB112FADA001001C74FE /* FitnessTab.swift in Sources */,
+				0F33CB132FADA001001C74FE /* FitnessAppTabView.swift in Sources */,
+				0F33CB152FADA001001C74FE /* HomeView.swift in Sources */,
+				0F33CB172FADA001001C74FE /* TodayHeaderView.swift in Sources */,
+				0F33CB192FADA001001C74FE /* HomeCalorieCard.swift in Sources */,
+				0F33CB1B2FADA001001C74FE /* HomeRecommendationCard.swift in Sources */,
+				0F33CB1D2FADA001001C74FE /* HomeStatusCard.swift in Sources */,
+				0F33CB1F2FADA001001C74FE /* WorkoutsView.swift in Sources */,
+				0F33CB212FADA001001C74FE /* CoachView.swift in Sources */,
+				0F33CB232FADA001001C74FE /* CoachPreviewCard.swift in Sources */,
+				0F33CB252FADA001001C74FE /* CoachFeedbackCard.swift in Sources */,
+				0F33CB272FADA001001C74FE /* ProfileView.swift in Sources */,
+				0F33CB292FADA001001C74FE /* GoalSummaryCard.swift in Sources */,
+				0F33CB2B2FADA001001C74FE /* ProfileReadinessCard.swift in Sources */,
 				0F33CA4A2FAD80B5001C74FE /* Persistence.swift in Sources */,
 				0F33CA432FAD80AF001C74FE /* ContentView.swift in Sources */,
 				0F33CA412FAD80AF001C74FE /* FitnessappApp.swift in Sources */,
