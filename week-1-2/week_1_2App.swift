@@ -11,7 +11,7 @@ import SwiftUI
 struct week_1_2App: App {
     var body: some Scene {
         WindowGroup {
-            WeatherHomeView()
+            WeatherRootView()
         }
     }
 }

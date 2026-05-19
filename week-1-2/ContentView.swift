@@ -7,23 +7,31 @@
 
 import SwiftUI
 
+enum WeatherTab: Hashable {
+    case home
+    case search
+}
+
 // MARK: - Root Tab View with Bottom Nav
 struct WeatherRootView: View {
     @StateObject private var viewModel = WeatherViewModel()
+    @State private var selectedTab: WeatherTab = .home
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             WeatherHomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
+                .tag(WeatherTab.home)
 
-            SearchCityView()
+            SearchCityView(selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search City")
                 }
+                .tag(WeatherTab.search)
         }
         .environmentObject(viewModel)
     }
@@ -58,7 +66,9 @@ struct WeatherHomeView: View {
             }
         }
         .onAppear {
-            viewModel.fetchWeather() // default location
+            if viewModel.currentTemp == nil {
+                viewModel.fetchWeather() // default location only once
+            }
         }
     }
 
@@ -193,15 +203,22 @@ struct WeatherHomeView: View {
 // MARK: - Search View
 struct SearchCityView: View {
     @EnvironmentObject var viewModel: WeatherViewModel
+    @Binding var selectedTab: WeatherTab
     @State private var query: String = ""
+    @State private var suggestions: [GeocodingPlace] = []
     @State private var searching = false
+    @State private var showError = false
+    @State private var noResults = false
 
     var body: some View {
         NavigationView {
             VStack(spacing: 16) {
                 HStack {
-                    TextField("Enter city name (e.g. London)", text: $query)
+                    TextField("Type a city name", text: $query)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .onChange(of: query) { _ in
+                            searchSuggestions()
+                        }
 
                     Button(action: search) {
                         if searching {
@@ -214,21 +231,96 @@ struct SearchCityView: View {
                 }
                 .padding()
 
-                if let current = viewModel.currentTemp {
-                    VStack(spacing: 6) {
-                        Text(viewModel.displayLocation)
-                            .font(.title2)
-                        Text("\(Int(round(current)))°")
-                            .font(.largeTitle)
+                if !suggestions.isEmpty {
+                    ScrollView(showsIndicators: false) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(suggestions) { place in
+                                Button(action: {
+                                    select(place: place)
+                                }) {
+                                    HStack(spacing: 12) {
+                                        VStack(alignment: .leading, spacing: 3) {
+                                            Text(place.displayName)
+                                                .font(.system(.body, design: .default))
+                                                .fontWeight(.medium)
+                                                .foregroundColor(.primary)
+                                                .lineLimit(1)
+                                            
+                                            if !place.subtitle.isEmpty {
+                                                Text(place.subtitle)
+                                                    .font(.system(.caption, design: .default))
+                                                    .foregroundColor(.secondary)
+                                                    .lineLimit(1)
+                                            }
+                                        }
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .font(.system(size: 14, weight: .semibold))
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding(.vertical, 12)
+                                    .padding(.horizontal, 14)
+                                    .background(Color(.systemGray6))
+                                    .cornerRadius(10)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
                     }
-                } else {
-                    Text("No city selected")
+                    .frame(maxHeight: 400)
+                } else if query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    Text("Start typing a city name to see suggestions.")
                         .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                } else if noResults {
+                    Text("No cities found for \(query). Try another name.")
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                } else {
+                    Text("Searching for cities...")
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
                 Spacer()
             }
             .navigationTitle("Search City")
+            .alert("City not found", isPresented: $showError) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text("Please try a different city name.")
+            }
+        }
+    }
+
+    private func searchSuggestions() {
+        let city = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !city.isEmpty else {
+            suggestions = []
+            noResults = false
+            return
+        }
+
+        viewModel.searchLocations(forCityName: city) { results in
+            self.suggestions = results
+            self.noResults = results.isEmpty
+        }
+    }
+
+    private func select(place: GeocodingPlace) {
+        searching = true
+        viewModel.fetchWeather(latitude: place.latitude, longitude: place.longitude, placeName: place.displayName) { success in
+            searching = false
+            if success {
+                query = ""
+                suggestions = []
+                selectedTab = .home
+            } else {
+                showError = true
+            }
         }
     }
 
@@ -236,9 +328,14 @@ struct SearchCityView: View {
         let city = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !city.isEmpty else { return }
         searching = true
-        viewModel.fetchWeather(forCityName: city) { _ in
+        viewModel.fetchWeather(forCityName: city) { success in
             searching = false
-            query = ""
+            if success {
+                query = ""
+                selectedTab = .home
+            } else {
+                showError = true
+            }
         }
     }
 }
@@ -283,6 +380,28 @@ class WeatherViewModel: ObservableObject {
                 }
             } catch {
                 DispatchQueue.main.async { self.loadMockData(); completion?(false) }
+            }
+        }.resume()
+    }
+
+    func searchLocations(forCityName name: String, completion: @escaping ([GeocodingPlace]) -> Void) {
+        guard let encoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: "https://geocoding-api.open-meteo.com/v1/search?name=\(encoded)&count=10") else {
+            DispatchQueue.main.async { completion([]) }
+            return
+        }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async { completion([]) }
+                return
+            }
+
+            do {
+                let result = try JSONDecoder().decode(GeocodingResponse.self, from: data)
+                DispatchQueue.main.async { completion(result.results ?? []) }
+            } catch {
+                DispatchQueue.main.async { completion([]) }
             }
         }.resume()
     }
@@ -471,10 +590,29 @@ struct HourlyData: Codable {
 struct GeocodingResponse: Codable {
     let results: [GeocodingPlace]?
 }
-struct GeocodingPlace: Codable {
+struct GeocodingPlace: Codable, Identifiable {
+    var id = UUID()
     let name: String
     let latitude: Double
     let longitude: Double
+    let country: String?
+    let admin1: String?
+
+    enum CodingKeys: String, CodingKey {
+        case name, latitude, longitude, country, admin1
+    }
+
+    var displayName: String {
+        let parts = [name, admin1, country].compactMap { $0 }
+        return parts.joined(separator: ", ")
+    }
+
+    var subtitle: String {
+        if let country = country {
+            return country
+        }
+        return ""
+    }
 }
 
 // MARK: - Previews
