@@ -60,6 +60,58 @@
   - `cameraStatus: PermissionStatus`
   - `todayRecommendation: Workout?`
   - `readinessItems: [AppReadinessItem]`
+- `AppUser`
+  - `id: String`
+  - `username: String`
+  - `email: String`
+- `UserFitnessProfile`
+  - `userId: String`
+  - `username: String`
+  - `email: String`
+  - `dailyCalorieTarget: Int`
+  - `dailyWorkoutDurationMinutes: Int`
+  - `weightKg: Double`
+  - `age: Int`
+  - `fitnessLevel: FitnessLevel`
+  - `onboardingCompleted: Bool`
+  - `createdAt: Date?`
+  - `updatedAt: Date?`
+- `ExerciseCatalogItem`
+  - `id: String`
+  - `name: String`
+  - `category: ExerciseCategory`
+  - `intensity: ExerciseIntensity`
+  - `kcalPerMinute: Double`
+  - `level: FitnessLevel`
+  - `equipment: String`
+  - `instructions: String`
+  - `bodyFocus: [String]`
+  - `aiTags: [String]`
+  - `isActive: Bool`
+  - `sortOrder: Int`
+- `WorkoutRecommendation`
+  - `id: String`
+  - `userId: String`
+  - `source: RecommendationSource`
+  - `summary: String`
+  - `dailyCalorieTarget: Int`
+  - `dailyWorkoutDurationMinutes: Int`
+  - `totalEstimatedCalories: Double`
+  - `items: [WorkoutRecommendationItem]`
+  - `createdAt: Date?`
+- `WorkoutRecommendationItem`
+  - `exerciseId: String`
+  - `name: String`
+  - `durationMinutes: Int`
+  - `estimatedCalories: Double`
+  - `intensity: ExerciseIntensity`
+  - `instructions: String`
+- `AIMessage`
+  - `id: String`
+  - `userId: String`
+  - `role: AIMessageRole`
+  - `content: String`
+  - `createdAt: Date?`
 - Supporting enums:
   - `WorkoutCategory`
   - `WorkoutDifficulty`
@@ -67,39 +119,106 @@
   - `PermissionStatus`
   - `ExerciseFormIssue`
   - `AppReadinessItemStatus`
+  - `FitnessLevel`
+  - `ExerciseCategory`
+  - `ExerciseIntensity`
+  - `RecommendationSource`
+  - `AIMessageRole`
 
-Plain Swift models were created instead of SwiftData models because the target is iOS 16.4/Xcode 14-era and SwiftData would require iOS 17+ plus project migration.
+Plain Swift models are used instead of SwiftData models because this project targets iOS 16.4/Xcode 14.3.1.
 
 ## Services Available
 - `HealthKitManager`
-  - Owns a single shared `HKHealthStore` through `HealthKitManager.shared`.
-  - Requests minimum HealthKit permissions for active energy read access and workout write access.
+  - Owns `HealthKitManager.shared`.
+  - Requests HealthKit permissions.
   - Reads active energy burned in kilocalories.
   - Saves completed workouts to Apple Health.
 - `CalorieGoalService`
-  - Stores the daily calorie goal in `UserDefaults`.
-  - Provides a default goal of `500`.
-  - Calculates clamped calorie progress for UI rings.
+  - Stores the local daily calorie goal in `UserDefaults`.
+  - Calculates calorie progress for rings/cards.
 - `WorkoutRecommendationService`
-  - Returns recommendations based on calorie progress.
-  - Handles low, medium, near-goal, and goal-reached progress states.
+  - Existing HealthKit-progress-based recommendation service.
 - `CameraSessionManager`
   - Owns an `AVCaptureSession`.
-  - Requests and reports camera permission.
-  - Configures front camera input and video output.
-  - Starts/stops capture off the main path through an actor.
+  - Requests camera permission and starts/stops capture.
+  - Supports front/back camera switching.
+  - Emits `CMSampleBuffer` frames through `sampleBufferHandler` for Vision analysis.
 - `ExerciseFormAnalyzer`
-  - Accepts `CMSampleBuffer`.
-  - Runs `VNDetectHumanBodyPoseRequest` on an actor-backed background path.
-  - Returns `FormFeedback`.
-  - Includes placeholder rule-based analysis until a real Core ML classifier is added.
+  - Runs Vision body pose detection from `CMSampleBuffer`.
+  - Counts supported workout reps with Vision joint angles and state machines.
+  - Supports push-ups, squats, lunges, burpees, sit-ups, jumping jacks, mountain climbers, and plank feedback.
+  - Uses the same broad approach described by Good-GYM: pose keypoints, joint-angle thresholds, and movement phases.
 - `AppReadinessService`
-  - Returns checklist items for HealthKit permission, camera permission, local-only processing, usage descriptions, and HealthKit capability.
+  - Returns checklist items for permissions, privacy, and app setup.
 - `FitnessDashboardManager`
-  - Aggregates the landing page data from `HealthKitManager`, `CalorieGoalService`, `WorkoutRecommendationService`, `CameraSessionManager`, and `AppReadinessService`.
-  - Returns one `FitnessDashboardSummary` for `ContentView`.
+  - Aggregates HealthKit, recommendation, camera, and readiness data.
+- `AuthService`
+  - Local-only email/password register placeholder.
+  - Local-only email/password login placeholder.
+  - Google login is disabled while Firebase is paused.
+  - Logout/current user.
+- `UserProfileService`
+  - Stores user profile data in memory while Firebase is paused.
+  - Marks onboarding complete.
+- `ExerciseCatalogService`
+  - Returns the 10 default local exercises.
+  - Seed method is a no-op while Firebase is paused.
+- `RecommendationService`
+  - Generates MVP rule-based plans from `UserFitnessProfile` + `ExerciseCatalogItem`.
+  - Save/fetch latest recommendation are local no-ops while Firebase is paused.
+- `AIAssistantService`
+  - Calls a backend/proxy boundary for AI chat and AI workout recommendations.
+  - Defaults to `http://127.0.0.1:8787` for local simulator development.
+  - Does not store or send any AI API key from the iOS app.
+- `Fitnessapp/ai-proxy`
+  - Node.js DeepSeek proxy.
+  - Reads `DEEPSEEK_API_KEY` from environment only.
+  - Exposes `GET /health`, `POST /chat`, and `POST /recommendation`.
+  - Calls `https://api.deepseek.com/chat/completions` with `deepseek-v4-pro`, thinking enabled, and high reasoning effort.
 
 ## Public APIs for UI Layer
+```swift
+final class AuthService {
+    func register(username: String, email: String, password: String) async throws -> AppUser
+    func login(email: String, password: String) async throws -> AppUser
+    func loginWithGoogle() async throws -> AppUser
+    func loginWithGoogle(idToken: String, accessToken: String) async throws -> AppUser
+    func logout() throws
+    func currentUser() -> AppUser?
+}
+```
+
+```swift
+final class UserProfileService {
+    func fetchProfile(userId: String) async throws -> UserFitnessProfile?
+    func saveProfile(_ profile: UserFitnessProfile) async throws
+    func markOnboardingComplete(userId: String) async throws
+}
+```
+
+```swift
+final class ExerciseCatalogService {
+    func fetchExercises() async throws -> [ExerciseCatalogItem]
+    func seedDefaultExercisesIfNeeded() async throws
+}
+```
+
+```swift
+final class RecommendationService {
+    func generateRecommendation(profile: UserFitnessProfile, exercises: [ExerciseCatalogItem]) async throws -> WorkoutRecommendation
+    func saveRecommendation(_ recommendation: WorkoutRecommendation, userId: String) async throws
+    func latestRecommendation(userId: String) async throws -> WorkoutRecommendation?
+}
+```
+
+```swift
+final class AIAssistantService {
+    init(baseURL: URL = URL(string: "http://127.0.0.1:8787")!, urlSession: URLSession = .shared)
+    func generateAIRecommendation(profile: UserFitnessProfile, exercises: [ExerciseCatalogItem], planPreference: String?) async throws -> WorkoutRecommendation
+    func sendMessage(_ message: String, userId: String) async throws -> AIMessage
+}
+```
+
 ```swift
 final class HealthKitManager {
     static let shared: HealthKitManager
@@ -130,11 +249,13 @@ final class WorkoutRecommendationService {
 ```swift
 final class CameraSessionManager {
     let session: AVCaptureSession
+    var sampleBufferHandler: ((CMSampleBuffer) -> Void)?
 
     func requestCameraAccess() async -> PermissionStatus
     func cameraPermissionStatus() -> PermissionStatus
     func startSession() async throws
     func stopSession()
+    func switchCamera() async throws
 }
 ```
 
@@ -174,21 +295,38 @@ final class FitnessDashboardManager {
     - `recovery` -> `.mindAndBody`
 
 ## Notes for UI/UX Agent
-- New implementation files are in:
+- Firebase connection status:
+  - Firebase runtime is paused/disabled.
+  - `FitnessappApp.swift` does not import `FirebaseCore` and does not call `FirebaseApp.configure()`.
+  - Firebase package products are no longer linked to the `Fitnessapp` target.
+  - `GoogleService-Info.plist` is not copied into the app bundle.
+- Current local implementation files are in:
   - `Fitnessapp/Fitnessapp/Models/`
   - `Fitnessapp/Fitnessapp/Services/`
-  - `Fitnessapp/Fitnessapp/Managers/`
-- `ContentView.swift` now uses `FitnessDashboardManager` as the landing-page data source.
-- The Xcode project was updated so these files compile in the `Fitnessapp` target.
-- The build was verified with:
+- The Xcode project now includes all new model/service Swift files in the `Fitnessapp` target.
+- Build verified:
   - `xcodebuild -project Fitnessapp/Fitnessapp.xcodeproj -scheme Fitnessapp -sdk iphonesimulator -derivedDataPath /private/tmp/FitnessappDerivedData build -quiet`
-- Do not call HealthKit, camera, Vision, or Core ML APIs directly from SwiftUI views. Route calls through the managers/services above.
-- `CameraSessionManager.session` is exposed so a future camera preview view can attach it through a UI-only preview wrapper.
-- HealthKit read authorization status cannot be directly inspected for active energy. `authorizationStatus()` reflects workout write authorization and HealthKit availability; denied read access may appear as empty HealthKit results.
-- Required generated Info.plist keys still need to be configured before device/App Store work:
-  - `NSHealthShareUsageDescription`
-  - `NSHealthUpdateUsageDescription`
-  - `NSCameraUsageDescription`
-- Required capabilities/entitlements still need to be configured before real HealthKit device testing:
-  - HealthKit capability
-- No custom Core ML model is present yet. `ExerciseFormAnalyzer` uses Vision body pose detection plus simple rule-based feedback and is structured so a classifier can be added later.
+- AI assistant boundary:
+  - `AIAssistantView` is now wired to `AIAssistantService` through `AIAssistantViewModel`.
+  - Do not put the DeepSeek API key in Swift, plist files, Firebase client config, or any app bundle resource.
+  - Use `Fitnessapp/ai-proxy` with `DEEPSEEK_API_KEY` in `.env` or backend environment only.
+  - For physical iPhone testing, replace the default `127.0.0.1` proxy URL with a reachable backend/LAN URL.
+  - Local proxy health and a short `/chat` request were verified successfully.
+  - `/recommendation` now has an 18-second endpoint timeout and returns a fast rule-based fallback plan if DeepSeek is too slow.
+  - `AIAssistantService` uses a 120-second URLSession timeout so the UI can survive slower local proxy responses.
+  - AI proxy supports separate model routing: `DEEPSEEK_CHAT_MODEL` for chat and `DEEPSEEK_RECOMMENDATION_MODEL` for generated workout plans. Current `.env` maps chat `flash` to `deepseek-chat` and recommendation `pro` to `deepseek-v4-pro`.
+  - AI workout plan requests now accept optional user preference text, e.g. no running or low impact.
+- Exercise catalog seed status:
+  - `ExerciseCatalogService.defaultExercises` contains Running, Walking, Squats, Push-ups, Jumping Jacks, Plank, Lunges, Burpees, Mountain Climbers, and Sit-ups.
+  - `seedDefaultExercisesIfNeeded()` is currently a no-op.
+- Recommendation logic:
+  - Beginner gets beginner non-high-intensity exercises.
+  - Intermediate gets beginner + intermediate exercises.
+  - Advanced can use all active exercises.
+  - Duration is split across up to 4 balanced categories.
+  - Calories use `durationMinutes * kcalPerMinute`.
+- Future Firebase restore:
+  - Re-link Firebase package products.
+  - Add `FirebaseApp.configure()` back to app startup.
+  - Re-add `GoogleService-Info.plist` to bundle resources.
+  - Replace local service stubs with Firebase implementations.

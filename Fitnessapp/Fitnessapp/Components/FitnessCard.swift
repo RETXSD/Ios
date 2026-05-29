@@ -9,12 +9,13 @@ struct FitnessCard<Content: View>: View {
 
     var body: some View {
         content
-            .padding()
+            .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(FitnessTheme.surface, in: RoundedRectangle(cornerRadius: 8))
+            .background(FitnessTheme.surfaceRaised, in: RoundedRectangle(cornerRadius: FitnessTheme.cardRadius))
             .overlay {
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: FitnessTheme.cardRadius)
                     .stroke(FitnessTheme.border, lineWidth: 1)
             }
+            .shadow(color: .black.opacity(0.16), radius: 18, x: 0, y: 10)
     }
 }

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>580668050886-35qaf3v4c4g2rh37eq1tnonfqdgk8ibn.apps.googleusercontent.com</string>
+	<string>368871935566-k3e3llfbehg5bc6pl6pjkncr1df6j9g7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.580668050886-35qaf3v4c4g2rh37eq1tnonfqdgk8ibn</string>
+	<string>com.googleusercontent.apps.368871935566-k3e3llfbehg5bc6pl6pjkncr1df6j9g7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDRLvJSlc6l_siq_xPcs6qiLHSDUqzDmFw</string>
+	<string>AIzaSyDdwTBNTLFjQw-1Nt7ji-IMCvg6mlJWEx8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>580668050886</string>
+	<string>368871935566</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>cn.edu.njxzc.To-Do-List</string>
+	<string>cn.edu.njxzc.Fitnessapp</string>
 	<key>PROJECT_ID</key>
-	<string>todolist-adr-2026</string>
+	<string>fitnessapp2-c0d7c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>todolist-adr-2026.firebasestorage.app</string>
+	<string>fitnessapp2-c0d7c.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:580668050886:ios:760ecc0da7c87ebbe0b6c7</string>
+	<string>1:368871935566:ios:dfdb8a4d1aa127fefabd1f</string>
 </dict>
 </plist>

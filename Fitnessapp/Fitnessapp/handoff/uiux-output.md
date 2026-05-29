@@ -2,37 +2,65 @@
 
 ## Screens Built
 - `ContentView.swift` — Hosts the app shell by rendering `FitnessAppTabView`.
-- `Views/FitnessAppTabView.swift` — Bottom tab navigation shell with Home, Workouts, Coach, and Profile.
+- `Views/FitnessAppTabView.swift` — App flow shell: Authentication, Onboarding, then bottom tabs for Home, Workouts, Coach, and Profile.
+  - Configures opaque tab bar and navigation bar appearances for both standard and scroll-edge states so bars stay on the app theme while scrolling.
+- `Views/AuthenticationView.swift` — Login/Register screen with email/password fields and Google sign-in CTA.
+- `Views/AuthenticationViewModel.swift` — UI state and local-only login/register placeholder while Firebase is paused.
+- `Views/AuthInputField.swift` — Dark styled auth text field with icon, accessibility label, and secure mode support.
+- `Views/AuthHeaderView.swift` — Authentication header.
+- `Views/AuthFormView.swift` — Login/Register input form.
+- `Views/AuthActionButtonsView.swift` — Primary auth action and Google sign-in CTA.
+- `Views/OnboardingView.swift` — Profile setup form for calorie target, workout duration, weight, age, and fitness level with empty-first custom inputs.
+- `Views/OnboardingHeaderView.swift` — Onboarding header.
 - `Views/HomeView.swift` — Home dashboard with daily active energy, calorie goal progress, recommendation, and status.
 - `Views/WorkoutsView.swift` — Workout recommendations list based on current calorie progress.
-- `Views/CoachView.swift` — Camera/form-coach placeholder screen with permission status and feedback area.
+- `Views/ExerciseCatalogRow.swift` — Local exercise catalog row with kcal/min, category, intensity, level, equipment, and instructions.
+- `Views/CameraPreviewView.swift` — UIKit bridge for `AVCaptureVideoPreviewLayer`.
+- `Views/CoachView.swift` — Live camera/form-coach screen with permission request, start/stop, front/back switch, exercise picker, and feedback area.
 - `Views/ProfileView.swift` — Goal summary and app readiness checklist.
+- `Views/ProfileEditorCard.swift` — Editable local fitness profile form for calorie target, workout duration, weight, age, and fitness level.
+- `Views/AIAssistantView.swift` — AI assistant sheet that sends chat prompts and generates AI workout recommendations through `AIAssistantService`.
+- `Views/AIAssistantViewModel.swift` — UI state for AI chat, loading/error handling, and AI-generated workout plan responses.
+- `Views/AIAssistantCard.swift` — Home CTA card that opens the AI assistant sheet.
+- `Views/ProfileAccountCard.swift` — Profile account summary and logout CTA.
 - `Views/TodayHeaderView.swift` — Home header.
 - `Views/HomeCalorieCard.swift` — Active energy and calorie progress card.
 - `Views/HomeRecommendationCard.swift` — Today's workout card.
 - `Views/HomeStatusCard.swift` — HealthKit and Camera permission status card.
-- `Views/CoachPreviewCard.swift` — Coach camera preview placeholder and camera permission status.
-- `Views/CoachFeedbackCard.swift` — Live feedback placeholder.
+- `Views/CoachPreviewCard.swift` — Live coach camera preview controls, exercise picker, live reps, and selected-exercise movement guide.
+- `Views/CoachFeedbackCard.swift` — Live Vision feedback score, confidence, message, and issues.
+- `Views/CoachExerciseSessionSummary.swift` — UI model for per-exercise reps, duration, kcal/min, and estimated calories during the current coach session.
+- `Views/CoachSessionSummaryCard.swift` — Current workout session summary with total reps, calories, time, and per-exercise rows.
 - `Views/GoalSummaryCard.swift` — Profile daily goal summary.
 - `Views/ProfileReadinessCard.swift` — Profile readiness checklist.
+- `DESIGN.md` — Installed with `npx getdesign@latest add sentry` and used as the visual direction for the refreshed dark violet/lime/pink theme.
 
 ## Navigation Flow
 - Root view:
   - `ContentView` -> `FitnessAppTabView`
+- App launch flow:
+  - `AuthenticationView` signs in/registers locally.
+  - `OnboardingView` appears until `UserFitnessProfile.onboardingCompleted == true`.
+  - Main tab app
 - Bottom tab navigation:
   - `Home`
   - `Workouts`
   - `Coach`
   - `Profile`
+- Tab bar uses an opaque themed background for standard and scroll-edge appearances.
 - Each tab owns its own `NavigationStack`.
+- AI Assistant opens as a sheet from the Home tab.
+- Logout returns the UI to `AuthenticationView`.
 - No `NavigationView` is used.
 - There are no detail routes yet; workout detail and camera session screens can be added later with `navigationDestination`.
 
 ## Components Available
 - `FitnessTheme`
-  - Shared colors: `background`, `surface`, `primary`, `secondary`, `gold`, `border`.
+  - Shared Sentry-inspired colors: `background`, `surface`, `surfaceRaised`, `primary` lime, `secondary` violet, `gold` pink, `violetDeep`, `ink`, `text`, `textMuted`, `border`, and `focusRing`.
+  - Shared dimensions: `cardRadius`, `controlRadius`.
+  - `pageBackground` provides the app-wide midnight canvas.
 - `FitnessCard`
-  - Generic card container with dark surface, 8px corner radius, and subtle border.
+  - Generic card container with raised violet surface, 12px corner radius, subtle border, and dark shadow.
 - `CalorieProgressRing`
   - Parameters: `progress: CalorieProgress`.
 - `StatusBadge`
@@ -41,31 +69,77 @@
   - Parameters: `title: String`, optional `systemImage: String?`.
 - `WorkoutRow`
   - Parameters: `workout: Workout`.
+- `AIAssistantCard`
+  - Parameters: `action: () -> Void`.
+- `AIAssistantViewModel`
+  - Owns `prompt`, `planPreference`, `messages`, `recommendation`, `isLoading`, and `errorMessage`.
+  - Calls `AIAssistantService.sendMessage` and `AIAssistantService.generateAIRecommendation`.
+  - Is owned by `FitnessAppTabView`, so chat history and generated plan survive closing/reopening the AI Assistant sheet during the current app session.
+- `ProfileAccountCard`
+  - Parameters: `username: String`, `email: String`, `logoutAction: () -> Void`.
+- `AuthInputField`
+  - Parameters: `title: String`, `systemImage: String`, `text: Binding<String>`, `isSecure: Bool`, `textContentType: UITextContentType?`, `keyboardType: UIKeyboardType`, `capitalization: TextInputAutocapitalization`.
+  - Uses custom dark input styling, lime cursor, and brighter placeholder text for readability.
 
 ## Data Bindings Used
 - `FitnessAppTabView`
   - Calls `FitnessDashboardManager.loadSummary()`.
   - Stores `FitnessDashboardSummary` in local `@State`.
+  - Stores current local user/profile state in local `@State`.
+  - Stores `AIAssistantViewModel` in `@StateObject` and resets it only on logout.
+- `AuthenticationView`
+  - Expects `onAuthenticated: (AppUser, UserFitnessProfile?) -> Void`.
+  - Uses `AuthenticationViewModel`.
+  - Register/login create a local `AppUser` and default `UserFitnessProfile`.
+  - Auth fields use explicit light labels, brighter placeholders, light typed text, and lime cursor/icons for dark-mode readability.
+  - Google CTA is disabled while Firebase is paused.
+- `OnboardingView`
+  - Expects `profile: UserFitnessProfile`, `isSaving: Bool`, `onComplete: (UserFitnessProfile) -> Void`.
+  - Captures calorie target, workout duration, weight, age, and fitness level, then returns an updated profile with `onboardingCompleted: true`.
+  - Numeric inputs intentionally start empty instead of using default profile values, show labels above each field, show readable placeholders, and disable Save until all numbers are valid.
 - `HomeView`
   - Expects `FitnessDashboardSummary`.
   - Uses `CalorieProgress`, `Workout?`, `PermissionStatus`.
+  - Expects `onOpenAssistant: () -> Void`.
 - `WorkoutsView`
   - Expects `CalorieProgress`.
   - Calls `WorkoutRecommendationService.recommendations(for:)`.
+  - Displays `ExerciseCatalogService.defaultExercises`.
+- `AIAssistantView`
+  - Expects `userId: String`, `profile: UserFitnessProfile?`, and `exercises: [ExerciseCatalogItem]`.
+  - Sends chat messages to the local/proxy AI service and renders user/assistant bubbles.
+  - Generates an AI workout plan from the current profile, local exercise catalog, and optional plan request text.
+  - Disables plan generation when the profile is missing.
 - `CoachView`
-  - Expects `PermissionStatus` for camera state.
-  - Does not start camera capture yet.
+  - Owns `CameraSessionManager` and `ExerciseFormAnalyzer`.
+  - Requests camera permission, starts/stops capture, switches front/back camera, and sends sample buffers to Vision body-pose analysis.
+  - Loads exercise names from the local default catalog.
+  - Shows a selected-exercise guide in the camera card with instructions, body focus, intensity, level, and kcal/min.
+  - Displays `FormFeedback` score, confidence, rep count, message, and issues.
+  - Shows the live repetition count beside the exercise picker, so users do not need to scroll down while exercising.
+  - Builds a local session summary across multiple selected exercises, including total reps, per-exercise reps, detected duration, and estimated calories from each exercise's `kcalPerMinute`.
+  - Rep counting supports push-ups, squats, lunges, burpees, sit-ups, jumping jacks, mountain climbers, and plank feedback.
 - `ProfileView`
   - Expects `FitnessDashboardSummary`.
-  - Uses `CalorieProgress` and `[AppReadinessItem]`.
+  - Expects `username: String`, `email: String`, `profile: UserFitnessProfile?`, `isSavingProfile: Bool`, `saveProfileAction: (UserFitnessProfile) -> Void`, and `logoutAction: () -> Void`.
+  - Uses local profile values for target calories, workout duration, weight, age, and fitness level.
+  - Saves edited profile data back into `FitnessAppTabView` state.
 
 ## Notes for QA Agent
 - Build verified with:
   - `xcodebuild -project Fitnessapp/Fitnessapp.xcodeproj -scheme Fitnessapp -sdk iphonesimulator -derivedDataPath /private/tmp/FitnessappDerivedData build -quiet`
-- The UI now matches the agreed 4-tab app structure: Home, Workouts, Coach, Profile.
-- Permission prompt buttons are intentionally not present yet because `NSHealthShareUsageDescription`, `NSHealthUpdateUsageDescription`, and `NSCameraUsageDescription` are still missing.
-- Coach screen is a placeholder UI until Info.plist privacy strings and a real camera preview wrapper are added.
+- Current UI refresh uses the installed Sentry-inspired `DESIGN.md`: midnight violet background, raised violet cards, lime primary actions, pink secondary accents, and custom dark form fields.
+- Navigation and tab bars use fixed theme appearances to avoid turning black when a scroll view reaches its bottom/top edge.
+- Firebase is paused/disabled in the app target for now.
+- Login/register/profile/exercise catalog are local-only so camera and Vision movement detection can be tested first.
+- AI assistant requires `Fitnessapp/ai-proxy` running at `http://127.0.0.1:8787` for simulator use.
+- AI workout plan generation may return an AI plan or a fast rule-based fallback when DeepSeek takes too long; the UI should still render both response sources.
+- For physical iPhone testing, the AI proxy URL must point to a reachable backend/LAN address instead of `127.0.0.1`.
+- `NSCameraUsageDescription` is configured in generated Info.plist build settings.
+- Coach screen now uses a real `AVCaptureVideoPreviewLayer`; camera behavior must be tested on a physical iPhone because the simulator may not provide usable camera input.
+- Verify the movement guide changes immediately when selecting Running, Walking, Squats, Push-ups, Jumping Jacks, Plank, Lunges, Burpees, Mountain Climbers, and Sit-ups.
+- Coach session duration and calories are estimated from time between successful body-pose feedback frames, so QA should validate behavior when the user leaves frame, switches exercises, stops the camera, and resumes.
 - Workouts screen currently lists recommendations but has no workout detail route.
-- Profile screen shows readiness status but does not yet allow editing the daily calorie goal.
+- Profile screen edits local profile state only; Firebase persistence can be restored later.
 - Test Dynamic Type on small screens, especially `HomeCalorieCard` and `ProfileReadinessCard`.
-- Test VoiceOver labels for tab items, progress ring, readiness badges, and workout rows.
+- Test VoiceOver labels for auth fields, onboarding fields, tab items, progress ring, readiness badges, and workout rows.

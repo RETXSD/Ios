@@ -5,11 +5,11 @@ struct TodayHeaderView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Today")
                 .font(.largeTitle.bold())
-                .foregroundStyle(.white)
+                .foregroundStyle(FitnessTheme.text)
 
             Text("Your calorie goal, active energy, and next workout.")
                 .font(.body)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(FitnessTheme.textMuted)
         }
         .accessibilityElement(children: .combine)
     }

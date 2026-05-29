@@ -11,10 +11,10 @@ struct HomeStatusCard: View {
                     .foregroundStyle(FitnessTheme.gold)
 
                 LabeledContent("Apple Health", value: summary.healthKitStatus.rawValue)
-                    .foregroundStyle(.white, FitnessTheme.secondary)
+                    .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)
 
                 LabeledContent("Camera", value: summary.cameraStatus.rawValue)
-                    .foregroundStyle(.white, FitnessTheme.secondary)
+                    .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)
             }
         }
     }

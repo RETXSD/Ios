@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     let summary: FitnessDashboardSummary
     let isLoading: Bool
+    let onOpenAssistant: () -> Void
 
     var body: some View {
         NavigationStack {
@@ -11,11 +12,12 @@ struct HomeView: View {
                     TodayHeaderView()
                     HomeCalorieCard(progress: summary.progress, isLoading: isLoading)
                     HomeRecommendationCard(workout: summary.todayRecommendation)
+                    AIAssistantCard(action: onOpenAssistant)
                     HomeStatusCard(summary: summary)
                 }
                 .padding()
             }
-            .background(FitnessTheme.background)
+            .background { FitnessTheme.pageBackground }
             .navigationTitle("Home")
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(FitnessTheme.background, for: .navigationBar)

@@ -6,13 +6,13 @@ struct CalorieProgressRing: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(.secondary.opacity(0.2), lineWidth: 16)
+                .stroke(FitnessTheme.border, lineWidth: 16)
 
             Circle()
                 .trim(from: 0, to: progress.progressRatio)
                 .stroke(
                     LinearGradient(
-                        colors: [FitnessTheme.primary, FitnessTheme.secondary],
+                        colors: [FitnessTheme.primary, FitnessTheme.gold],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     ),
@@ -23,11 +23,11 @@ struct CalorieProgressRing: View {
             VStack(spacing: 2) {
                 Text(progress.progressRatio, format: .percent.precision(.fractionLength(0)))
                     .font(.title2.bold())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(FitnessTheme.text)
 
                 Text("goal")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(FitnessTheme.textMuted)
             }
         }
         .frame(width: 112, height: 112)

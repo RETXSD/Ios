@@ -1,0 +1,132 @@
+[debug] [2026-05-27T09:21:49.383Z] ----------------------------------------------------------------------
+[debug] [2026-05-27T09:21:49.390Z] Command:       /usr/local/Cellar/node/23.10.0_1/bin/node /usr/local/bin/firebase deploy --only firestore:rules --project fitnessapp2-c0d7c
+[debug] [2026-05-27T09:21:49.391Z] CLI Version:   14.0.1
+[debug] [2026-05-27T09:21:49.391Z] Platform:      darwin
+[debug] [2026-05-27T09:21:49.391Z] Node Version:  v23.10.0
+[debug] [2026-05-27T09:21:49.391Z] Time:          Wed May 27 2026 17:21:49 GMT+0800 (China Standard Time)
+[debug] [2026-05-27T09:21:49.391Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-27T09:21:49.395Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-05-27T09:21:49.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-27T09:21:49.633Z] > authorizing via signed-in user (andrianandrian761@gmail.com)
+[debug] [2026-05-27T09:21:49.633Z] [iam] checking project fitnessapp2-c0d7c for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2026-05-27T09:21:49.634Z] Checked if tokens are valid: false, expires at: 1778206097560
+[debug] [2026-05-27T09:21:49.634Z] Checked if tokens are valid: false, expires at: 1778206097560
+[debug] [2026-05-27T09:21:49.635Z] > refreshing access token with scopes: []
+[debug] [2026-05-27T09:21:49.637Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-27T09:21:49.637Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-27T09:21:52.064Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-05-27T09:21:52.065Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-05-27T09:21:53.075Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-27T09:21:53.075Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-27T09:21:53.091Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions [none]
+[debug] [2026-05-27T09:21:53.091Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions x-goog-quota-user=projects/fitnessapp2-c0d7c
+[debug] [2026-05-27T09:21:53.091Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2026-05-27T09:21:58.326Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions 200
+[debug] [2026-05-27T09:21:58.326Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'fitnessapp2-c0d7c'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2026-05-27T09:21:58.331Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:21:58.332Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:21:58.332Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test [none]
+[debug] [2026-05-27T09:21:58.332Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test [omitted]
+[debug] [2026-05-27T09:22:02.191Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test 200
+[debug] [2026-05-27T09:22:02.191Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2026-05-27T09:22:02.193Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:02.194Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:02.195Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases pageSize=10&pageToken=
+[debug] [2026-05-27T09:22:03.117Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases 200
+[debug] [2026-05-27T09:22:03.118Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases {"releases":[{"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/ba5bb1c6-f1cd-4179-8c82-eac2c21e0821","createTime":"2026-05-27T08:48:05.083411Z","updateTime":"2026-05-27T08:48:05.083411Z"}]}
+[debug] [2026-05-27T09:22:03.118Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:03.118Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:03.118Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/ba5bb1c6-f1cd-4179-8c82-eac2c21e0821 [none]
+[debug] [2026-05-27T09:22:04.864Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/ba5bb1c6-f1cd-4179-8c82-eac2c21e0821 200
+[debug] [2026-05-27T09:22:04.865Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/ba5bb1c6-f1cd-4179-8c82-eac2c21e0821 [omitted]
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2026-05-27T09:22:04.866Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:04.866Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:04.867Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets [none]
+[debug] [2026-05-27T09:22:04.867Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets [omitted]
+[debug] [2026-05-27T09:22:06.513Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets 200
+[debug] [2026-05-27T09:22:06.513Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets {"name":"projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc","source":{"files":[{"content":"rules_version = '2';\n\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    function signedIn() {\n      return request.auth != null;\n    }\n\n    function isOwner(userId) {\n      return signedIn() && request.auth.uid == userId;\n    }\n\n    match /users/{userId} {\n      allow create: if isOwner(userId)\n        && request.resource.data.uid == userId;\n      allow read, update, delete: if isOwner(userId);\n    }\n\n    match /exercises/{exerciseId} {\n      allow read: if signedIn();\n      allow create, update, delete: if false;\n    }\n\n    match /recommendations/{recommendationId} {\n      allow create: if signedIn()\n        && request.resource.data.userId == request.auth.uid;\n      allow read, update, delete: if signedIn()\n        && resource.data.userId == request.auth.uid;\n    }\n\n    match /aiMessages/{messageId} {\n      allow create: if signedIn()\n        && request.resource.data.userId == request.auth.uid;\n      allow read, update, delete: if signedIn()\n        && resource.data.userId == request.auth.uid;\n    }\n  }\n}\n","name":"firestore.rules"}]},"createTime":"2026-05-27T09:22:06.873231Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2026-05-27T09:22:06.513Z] [rules] created ruleset projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc
+[debug] [2026-05-27T09:22:06.514Z] [rules] releasing cloud.firestore/(default) with ruleset projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc
+[debug] [2026-05-27T09:22:06.515Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:06.515Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:22:06.515Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) [none]
+[debug] [2026-05-27T09:22:06.515Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) {"release":{"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default)","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc"}}
+[debug] [2026-05-27T09:22:08.155Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) 200
+[debug] [2026-05-27T09:22:08.155Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) {"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc","createTime":"2026-05-27T08:48:05.083411Z","updateTime":"2026-05-27T09:22:08.526508Z"}
+[debug] [2026-05-27T09:22:08.155Z] [rules] updated release projects/fitnessapp2-c0d7c/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/fitnessapp2-c0d7c/overview
+[debug] [2026-05-27T09:32:53.108Z] ----------------------------------------------------------------------
+[debug] [2026-05-27T09:32:53.139Z] Command:       /usr/local/Cellar/node/23.10.0_1/bin/node /usr/local/bin/firebase deploy --only firestore:rules --project fitnessapp2-c0d7c
+[debug] [2026-05-27T09:32:53.140Z] CLI Version:   14.0.1
+[debug] [2026-05-27T09:32:53.140Z] Platform:      darwin
+[debug] [2026-05-27T09:32:53.140Z] Node Version:  v23.10.0
+[debug] [2026-05-27T09:32:53.140Z] Time:          Wed May 27 2026 17:32:53 GMT+0800 (China Standard Time)
+[debug] [2026-05-27T09:32:53.140Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-27T09:32:53.346Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-27T09:32:53.347Z] > authorizing via signed-in user (andrianandrian761@gmail.com)
+[debug] [2026-05-27T09:32:53.347Z] [iam] checking project fitnessapp2-c0d7c for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2026-05-27T09:32:53.349Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:32:53.349Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:32:53.352Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions [none]
+[debug] [2026-05-27T09:32:53.352Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions x-goog-quota-user=projects/fitnessapp2-c0d7c
+[debug] [2026-05-27T09:32:53.352Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2026-05-27T09:32:58.707Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions 200
+[debug] [2026-05-27T09:32:58.707Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fitnessapp2-c0d7c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'fitnessapp2-c0d7c'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2026-05-27T09:32:58.713Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:32:58.713Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:32:58.713Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test [none]
+[debug] [2026-05-27T09:32:58.713Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test [omitted]
+[debug] [2026-05-27T09:33:04.089Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test 200
+[debug] [2026-05-27T09:33:04.089Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2026-05-27T09:33:04.091Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:04.091Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:04.092Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases pageSize=10&pageToken=
+[debug] [2026-05-27T09:33:05.729Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases 200
+[debug] [2026-05-27T09:33:05.729Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases {"releases":[{"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc","createTime":"2026-05-27T08:48:05.083411Z","updateTime":"2026-05-27T09:22:08.526508Z"}]}
+[debug] [2026-05-27T09:33:05.730Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:05.730Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:05.730Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc [none]
+[debug] [2026-05-27T09:33:07.373Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc 200
+[debug] [2026-05-27T09:33:07.373Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets/1cf0058f-8a4f-406d-8be2-4cb700fa1acc [omitted]
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2026-05-27T09:33:07.375Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:07.375Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:07.375Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets [none]
+[debug] [2026-05-27T09:33:07.376Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets [omitted]
+[debug] [2026-05-27T09:33:09.103Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets 200
+[debug] [2026-05-27T09:33:09.104Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/rulesets {"name":"projects/fitnessapp2-c0d7c/rulesets/eee2349f-68e1-467f-895f-a3f594d739b1","source":{"files":[{"content":"rules_version = '2';\n\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    function signedIn() {\n      return request.auth != null;\n    }\n\n    function isOwner(userId) {\n      return signedIn() && request.auth.uid == userId;\n    }\n\n    match /users/{userId} {\n      allow create: if isOwner(userId)\n        && request.resource.data.uid == userId;\n      allow read, update, delete: if isOwner(userId);\n    }\n\n    match /exercises/{exerciseId} {\n      allow read: if signedIn();\n      allow create: if signedIn()\n        && request.resource.data.id == exerciseId\n        && request.resource.data.isActive == true;\n      allow update, delete: if false;\n    }\n\n    match /recommendations/{recommendationId} {\n      allow create: if signedIn()\n        && request.resource.data.userId == request.auth.uid;\n      allow read, update, delete: if signedIn()\n        && resource.data.userId == request.auth.uid;\n    }\n\n    match /aiMessages/{messageId} {\n      allow create: if signedIn()\n        && request.resource.data.userId == request.auth.uid;\n      allow read, update, delete: if signedIn()\n        && resource.data.userId == request.auth.uid;\n    }\n  }\n}\n","name":"firestore.rules"}]},"createTime":"2026-05-27T09:33:09.459551Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2026-05-27T09:33:09.104Z] [rules] created ruleset projects/fitnessapp2-c0d7c/rulesets/eee2349f-68e1-467f-895f-a3f594d739b1
+[debug] [2026-05-27T09:33:09.104Z] [rules] releasing cloud.firestore/(default) with ruleset projects/fitnessapp2-c0d7c/rulesets/eee2349f-68e1-467f-895f-a3f594d739b1
+[debug] [2026-05-27T09:33:09.105Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:09.105Z] Checked if tokens are valid: true, expires at: 1779877312075
+[debug] [2026-05-27T09:33:09.105Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) [none]
+[debug] [2026-05-27T09:33:09.105Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) {"release":{"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default)","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/eee2349f-68e1-467f-895f-a3f594d739b1"}}
+[debug] [2026-05-27T09:33:09.967Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) 200
+[debug] [2026-05-27T09:33:09.967Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/fitnessapp2-c0d7c/releases/cloud.firestore/(default) {"name":"projects/fitnessapp2-c0d7c/releases/cloud.firestore","rulesetName":"projects/fitnessapp2-c0d7c/rulesets/eee2349f-68e1-467f-895f-a3f594d739b1","createTime":"2026-05-27T08:48:05.083411Z","updateTime":"2026-05-27T09:33:10.322434Z"}
+[debug] [2026-05-27T09:33:09.967Z] [rules] updated release projects/fitnessapp2-c0d7c/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/fitnessapp2-c0d7c/overview

@@ -1,23 +1,51 @@
 import SwiftUI
 
 struct CoachFeedbackCard: View {
+    let feedback: FormFeedback?
+    let errorMessage: String?
+
     var body: some View {
         FitnessCard {
             VStack(alignment: .leading, spacing: 12) {
                 Label("Live Feedback", systemImage: "waveform.path.ecg")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.secondary)
+                    .foregroundStyle(FitnessTheme.primary)
 
-                LabeledContent("Form Score", value: "Waiting")
-                    .foregroundStyle(.white, .secondary)
+                LabeledContent("Exercise", value: feedback?.exerciseName ?? "Waiting")
+                    .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)
 
-                LabeledContent("Rep Count", value: "0")
-                    .foregroundStyle(.white, .secondary)
+                LabeledContent("Form Score", value: scoreText)
+                    .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)
 
-                Text("Vision body-pose feedback is ready in the manager layer. The camera UI can be connected after privacy strings are configured.")
+                LabeledContent("Confidence", value: confidenceText)
+                    .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)
+
+                Text(feedback?.message ?? errorMessage ?? "Start the camera and move fully into frame.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(feedback == nil && errorMessage != nil ? .red : FitnessTheme.textMuted)
+
+                if let issues = feedback?.detectedIssues, !issues.isEmpty {
+                    Text(issues.joined(separator: ", "))
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(FitnessTheme.gold)
+                }
             }
         }
+    }
+
+    private var scoreText: String {
+        guard let score = feedback?.score else {
+            return "Waiting"
+        }
+
+        return "\(Int(score * 100))%"
+    }
+
+    private var confidenceText: String {
+        guard let confidence = feedback?.confidence else {
+            return "Waiting"
+        }
+
+        return "\(Int(confidence * 100))%"
     }
 }

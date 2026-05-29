@@ -7,23 +7,36 @@ struct StatusBadge: View {
     var body: some View {
         Label(title, systemImage: symbolName)
             .font(.caption.bold())
-            .foregroundStyle(color)
+            .foregroundStyle(status == .ready ? FitnessTheme.ink : color)
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
-            .background(color.opacity(0.14), in: Capsule())
+            .background(backgroundColor, in: RoundedRectangle(cornerRadius: 6))
             .accessibilityElement(children: .combine)
+    }
+
+    private var backgroundColor: Color {
+        switch status {
+        case .ready:
+            return FitnessTheme.primary
+        case .needsAttention:
+            return FitnessTheme.gold.opacity(0.18)
+        case .blocked:
+            return .red.opacity(0.18)
+        case .notChecked:
+            return FitnessTheme.surface
+        }
     }
 
     private var color: Color {
         switch status {
         case .ready:
-            return .green
+            return FitnessTheme.primary
         case .needsAttention:
-            return FitnessTheme.secondary
+            return FitnessTheme.gold
         case .blocked:
             return .red
         case .notChecked:
-            return .gray
+            return FitnessTheme.textMuted
         }
     }
 

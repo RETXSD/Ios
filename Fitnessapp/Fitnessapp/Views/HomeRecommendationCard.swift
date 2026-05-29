@@ -8,12 +8,12 @@ struct HomeRecommendationCard: View {
             VStack(alignment: .leading, spacing: 12) {
                 Label("Today's Workout", systemImage: "bolt.heart.fill")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.secondary)
+                    .foregroundStyle(FitnessTheme.primary)
 
                 if let workout {
                     Text(workout.title)
                         .font(.title3.bold())
-                        .foregroundStyle(.white)
+                        .foregroundStyle(FitnessTheme.text)
 
                     HStack {
                         MetricPill(workout.category.rawValue)
@@ -23,11 +23,11 @@ struct HomeRecommendationCard: View {
 
                     Text(workout.recommendationReason)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(FitnessTheme.textMuted)
                 } else {
                     Label("A recommendation will appear after dashboard data loads.", systemImage: "figure.walk")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(FitnessTheme.textMuted)
                 }
             }
         }

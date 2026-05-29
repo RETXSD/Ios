@@ -10,18 +10,18 @@ struct WorkoutRow: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Text(workout.title)
                             .font(.headline)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(FitnessTheme.text)
 
                         Text(workout.recommendationReason)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(FitnessTheme.textMuted)
                     }
 
                     Spacer()
 
                     Text(workout.estimatedActiveCalories, format: .number.precision(.fractionLength(0)))
                         .font(.headline.bold())
-                        .foregroundStyle(FitnessTheme.secondary)
+                        .foregroundStyle(FitnessTheme.primary)
                         .accessibilityLabel("Estimated calories")
                 }
 

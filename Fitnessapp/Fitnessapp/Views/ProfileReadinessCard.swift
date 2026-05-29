@@ -15,7 +15,7 @@ struct ProfileReadinessCard: View {
                         HStack(alignment: .firstTextBaseline) {
                             Text(item.title)
                                 .font(.subheadline.bold())
-                                .foregroundStyle(.white)
+                                .foregroundStyle(FitnessTheme.text)
 
                             Spacer()
 
@@ -24,7 +24,7 @@ struct ProfileReadinessCard: View {
 
                         Text(item.detail)
                             .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(FitnessTheme.textMuted)
                     }
                 }
             }

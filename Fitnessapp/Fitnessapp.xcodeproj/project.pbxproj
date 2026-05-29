@@ -22,13 +22,13 @@
 		0F33CA6D2FAD9001001C74FE /* CompletedWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA6C2FAD9001001C74FE /* CompletedWorkout.swift */; };
 		0F33CA6F2FAD9001001C74FE /* CalorieProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */; };
 		0F33CA712FAD9001001C74FE /* AppReadinessItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */; };
-		0F33CA832FAD9101001C74FE /* FitnessDashboardSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */; };
 		0F33CA752FAD9001001C74FE /* CalorieGoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */; };
 		0F33CA772FAD9001001C74FE /* WorkoutRecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */; };
 		0F33CA792FAD9001001C74FE /* AppReadinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA782FAD9001001C74FE /* AppReadinessService.swift */; };
 		0F33CA7D2FAD9001001C74FE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA7C2FAD9001001C74FE /* HealthKitManager.swift */; };
 		0F33CA7F2FAD9001001C74FE /* CameraSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA7E2FAD9001001C74FE /* CameraSessionManager.swift */; };
 		0F33CA812FAD9001001C74FE /* ExerciseFormAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA802FAD9001001C74FE /* ExerciseFormAnalyzer.swift */; };
+		0F33CA832FAD9101001C74FE /* FitnessDashboardSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */; };
 		0F33CA852FAD9101001C74FE /* FitnessDashboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CA842FAD9101001C74FE /* FitnessDashboardManager.swift */; };
 		0F33CB012FADA001001C74FE /* FitnessTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB002FADA001001C74FE /* FitnessTheme.swift */; };
 		0F33CB032FADA001001C74FE /* FitnessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB022FADA001001C74FE /* FitnessCard.swift */; };
@@ -50,6 +50,40 @@
 		0F33CB272FADA001001C74FE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB262FADA001001C74FE /* ProfileView.swift */; };
 		0F33CB292FADA001001C74FE /* GoalSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */; };
 		0F33CB2B2FADA001001C74FE /* ProfileReadinessCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */; };
+		0F33CB2D2FADA101001C74FE /* AppLaunchStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB2C2FADA101001C74FE /* AppLaunchStage.swift */; };
+		0F33CB2F2FADA101001C74FE /* AuthMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB2E2FADA101001C74FE /* AuthMode.swift */; };
+		0F33CB312FADA101001C74FE /* FitnessLevelOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB302FADA101001C74FE /* FitnessLevelOption.swift */; };
+		0F33CB332FADA101001C74FE /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB322FADA101001C74FE /* AuthenticationView.swift */; };
+		0F33CB352FADA101001C74FE /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB342FADA101001C74FE /* AuthHeaderView.swift */; };
+		0F33CB372FADA101001C74FE /* AuthFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB362FADA101001C74FE /* AuthFormView.swift */; };
+		0F33CB392FADA101001C74FE /* AuthActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB382FADA101001C74FE /* AuthActionButtonsView.swift */; };
+		0F33CB3B2FADA101001C74FE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB3A2FADA101001C74FE /* OnboardingView.swift */; };
+		0F33CB3D2FADA101001C74FE /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB3C2FADA101001C74FE /* OnboardingHeaderView.swift */; };
+		0F33CB3F2FADA101001C74FE /* AIAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB3E2FADA101001C74FE /* AIAssistantView.swift */; };
+		0F33CB412FADA101001C74FE /* AIAssistantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB402FADA101001C74FE /* AIAssistantCard.swift */; };
+		0F33CB432FADA101001C74FE /* ProfileAccountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CB422FADA101001C74FE /* ProfileAccountCard.swift */; };
+		0F33CC012FADB001001C74FE /* FirebaseFitnessEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC002FADB001001C74FE /* FirebaseFitnessEnums.swift */; };
+		0F33CC032FADB001001C74FE /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC022FADB001001C74FE /* AppUser.swift */; };
+		0F33CC052FADB001001C74FE /* UserFitnessProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC042FADB001001C74FE /* UserFitnessProfile.swift */; };
+		0F33CC072FADB001001C74FE /* ExerciseCatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC062FADB001001C74FE /* ExerciseCatalogItem.swift */; };
+		0F33CC092FADB001001C74FE /* WorkoutRecommendationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC082FADB001001C74FE /* WorkoutRecommendationItem.swift */; };
+		0F33CC0B2FADB001001C74FE /* WorkoutRecommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC0A2FADB001001C74FE /* WorkoutRecommendation.swift */; };
+		0F33CC0D2FADB001001C74FE /* AIMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC0C2FADB001001C74FE /* AIMessage.swift */; };
+		0F33CC0F2FADB001001C74FE /* FirebaseServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC0E2FADB001001C74FE /* FirebaseServiceError.swift */; };
+		0F33CC112FADB001001C74FE /* FirebasePayloadMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC102FADB001001C74FE /* FirebasePayloadMapper.swift */; };
+		0F33CC132FADB001001C74FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC122FADB001001C74FE /* AuthService.swift */; };
+		0F33CC152FADB001001C74FE /* UserProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC142FADB001001C74FE /* UserProfileService.swift */; };
+		0F33CC172FADB001001C74FE /* ExerciseCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC162FADB001001C74FE /* ExerciseCatalogService.swift */; };
+		0F33CC192FADB001001C74FE /* RecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC182FADB001001C74FE /* RecommendationService.swift */; };
+		0F33CC1B2FADB001001C74FE /* AIAssistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC1A2FADB001001C74FE /* AIAssistantService.swift */; };
+		0F33CC212FADB301001C74FE /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC202FADB301001C74FE /* AuthenticationViewModel.swift */; };
+		0F33CC232FADB301001C74FE /* AuthInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC222FADB301001C74FE /* AuthInputField.swift */; };
+		0F33CC2F2FADB701001C74FE /* AIAssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC2E2FADB701001C74FE /* AIAssistantViewModel.swift */; };
+		0F33CC252FADB401001C74FE /* ExerciseCatalogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC242FADB401001C74FE /* ExerciseCatalogRow.swift */; };
+		0F33CC272FADB401001C74FE /* ProfileEditorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC262FADB401001C74FE /* ProfileEditorCard.swift */; };
+		0F33CC292FADB501001C74FE /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC282FADB501001C74FE /* CameraPreviewView.swift */; };
+		0F33CC2B2FADB601001C74FE /* CoachExerciseSessionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC2A2FADB601001C74FE /* CoachExerciseSessionSummary.swift */; };
+		0F33CC2D2FADB601001C74FE /* CoachSessionSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33CC2C2FADB601001C74FE /* CoachSessionSummaryCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,13 +103,13 @@
 		0F33CA6C2FAD9001001C74FE /* CompletedWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWorkout.swift; sourceTree = "<group>"; };
 		0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieProgress.swift; sourceTree = "<group>"; };
 		0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReadinessItem.swift; sourceTree = "<group>"; };
-		0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboardSummary.swift; sourceTree = "<group>"; };
 		0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieGoalService.swift; sourceTree = "<group>"; };
 		0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecommendationService.swift; sourceTree = "<group>"; };
 		0F33CA782FAD9001001C74FE /* AppReadinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReadinessService.swift; sourceTree = "<group>"; };
 		0F33CA7C2FAD9001001C74FE /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		0F33CA7E2FAD9001001C74FE /* CameraSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSessionManager.swift; sourceTree = "<group>"; };
 		0F33CA802FAD9001001C74FE /* ExerciseFormAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFormAnalyzer.swift; sourceTree = "<group>"; };
+		0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboardSummary.swift; sourceTree = "<group>"; };
 		0F33CA842FAD9101001C74FE /* FitnessDashboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboardManager.swift; sourceTree = "<group>"; };
 		0F33CB002FADA001001C74FE /* FitnessTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTheme.swift; sourceTree = "<group>"; };
 		0F33CB022FADA001001C74FE /* FitnessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCard.swift; sourceTree = "<group>"; };
@@ -97,6 +131,41 @@
 		0F33CB262FADA001001C74FE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryCard.swift; sourceTree = "<group>"; };
 		0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReadinessCard.swift; sourceTree = "<group>"; };
+		0F33CB2C2FADA101001C74FE /* AppLaunchStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchStage.swift; sourceTree = "<group>"; };
+		0F33CB2E2FADA101001C74FE /* AuthMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMode.swift; sourceTree = "<group>"; };
+		0F33CB302FADA101001C74FE /* FitnessLevelOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLevelOption.swift; sourceTree = "<group>"; };
+		0F33CB322FADA101001C74FE /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		0F33CB342FADA101001C74FE /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		0F33CB362FADA101001C74FE /* AuthFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormView.swift; sourceTree = "<group>"; };
+		0F33CB382FADA101001C74FE /* AuthActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthActionButtonsView.swift; sourceTree = "<group>"; };
+		0F33CB3A2FADA101001C74FE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0F33CB3C2FADA101001C74FE /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
+		0F33CB3E2FADA101001C74FE /* AIAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantView.swift; sourceTree = "<group>"; };
+		0F33CB402FADA101001C74FE /* AIAssistantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantCard.swift; sourceTree = "<group>"; };
+		0F33CB422FADA101001C74FE /* ProfileAccountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountCard.swift; sourceTree = "<group>"; };
+		0F33CC002FADB001001C74FE /* FirebaseFitnessEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFitnessEnums.swift; sourceTree = "<group>"; };
+		0F33CC022FADB001001C74FE /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		0F33CC042FADB001001C74FE /* UserFitnessProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFitnessProfile.swift; sourceTree = "<group>"; };
+		0F33CC062FADB001001C74FE /* ExerciseCatalogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCatalogItem.swift; sourceTree = "<group>"; };
+		0F33CC082FADB001001C74FE /* WorkoutRecommendationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecommendationItem.swift; sourceTree = "<group>"; };
+		0F33CC0A2FADB001001C74FE /* WorkoutRecommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecommendation.swift; sourceTree = "<group>"; };
+		0F33CC0C2FADB001001C74FE /* AIMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMessage.swift; sourceTree = "<group>"; };
+		0F33CC0E2FADB001001C74FE /* FirebaseServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceError.swift; sourceTree = "<group>"; };
+		0F33CC102FADB001001C74FE /* FirebasePayloadMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePayloadMapper.swift; sourceTree = "<group>"; };
+		0F33CC122FADB001001C74FE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0F33CC142FADB001001C74FE /* UserProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileService.swift; sourceTree = "<group>"; };
+		0F33CC162FADB001001C74FE /* ExerciseCatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCatalogService.swift; sourceTree = "<group>"; };
+		0F33CC182FADB001001C74FE /* RecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationService.swift; sourceTree = "<group>"; };
+		0F33CC1A2FADB001001C74FE /* AIAssistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantService.swift; sourceTree = "<group>"; };
+		0F33CC1C2FADB201001C74FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F33CC202FADB301001C74FE /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		0F33CC222FADB301001C74FE /* AuthInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInputField.swift; sourceTree = "<group>"; };
+		0F33CC2E2FADB701001C74FE /* AIAssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantViewModel.swift; sourceTree = "<group>"; };
+		0F33CC242FADB401001C74FE /* ExerciseCatalogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCatalogRow.swift; sourceTree = "<group>"; };
+		0F33CC262FADB401001C74FE /* ProfileEditorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditorCard.swift; sourceTree = "<group>"; };
+		0F33CC282FADB501001C74FE /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		0F33CC2A2FADB601001C74FE /* CoachExerciseSessionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachExerciseSessionSummary.swift; sourceTree = "<group>"; };
+		0F33CC2C2FADB601001C74FE /* CoachSessionSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachSessionSummaryCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +200,7 @@
 			children = (
 				0F33CA402FAD80AF001C74FE /* FitnessappApp.swift */,
 				0F33CA422FAD80AF001C74FE /* ContentView.swift */,
+				0F33CC1C2FADB201001C74FE /* GoogleService-Info.plist */,
 				0F33CB0C2FADA001001C74FE /* Components */,
 				0F33CB0E2FADA001001C74FE /* Views */,
 				0F33CA5D2FAD9001001C74FE /* Models */,
@@ -142,6 +212,14 @@
 				0F33CA462FAD80B5001C74FE /* Preview Content */,
 			);
 			path = Fitnessapp;
+			sourceTree = "<group>";
+		};
+		0F33CA462FAD80B5001C74FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0F33CA472FAD80B5001C74FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0F33CA5D2FAD9001001C74FE /* Models */ = {
@@ -157,6 +235,13 @@
 				0F33CA6E2FAD9001001C74FE /* CalorieProgress.swift */,
 				0F33CA702FAD9001001C74FE /* AppReadinessItem.swift */,
 				0F33CA822FAD9101001C74FE /* FitnessDashboardSummary.swift */,
+				0F33CC002FADB001001C74FE /* FirebaseFitnessEnums.swift */,
+				0F33CC022FADB001001C74FE /* AppUser.swift */,
+				0F33CC042FADB001001C74FE /* UserFitnessProfile.swift */,
+				0F33CC062FADB001001C74FE /* ExerciseCatalogItem.swift */,
+				0F33CC082FADB001001C74FE /* WorkoutRecommendationItem.swift */,
+				0F33CC0A2FADB001001C74FE /* WorkoutRecommendation.swift */,
+				0F33CC0C2FADB001001C74FE /* AIMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +252,13 @@
 				0F33CA742FAD9001001C74FE /* CalorieGoalService.swift */,
 				0F33CA762FAD9001001C74FE /* WorkoutRecommendationService.swift */,
 				0F33CA782FAD9001001C74FE /* AppReadinessService.swift */,
+				0F33CC0E2FADB001001C74FE /* FirebaseServiceError.swift */,
+				0F33CC102FADB001001C74FE /* FirebasePayloadMapper.swift */,
+				0F33CC122FADB001001C74FE /* AuthService.swift */,
+				0F33CC142FADB001001C74FE /* UserProfileService.swift */,
+				0F33CC162FADB001001C74FE /* ExerciseCatalogService.swift */,
+				0F33CC182FADB001001C74FE /* RecommendationService.swift */,
+				0F33CC1A2FADB001001C74FE /* AIAssistantService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,29 +291,41 @@
 			isa = PBXGroup;
 			children = (
 				0F33CB102FADA001001C74FE /* FitnessTab.swift */,
+				0F33CB2C2FADA101001C74FE /* AppLaunchStage.swift */,
+				0F33CB2E2FADA101001C74FE /* AuthMode.swift */,
+				0F33CB302FADA101001C74FE /* FitnessLevelOption.swift */,
 				0F33CB122FADA001001C74FE /* FitnessAppTabView.swift */,
+				0F33CB322FADA101001C74FE /* AuthenticationView.swift */,
+				0F33CB342FADA101001C74FE /* AuthHeaderView.swift */,
+				0F33CB362FADA101001C74FE /* AuthFormView.swift */,
+				0F33CB382FADA101001C74FE /* AuthActionButtonsView.swift */,
+				0F33CC202FADB301001C74FE /* AuthenticationViewModel.swift */,
+				0F33CC222FADB301001C74FE /* AuthInputField.swift */,
+				0F33CB3A2FADA101001C74FE /* OnboardingView.swift */,
+				0F33CB3C2FADA101001C74FE /* OnboardingHeaderView.swift */,
 				0F33CB142FADA001001C74FE /* HomeView.swift */,
 				0F33CB162FADA001001C74FE /* TodayHeaderView.swift */,
 				0F33CB182FADA001001C74FE /* HomeCalorieCard.swift */,
 				0F33CB1A2FADA001001C74FE /* HomeRecommendationCard.swift */,
 				0F33CB1C2FADA001001C74FE /* HomeStatusCard.swift */,
+				0F33CB3E2FADA101001C74FE /* AIAssistantView.swift */,
+				0F33CC2E2FADB701001C74FE /* AIAssistantViewModel.swift */,
+				0F33CB402FADA101001C74FE /* AIAssistantCard.swift */,
 				0F33CB1E2FADA001001C74FE /* WorkoutsView.swift */,
+				0F33CC242FADB401001C74FE /* ExerciseCatalogRow.swift */,
 				0F33CB202FADA001001C74FE /* CoachView.swift */,
 				0F33CB222FADA001001C74FE /* CoachPreviewCard.swift */,
 				0F33CB242FADA001001C74FE /* CoachFeedbackCard.swift */,
+				0F33CC2A2FADB601001C74FE /* CoachExerciseSessionSummary.swift */,
+				0F33CC2C2FADB601001C74FE /* CoachSessionSummaryCard.swift */,
+				0F33CC282FADB501001C74FE /* CameraPreviewView.swift */,
 				0F33CB262FADA001001C74FE /* ProfileView.swift */,
+				0F33CB422FADA101001C74FE /* ProfileAccountCard.swift */,
+				0F33CC262FADB401001C74FE /* ProfileEditorCard.swift */,
 				0F33CB282FADA001001C74FE /* GoalSummaryCard.swift */,
 				0F33CB2A2FADA001001C74FE /* ProfileReadinessCard.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0F33CA462FAD80B5001C74FE /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0F33CA472FAD80B5001C74FE /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +433,43 @@
 				0F33CB212FADA001001C74FE /* CoachView.swift in Sources */,
 				0F33CB232FADA001001C74FE /* CoachPreviewCard.swift in Sources */,
 				0F33CB252FADA001001C74FE /* CoachFeedbackCard.swift in Sources */,
+				0F33CC2B2FADB601001C74FE /* CoachExerciseSessionSummary.swift in Sources */,
+				0F33CC2D2FADB601001C74FE /* CoachSessionSummaryCard.swift in Sources */,
+				0F33CC292FADB501001C74FE /* CameraPreviewView.swift in Sources */,
 				0F33CB272FADA001001C74FE /* ProfileView.swift in Sources */,
 				0F33CB292FADA001001C74FE /* GoalSummaryCard.swift in Sources */,
 				0F33CB2B2FADA001001C74FE /* ProfileReadinessCard.swift in Sources */,
+				0F33CB2D2FADA101001C74FE /* AppLaunchStage.swift in Sources */,
+				0F33CB2F2FADA101001C74FE /* AuthMode.swift in Sources */,
+				0F33CB312FADA101001C74FE /* FitnessLevelOption.swift in Sources */,
+				0F33CB332FADA101001C74FE /* AuthenticationView.swift in Sources */,
+				0F33CB352FADA101001C74FE /* AuthHeaderView.swift in Sources */,
+				0F33CB372FADA101001C74FE /* AuthFormView.swift in Sources */,
+				0F33CB392FADA101001C74FE /* AuthActionButtonsView.swift in Sources */,
+				0F33CC212FADB301001C74FE /* AuthenticationViewModel.swift in Sources */,
+				0F33CC232FADB301001C74FE /* AuthInputField.swift in Sources */,
+				0F33CC252FADB401001C74FE /* ExerciseCatalogRow.swift in Sources */,
+				0F33CC272FADB401001C74FE /* ProfileEditorCard.swift in Sources */,
+				0F33CB3B2FADA101001C74FE /* OnboardingView.swift in Sources */,
+				0F33CB3D2FADA101001C74FE /* OnboardingHeaderView.swift in Sources */,
+				0F33CB3F2FADA101001C74FE /* AIAssistantView.swift in Sources */,
+				0F33CC2F2FADB701001C74FE /* AIAssistantViewModel.swift in Sources */,
+				0F33CB412FADA101001C74FE /* AIAssistantCard.swift in Sources */,
+				0F33CB432FADA101001C74FE /* ProfileAccountCard.swift in Sources */,
+				0F33CC012FADB001001C74FE /* FirebaseFitnessEnums.swift in Sources */,
+				0F33CC032FADB001001C74FE /* AppUser.swift in Sources */,
+				0F33CC052FADB001001C74FE /* UserFitnessProfile.swift in Sources */,
+				0F33CC072FADB001001C74FE /* ExerciseCatalogItem.swift in Sources */,
+				0F33CC092FADB001001C74FE /* WorkoutRecommendationItem.swift in Sources */,
+				0F33CC0B2FADB001001C74FE /* WorkoutRecommendation.swift in Sources */,
+				0F33CC0D2FADB001001C74FE /* AIMessage.swift in Sources */,
+				0F33CC0F2FADB001001C74FE /* FirebaseServiceError.swift in Sources */,
+				0F33CC112FADB001001C74FE /* FirebasePayloadMapper.swift in Sources */,
+				0F33CC132FADB001001C74FE /* AuthService.swift in Sources */,
+				0F33CC152FADB001001C74FE /* UserProfileService.swift in Sources */,
+				0F33CC172FADB001001C74FE /* ExerciseCatalogService.swift in Sources */,
+				0F33CC192FADB001001C74FE /* RecommendationService.swift in Sources */,
+				0F33CC1B2FADB001001C74FE /* AIAssistantService.swift in Sources */,
 				0F33CA4A2FAD80B5001C74FE /* Persistence.swift in Sources */,
 				0F33CA432FAD80AF001C74FE /* ContentView.swift in Sources */,
 				0F33CA412FAD80AF001C74FE /* FitnessappApp.swift in Sources */,
@@ -460,11 +598,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fitnessapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 97D5VZKT4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fitness Coach uses the camera to analyze exercise form on device.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -475,8 +618,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.njxzc.Fitnessapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CorneliusAdrianPutraa.Fitnessapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,11 +632,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Fitnessapp/Preview Content\"";
+				DEVELOPMENT_TEAM = 97D5VZKT4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fitness Coach uses the camera to analyze exercise form on device.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,8 +652,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.njxzc.Fitnessapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CorneliusAdrianPutraa.Fitnessapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
