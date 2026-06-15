@@ -11,7 +11,7 @@ struct ExerciseCatalogRow: View {
                         .font(.title3.weight(.semibold))
                         .foregroundStyle(FitnessTheme.primary)
                         .frame(width: 34, height: 34)
-                        .background(FitnessTheme.violetDeep, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
+                        .background(FitnessTheme.primaryTint, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
                         .accessibilityHidden(true)
 
                     VStack(alignment: .leading, spacing: 5) {

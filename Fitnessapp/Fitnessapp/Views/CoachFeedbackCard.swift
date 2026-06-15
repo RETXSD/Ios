@@ -22,7 +22,7 @@ struct CoachFeedbackCard: View {
 
                 Text(feedback?.message ?? errorMessage ?? "Start the camera and move fully into frame.")
                     .font(.subheadline)
-                    .foregroundStyle(feedback == nil && errorMessage != nil ? .red : FitnessTheme.textMuted)
+                    .foregroundStyle(feedback == nil && errorMessage != nil ? FitnessTheme.error : FitnessTheme.textMuted)
 
                 if let issues = feedback?.detectedIssues, !issues.isEmpty {
                     Text(issues.joined(separator: ", "))

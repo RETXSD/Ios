@@ -15,6 +15,7 @@ struct CoachView: View {
     @State private var lastFeedbackExercise: String?
 
     private let analyzer = ExerciseFormAnalyzer()
+    @StateObject private var audioFeedbackManager = FormAudioFeedbackManager()
 
     var body: some View {
         NavigationStack {
@@ -26,6 +27,7 @@ struct CoachView: View {
                         isRunning: cameraManager.isRunning,
                         selectedPosition: cameraManager.selectedPosition,
                         liveRepCount: liveRepCount,
+                        skeleton: feedbackForSelectedExercise?.skeleton,
                         selectedExercise: $selectedExercise,
                         exercises: exercises,
                         startAction: startCamera,
@@ -121,9 +123,14 @@ struct CoachView: View {
         defer { isAnalyzingFrame = false }
 
         do {
-            let newFeedback = try await analyzer.analyzeFrame(sampleBuffer, exercise: selectedExercise)
+            let newFeedback = try await analyzer.analyzeFrame(
+                sampleBuffer,
+                exercise: selectedExercise,
+                cameraPosition: cameraManager.selectedPosition
+            )
             feedback = newFeedback
             updateSessionSummary(with: newFeedback)
+            audioFeedbackManager.speakCorrectionIfNeeded(for: newFeedback)
             errorMessage = nil
         } catch ExerciseFormAnalyzerError.noBodyPoseDetected {
             errorMessage = "Move into frame so Vision can detect your body pose."
@@ -167,6 +174,7 @@ struct CoachView: View {
     private func resetFeedbackClock() {
         lastFeedbackAt = nil
         lastFeedbackExercise = nil
+        audioFeedbackManager.reset()
     }
 
     private func normalizedExerciseName(_ name: String) -> String {

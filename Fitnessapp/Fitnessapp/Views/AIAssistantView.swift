@@ -33,7 +33,7 @@ struct AIAssistantView: View {
             VStack(alignment: .leading, spacing: 12) {
                 Label("AI Coach", systemImage: "sparkles")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
 
                 Text("Ask for workout guidance or generate a plan from your profile, calorie target, available time, and exercise catalog.")
                     .font(.body)
@@ -43,7 +43,7 @@ struct AIAssistantView: View {
                 if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.red)
+                        .foregroundStyle(FitnessTheme.error)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
@@ -60,36 +60,34 @@ struct AIAssistantView: View {
 
                     Spacer()
 
-                if viewModel.isLoading {
-                    ProgressView()
-                        .tint(FitnessTheme.primary)
-                }
-            }
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Plan request")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(FitnessTheme.textMuted)
-
-                TextField("Example: no running today, low impact only", text: $viewModel.planPreference, axis: .vertical)
-                    .lineLimit(2...)
-                    .foregroundStyle(FitnessTheme.text)
-                    .tint(FitnessTheme.primary)
-                    .padding(12)
-                    .frame(minHeight: 58, alignment: .topLeading)
-                    .background(FitnessTheme.surface, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: FitnessTheme.controlRadius)
-                            .stroke(FitnessTheme.border, lineWidth: 1)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .tint(FitnessTheme.primary)
                     }
-            }
-
-            Button(action: generateRecommendation) {
-                Label("Generate Plan", systemImage: "wand.and.stars")
-                        .frame(maxWidth: .infinity, minHeight: 44)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(FitnessTheme.primary)
+
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Plan request")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(FitnessTheme.textMuted)
+
+                    TextField("Example: no running today, low impact only", text: $viewModel.planPreference, axis: .vertical)
+                        .lineLimit(2...)
+                        .foregroundStyle(FitnessTheme.text)
+                        .tint(FitnessTheme.primary)
+                        .padding(12)
+                        .frame(minHeight: 58, alignment: .topLeading)
+                        .background(FitnessTheme.surface, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: FitnessTheme.controlRadius)
+                                .stroke(FitnessTheme.border, lineWidth: 1)
+                        }
+                }
+
+                Button(action: generateRecommendation) {
+                    Label("Generate Plan", systemImage: "wand.and.stars")
+                }
+                .buttonStyle(FitnessPrimaryButtonStyle())
                 .disabled(viewModel.isLoading || profile == nil)
 
                 if let recommendation = viewModel.recommendation {
@@ -101,7 +99,7 @@ struct AIAssistantView: View {
                     HStack {
                         MetricPill("\(Int(recommendation.totalEstimatedCalories.rounded())) kcal", systemImage: "flame.fill")
                         MetricPill("\(recommendation.dailyWorkoutDurationMinutes) min", systemImage: "clock.fill")
-                        MetricPill("AI", systemImage: "sparkles")
+                        MetricPill(recommendation.source == .ai ? "AI" : "Backup", systemImage: recommendation.source == .ai ? "sparkles" : "arrow.triangle.2.circlepath")
                     }
 
                     VStack(spacing: 10) {
@@ -153,10 +151,8 @@ struct AIAssistantView: View {
 
                 Button(action: sendPrompt) {
                     Label("Send", systemImage: "paperplane.fill")
-                        .frame(maxWidth: .infinity, minHeight: 44)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(FitnessTheme.primary)
+                .buttonStyle(FitnessPrimaryButtonStyle())
                 .disabled(viewModel.prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || viewModel.isLoading)
             }
         }

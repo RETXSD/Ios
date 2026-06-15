@@ -8,7 +8,7 @@ struct AIAssistantCard: View {
             VStack(alignment: .leading, spacing: 12) {
                 Label("AI Assistant", systemImage: "sparkles")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
 
                 Text("Ask for a workout plan based on your calorie target, duration, age, weight, and fitness level.")
                     .font(.subheadline)
@@ -17,8 +17,7 @@ struct AIAssistantCard: View {
                 Button(action: action) {
                     Label("Open AI Coach", systemImage: "message.fill")
                 }
-                    .buttonStyle(.bordered)
-                    .tint(FitnessTheme.primary)
+                    .buttonStyle(FitnessSecondaryButtonStyle())
                     .frame(minHeight: 44)
             }
         }

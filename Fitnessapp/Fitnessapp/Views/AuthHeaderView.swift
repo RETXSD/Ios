@@ -5,12 +5,12 @@ struct AuthHeaderView: View {
         VStack(alignment: .leading, spacing: 18) {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(FitnessTheme.secondary.opacity(0.18))
+                    .fill(FitnessTheme.primary.opacity(0.15))
                     .frame(width: 54, height: 54)
 
                 Image(systemName: "flame.fill")
                     .font(.title2.weight(.bold))
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
             }
 
             VStack(alignment: .leading, spacing: 8) {

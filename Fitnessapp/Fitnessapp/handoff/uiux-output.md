@@ -15,7 +15,7 @@
 - `Views/HomeView.swift` — Home dashboard with daily active energy, calorie goal progress, recommendation, and status.
 - `Views/WorkoutsView.swift` — Workout recommendations list based on current calorie progress.
 - `Views/ExerciseCatalogRow.swift` — Local exercise catalog row with kcal/min, category, intensity, level, equipment, and instructions.
-- `Views/CameraPreviewView.swift` — UIKit bridge for `AVCaptureVideoPreviewLayer`.
+- `Views/CameraPreviewView.swift` — UIKit bridge for `AVCaptureVideoPreviewLayer`; configures portrait orientation/front-camera mirroring on the preview layer and draws the live Vision skeleton using `AVCaptureVideoPreviewLayer.layerPointConverted(fromCaptureDevicePoint:)` so overlay points track `resizeAspectFill`, crop, orientation, and mirroring.
 - `Views/CoachView.swift` — Live camera/form-coach screen with permission request, start/stop, front/back switch, exercise picker, and feedback area.
 - `Views/ProfileView.swift` — Goal summary and app readiness checklist.
 - `Views/ProfileEditorCard.swift` — Editable local fitness profile form for calorie target, workout duration, weight, age, and fitness level.
@@ -33,7 +33,8 @@
 - `Views/CoachSessionSummaryCard.swift` — Current workout session summary with total reps, calories, time, and per-exercise rows.
 - `Views/GoalSummaryCard.swift` — Profile daily goal summary.
 - `Views/ProfileReadinessCard.swift` — Profile readiness checklist.
-- `DESIGN.md` — Installed with `npx getdesign@latest add sentry` and used as the visual direction for the refreshed dark violet/lime/pink theme.
+- `design-system.md` — Source design tokens for the refreshed black/neon-lime fitness UI.
+- `design-preview.html` — Visual reference used to match card, button, stat, input, and tab styling.
 
 ## Navigation Flow
 - Root view:
@@ -56,17 +57,19 @@
 
 ## Components Available
 - `FitnessTheme`
-  - Shared Sentry-inspired colors: `background`, `surface`, `surfaceRaised`, `primary` lime, `secondary` violet, `gold` pink, `violetDeep`, `ink`, `text`, `textMuted`, `border`, and `focusRing`.
-  - Shared dimensions: `cardRadius`, `controlRadius`.
-  - `pageBackground` provides the app-wide midnight canvas.
+  - Shared design-system colors: deep black `background`, dark surfaces, neon lime `primary`, warning gold, error red, white text levels, translucent borders, and lime glow.
+  - Shared dimensions: 16pt card radius, 12pt control radius, pill-style CTA buttons, and opaque tab/nav surfaces.
+  - `pageBackground` provides the app-wide black canvas.
+  - Provides `FitnessPrimaryButtonStyle`, `FitnessSecondaryButtonStyle`, and `FitnessDestructiveButtonStyle`.
 - `FitnessCard`
-  - Generic card container with raised violet surface, 12px corner radius, subtle border, and dark shadow.
+  - Generic card container with dark raised surface, lime left accent bar, subtle border, shadow, and glow.
 - `CalorieProgressRing`
   - Parameters: `progress: CalorieProgress`.
 - `StatusBadge`
   - Parameters: `title: String`, `status: AppReadinessItemStatus`.
 - `MetricPill`
   - Parameters: `title: String`, optional `systemImage: String?`.
+  - Uses neon-lime pill styling from the design system.
 - `WorkoutRow`
   - Parameters: `workout: Workout`.
 - `AIAssistantCard`
@@ -114,6 +117,8 @@
   - Owns `CameraSessionManager` and `ExerciseFormAnalyzer`.
   - Requests camera permission, starts/stops capture, switches front/back camera, and sends sample buffers to Vision body-pose analysis.
   - Loads exercise names from the local default catalog.
+  - Passes `FormFeedback.skeleton` into `CoachPreviewCard` so `CameraPreviewView` can render live body skeleton lines and joint markers on the same preview layer as the camera feed.
+  - Passes the selected camera position into `CameraPreviewView`, keeping front/back preview mirroring aligned with the skeleton overlay.
   - Shows a selected-exercise guide in the camera card with instructions, body focus, intensity, level, and kcal/min.
   - Displays `FormFeedback` score, confidence, rep count, message, and issues.
   - Shows the live repetition count beside the exercise picker, so users do not need to scroll down while exercising.
@@ -128,13 +133,17 @@
 ## Notes for QA Agent
 - Build verified with:
   - `xcodebuild -project Fitnessapp/Fitnessapp.xcodeproj -scheme Fitnessapp -sdk iphonesimulator -derivedDataPath /private/tmp/FitnessappDerivedData build -quiet`
-- Current UI refresh uses the installed Sentry-inspired `DESIGN.md`: midnight violet background, raised violet cards, lime primary actions, pink secondary accents, and custom dark form fields.
+- Current UI refresh follows `design-system.md` and `design-preview.html`: deep black background, dark raised cards, neon-lime CTA/buttons/pills, white text hierarchy, gold warning accent, and custom dark form fields.
+- Primary actions use custom pill button styles instead of default bordered-prominent styling, so button text remains readable against neon lime.
 - Navigation and tab bars use fixed theme appearances to avoid turning black when a scroll view reaches its bottom/top edge.
 - Firebase is paused/disabled in the app target for now.
 - Login/register/profile/exercise catalog are local-only so camera and Vision movement detection can be tested first.
 - AI assistant requires `Fitnessapp/ai-proxy` running at `http://127.0.0.1:8787` for simulator use.
+- Physical iPhone builds use `http://10.24.203.75:8787`, matching the Mac's current Wi-Fi IP.
 - AI workout plan generation may return an AI plan or a fast rule-based fallback when DeepSeek takes too long; the UI should still render both response sources.
-- For physical iPhone testing, the AI proxy URL must point to a reachable backend/LAN address instead of `127.0.0.1`.
+- Plan request text is respected by both AI and backup plans, including common exclusions like no running, jangan burpees, low impact, and ringan.
+- Chat responses are restricted by the proxy to fitness/gym/workout topics. Off-topic questions return a short redirect message instead of calling the AI model.
+- If the Mac changes Wi-Fi networks or gets a different IP, update the device URL in `AIAssistantService.defaultBaseURL`.
 - `NSCameraUsageDescription` is configured in generated Info.plist build settings.
 - Coach screen now uses a real `AVCaptureVideoPreviewLayer`; camera behavior must be tested on a physical iPhone because the simulator may not provide usable camera input.
 - Verify the movement guide changes immediately when selecting Running, Walking, Squats, Push-ups, Jumping Jacks, Plank, Lunges, Burpees, Mountain Climbers, and Sit-ups.

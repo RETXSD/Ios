@@ -10,8 +10,8 @@ const apiKey = process.env.DEEPSEEK_API_KEY;
 const deepSeekURL = "https://api.deepseek.com/chat/completions";
 const chatModel = resolveModelName(process.env.DEEPSEEK_CHAT_MODEL || "deepseek-chat");
 const recommendationModel = resolveModelName(process.env.DEEPSEEK_RECOMMENDATION_MODEL || "deepseek-v4-pro");
-const deepSeekTimeoutMilliseconds = Number(process.env.DEEPSEEK_TIMEOUT_MS || 25000);
-const recommendationTimeoutMilliseconds = Number(process.env.RECOMMENDATION_TIMEOUT_MS || 18000);
+const deepSeekTimeoutMilliseconds = Number(process.env.DEEPSEEK_TIMEOUT_MS || 120000);
+const recommendationTimeoutMilliseconds = Number(process.env.RECOMMENDATION_TIMEOUT_MS || 120000);
 
 function resolveModelName(modelName) {
   switch (String(modelName || "").trim().toLowerCase()) {
@@ -133,6 +133,7 @@ function recommendationSystemPrompt() {
     "Return strict JSON only.",
     "Use only exercises from the provided catalog.",
     "Return 2 to 4 items only.",
+    "Respect the user's plan preference. If the user says they do not want an exercise, do not include it.",
     "Do not include medical claims.",
     "Keep the plan realistic for the user's profile, calorie target, and available minutes.",
     "The JSON schema is:",
@@ -235,6 +236,158 @@ function buildFallbackRecommendation(payload, reason) {
   };
 }
 
+function applyPlanPreference(exercises, planPreference) {
+  const preference = normalizePreference(planPreference);
+  if (!preference) {
+    return exercises;
+  }
+
+  let filtered = exercises.filter((exercise) => !isExcludedByPreference(exercise, preference));
+
+  if (mentionsLowImpact(preference)) {
+    filtered = filtered.filter((exercise) => exercise.intensity !== "high");
+  }
+
+  if (mentionsLightWorkout(preference)) {
+    filtered = filtered.filter((exercise) => exercise.intensity !== "high");
+  }
+
+  return filtered.length > 0 ? filtered : exercises;
+}
+
+function normalizePreference(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s-]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isExcludedByPreference(exercise, preference) {
+  const wantsExclusion = [
+    "no",
+    "not",
+    "dont",
+    "don't",
+    "do not",
+    "without",
+    "avoid",
+    "skip",
+    "jangan",
+    "ga",
+    "gak",
+    "nggak",
+    "tidak",
+    "males",
+    "malas"
+  ].some((word) => preference.includes(word));
+
+  if (!wantsExclusion) {
+    return false;
+  }
+
+  return exerciseAliases(exercise).some((alias) => preference.includes(alias));
+}
+
+function exerciseAliases(exercise) {
+  const baseAliases = [
+    String(exercise.id || "").toLowerCase(),
+    String(exercise.name || "").toLowerCase(),
+    String(exercise.name || "").toLowerCase().replace(/-/g, " ")
+  ].filter(Boolean);
+
+  const customAliases = {
+    running: ["run", "running", "lari", "jog", "jogging"],
+    walking: ["walk", "walking", "jalan", "jalan kaki"],
+    squats: ["squat", "squats"],
+    "push-ups": ["push up", "push-up", "pushups", "push ups"],
+    "jumping-jacks": ["jumping jack", "jumping jacks"],
+    plank: ["plank"],
+    lunges: ["lunge", "lunges"],
+    burpees: ["burpee", "burpees"],
+    "mountain-climbers": ["mountain climber", "mountain climbers"],
+    "sit-ups": ["sit up", "sit-up", "situps", "sit ups"]
+  };
+
+  return [...baseAliases, ...(customAliases[exercise.id] || [])];
+}
+
+function mentionsLowImpact(preference) {
+  return preference.includes("low impact") || preference.includes("no jump") || preference.includes("tanpa lompat");
+}
+
+function mentionsLightWorkout(preference) {
+  return preference.includes("light") || preference.includes("easy") || preference.includes("ringan") || preference.includes("santai");
+}
+
+function isFitnessRelatedMessage(message) {
+  const normalizedMessage = normalizePreference(message);
+  if (!normalizedMessage) {
+    return false;
+  }
+
+  const fitnessKeywords = [
+    "workout",
+    "exercise",
+    "gym",
+    "fitness",
+    "training",
+    "train",
+    "cardio",
+    "strength",
+    "calorie",
+    "kcal",
+    "burn",
+    "weight",
+    "muscle",
+    "body",
+    "form",
+    "reps",
+    "sets",
+    "squat",
+    "push",
+    "plank",
+    "lunge",
+    "burpee",
+    "running",
+    "walking",
+    "run",
+    "walk",
+    "stretch",
+    "mobility",
+    "recovery",
+    "diet",
+    "protein",
+    "latihan",
+    "olahraga",
+    "gym",
+    "kalori",
+    "berat",
+    "otot",
+    "badan",
+    "gerakan",
+    "repetisi",
+    "set",
+    "lari",
+    "jalan",
+    "pemanasan",
+    "pendinginan",
+    "peregangan"
+  ];
+
+  return fitnessKeywords.some((keyword) => normalizedMessage.includes(keyword));
+}
+
+function restrictedTopicMessage(userId) {
+  return {
+    id: randomUUID(),
+    userId: String(userId || ""),
+    role: "assistant",
+    content: "I can only help with fitness, gym, workout plans, exercise form, calories, and recovery. Ask me something about your training and I’ll help.",
+    createdAt: isoDate()
+  };
+}
+
 function balancedSelection(exercises) {
   const categories = ["cardio", "strength", "core", "fullBody", "mobility", "recovery"];
   const selected = [];
@@ -270,7 +423,14 @@ function allocateDurations(totalMinutes, itemCount) {
 async function handleRecommendation(request, response) {
   const payload = await readJSON(request);
   const profile = payload.profile;
-  const exercises = Array.isArray(payload.exercises) ? payload.exercises : [];
+  const exercises = applyPlanPreference(
+    Array.isArray(payload.exercises) ? payload.exercises : [],
+    payload.planPreference
+  );
+  const recommendationPayload = {
+    ...payload,
+    exercises
+  };
 
   try {
     const content = await withTimeout(
@@ -279,12 +439,12 @@ async function handleRecommendation(request, response) {
           { role: "system", content: recommendationSystemPrompt() },
           {
             role: "user",
-          content: [
-            `User profile: ${JSON.stringify(profile)}`,
-            `Plan preference: ${String(payload.planPreference || "No extra preference.")}`,
-            "Exercise catalog:",
-            exerciseCatalogText(exercises)
-          ].join("\n\n")
+            content: [
+              `User profile: ${JSON.stringify(profile)}`,
+              `Plan preference: ${String(payload.planPreference || "No extra preference.")}`,
+              "Exercise catalog:",
+              exerciseCatalogText(exercises)
+            ].join("\n\n")
           }
         ],
         {
@@ -299,9 +459,9 @@ async function handleRecommendation(request, response) {
     );
 
     const parsed = JSON.parse(content);
-    sendJSON(response, 200, buildRecommendation(payload, parsed));
+    sendJSON(response, 200, buildRecommendation(recommendationPayload, parsed));
   } catch (error) {
-    sendJSON(response, 200, buildFallbackRecommendation(payload, error.name === "AbortError" ? "request timed out" : error.message));
+    sendJSON(response, 200, buildFallbackRecommendation(recommendationPayload, error.name === "AbortError" ? "request timed out" : error.message));
   }
 }
 
@@ -316,13 +476,25 @@ function withTimeout(promise, timeoutMilliseconds, message) {
 
 async function handleChat(request, response) {
   const payload = await readJSON(request);
+  const message = String(payload.message || "");
+
+  if (!isFitnessRelatedMessage(message)) {
+    sendJSON(response, 200, restrictedTopicMessage(payload.userId));
+    return;
+  }
+
   const content = await deepSeekChat(
     [
       {
         role: "system",
-        content: "You are a concise fitness assistant. Give practical workout guidance and avoid medical diagnosis."
+        content: [
+          "You are a concise fitness assistant for a workout app.",
+          "Only answer questions about fitness, gym training, workout plans, exercise form, calories, mobility, recovery, and closely related nutrition.",
+          "If the user asks about anything outside fitness, politely refuse and redirect them to a workout or gym question.",
+          "Avoid medical diagnosis."
+        ].join(" ")
       },
-      { role: "user", content: String(payload.message || "") }
+      { role: "user", content: message }
     ],
     {
       model: chatModel,

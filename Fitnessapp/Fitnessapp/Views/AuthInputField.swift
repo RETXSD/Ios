@@ -18,7 +18,7 @@ struct AuthInputField: View {
             HStack(spacing: 12) {
                 Image(systemName: systemImage)
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
                     .frame(width: 22)
                     .accessibilityHidden(true)
 

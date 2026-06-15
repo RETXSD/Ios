@@ -60,8 +60,7 @@ struct ProfileEditorCard: View {
                     }
                     .frame(maxWidth: .infinity, minHeight: 48)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(FitnessTheme.primary)
+                .buttonStyle(FitnessPrimaryButtonStyle())
                 .disabled(isSaving)
             }
         }

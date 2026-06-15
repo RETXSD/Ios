@@ -85,7 +85,7 @@ struct CoachSessionSummaryCard: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
-        .background(FitnessTheme.violetDeep, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
+        .background(FitnessTheme.primaryTint, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
     }
 
     private func durationText(_ duration: TimeInterval) -> String {

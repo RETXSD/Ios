@@ -100,7 +100,7 @@ struct FitnessAppTabView: View {
         .tint(FitnessTheme.primary)
         .background { FitnessTheme.pageBackground }
         .toolbarColorScheme(.dark, for: .tabBar)
-        .toolbarBackground(FitnessTheme.background, for: .tabBar)
+        .toolbarBackground(FitnessTheme.tabBackground, for: .tabBar)
         .toolbarBackground(.visible, for: .tabBar)
     }
 
@@ -185,8 +185,11 @@ struct FitnessAppTabView: View {
     private func configureNavigationAppearance() {
         let tabAppearance = UITabBarAppearance()
         tabAppearance.configureWithOpaqueBackground()
-        tabAppearance.backgroundColor = UIColor(FitnessTheme.background)
+        tabAppearance.backgroundColor = UIColor(FitnessTheme.tabBackground)
         tabAppearance.shadowColor = UIColor(FitnessTheme.border)
+        configureTabItems(tabAppearance.stackedLayoutAppearance)
+        configureTabItems(tabAppearance.inlineLayoutAppearance)
+        configureTabItems(tabAppearance.compactInlineLayoutAppearance)
 
         UITabBar.appearance().standardAppearance = tabAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabAppearance
@@ -201,5 +204,12 @@ struct FitnessAppTabView: View {
         UINavigationBar.appearance().standardAppearance = navigationAppearance
         UINavigationBar.appearance().compactAppearance = navigationAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navigationAppearance
+    }
+
+    private func configureTabItems(_ itemAppearance: UITabBarItemAppearance) {
+        itemAppearance.selected.iconColor = UIColor(FitnessTheme.primary)
+        itemAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor(FitnessTheme.primary)]
+        itemAppearance.normal.iconColor = UIColor(FitnessTheme.textTertiary)
+        itemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor(FitnessTheme.textTertiary)]
     }
 }

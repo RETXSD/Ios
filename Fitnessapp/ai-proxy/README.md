@@ -23,9 +23,13 @@ DEEPSEEK_CHAT_MODEL=flash
 DEEPSEEK_FLASH_MODEL=deepseek-chat
 DEEPSEEK_RECOMMENDATION_MODEL=pro
 DEEPSEEK_PRO_MODEL=deepseek-v4-pro
+DEEPSEEK_TIMEOUT_MS=120000
+RECOMMENDATION_TIMEOUT_MS=120000
 ```
 
 `flash` and `pro` are local aliases. Change `DEEPSEEK_FLASH_MODEL` or `DEEPSEEK_PRO_MODEL` if DeepSeek gives you a different exact model id.
+
+Recommendation generation can be slow with pro models, so the proxy waits up to 120 seconds before using the backup plan.
 
 ## Endpoints
 

@@ -8,7 +8,7 @@ struct HomeStatusCard: View {
             VStack(alignment: .leading, spacing: 12) {
                 Label("Status", systemImage: "checkmark.shield.fill")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
 
                 LabeledContent("Apple Health", value: summary.healthKitStatus.rawValue)
                     .foregroundStyle(FitnessTheme.text, FitnessTheme.textMuted)

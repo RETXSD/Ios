@@ -21,8 +21,7 @@ struct ProfileAccountCard: View {
                 Button(action: logoutAction) {
                     Label("Logout", systemImage: "rectangle.portrait.and.arrow.right")
                 }
-                    .buttonStyle(.bordered)
-                    .tint(.red)
+                    .buttonStyle(FitnessDestructiveButtonStyle())
                     .frame(minHeight: 44)
             }
         }

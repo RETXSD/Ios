@@ -18,13 +18,13 @@ struct MetricPill: View {
             }
         }
         .font(.caption.bold())
-        .foregroundStyle(FitnessTheme.text)
+        .foregroundStyle(FitnessTheme.primary)
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
-        .background(FitnessTheme.violetDeep, in: RoundedRectangle(cornerRadius: 6))
+        .background(FitnessTheme.primary.opacity(0.15), in: Capsule())
         .overlay {
-            RoundedRectangle(cornerRadius: 6)
-                .stroke(FitnessTheme.border, lineWidth: 1)
+            Capsule()
+                .stroke(FitnessTheme.primary.opacity(0.3), lineWidth: 1)
         }
     }
 }

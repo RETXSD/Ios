@@ -8,6 +8,7 @@ struct FormFeedback: Identifiable, Equatable {
     let repCount: Int
     let message: String
     let detectedIssues: [String]
+    let skeleton: PoseSkeleton?
     let createdAt: Date
 
     init(
@@ -18,6 +19,7 @@ struct FormFeedback: Identifiable, Equatable {
         repCount: Int,
         message: String,
         detectedIssues: [String] = [],
+        skeleton: PoseSkeleton? = nil,
         createdAt: Date = Date.now
     ) {
         self.id = id
@@ -27,6 +29,7 @@ struct FormFeedback: Identifiable, Equatable {
         self.repCount = repCount
         self.message = message
         self.detectedIssues = detectedIssues
+        self.skeleton = skeleton
         self.createdAt = createdAt
     }
 }

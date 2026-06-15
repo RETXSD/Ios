@@ -8,7 +8,7 @@ struct ProfileReadinessCard: View {
             VStack(alignment: .leading, spacing: 14) {
                 Label("App Readiness", systemImage: "checkmark.seal.fill")
                     .font(.headline)
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
 
                 ForEach(items) { item in
                     VStack(alignment: .leading, spacing: 6) {

@@ -194,7 +194,9 @@ final class CameraSessionManager: NSObject, ObservableObject {
 
         if let connection = videoOutput.connection(with: .video) {
             connection.videoOrientation = .portrait
-            connection.isVideoMirrored = position == .front && connection.isVideoMirroringSupported
+            if connection.isVideoMirroringSupported {
+                connection.isVideoMirrored = false
+            }
         }
 
         isConfigured = true

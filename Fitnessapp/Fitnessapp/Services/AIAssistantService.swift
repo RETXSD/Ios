@@ -16,7 +16,7 @@ final class AIAssistantService {
     private let urlSession: URLSession
 
     init(
-        baseURL: URL = URL(string: "http://127.0.0.1:8787")!,
+        baseURL: URL = AIAssistantService.defaultBaseURL,
         urlSession: URLSession = AIAssistantService.defaultURLSession
     ) {
         self.baseURL = baseURL
@@ -66,9 +66,17 @@ final class AIAssistantService {
 
     private static var defaultURLSession: URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 120
-        configuration.timeoutIntervalForResource = 120
+        configuration.timeoutIntervalForRequest = 180
+        configuration.timeoutIntervalForResource = 180
         return URLSession(configuration: configuration)
+    }
+
+    private static var defaultBaseURL: URL {
+        #if targetEnvironment(simulator)
+        return URL(string: "http://127.0.0.1:8787")!
+        #else
+        return URL(string: "http://10.24.203.75:8787")!
+        #endif
     }
 }
 

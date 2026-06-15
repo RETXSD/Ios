@@ -18,19 +18,15 @@ struct AuthActionButtonsView: View {
                     Label(authMode.rawValue, systemImage: authMode == .register ? "person.badge.plus.fill" : "arrow.right.circle.fill")
                 }
                 .font(.headline)
-                .frame(maxWidth: .infinity, minHeight: 50)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(FitnessTheme.primary)
+            .buttonStyle(FitnessPrimaryButtonStyle())
             .disabled(isLoading)
 
             Button(action: googleAction) {
                 Label("Continue with Google", systemImage: "g.circle.fill")
                     .font(.headline)
-                    .frame(maxWidth: .infinity, minHeight: 50)
             }
-            .buttonStyle(.bordered)
-            .tint(FitnessTheme.primary)
+            .buttonStyle(FitnessSecondaryButtonStyle())
             .disabled(isLoading)
         }
     }

@@ -10,8 +10,16 @@ enum ExerciseFormAnalyzerError: Error {
 final class ExerciseFormAnalyzer {
     private let analyzerActor = BodyPoseAnalyzerActor()
 
-    func analyzeFrame(_ sampleBuffer: CMSampleBuffer, exercise: String) async throws -> FormFeedback {
-        try await analyzerActor.analyzeFrame(sampleBuffer, exercise: exercise)
+    func analyzeFrame(
+        _ sampleBuffer: CMSampleBuffer,
+        exercise: String,
+        cameraPosition: CameraPosition = .front
+    ) async throws -> FormFeedback {
+        try await analyzerActor.analyzeFrame(
+            sampleBuffer,
+            exercise: exercise,
+            cameraPosition: cameraPosition
+        )
     }
 }
 
@@ -46,13 +54,21 @@ private actor BodyPoseAnalyzerActor {
     private let minimumConfidence: Float = 0.5
     private var counters: [String: CounterState] = [:]
 
-    func analyzeFrame(_ sampleBuffer: CMSampleBuffer, exercise: String) throws -> FormFeedback {
+    func analyzeFrame(
+        _ sampleBuffer: CMSampleBuffer,
+        exercise: String,
+        cameraPosition: CameraPosition
+    ) throws -> FormFeedback {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             throw ExerciseFormAnalyzerError.missingImageBuffer
         }
 
         let request = VNDetectHumanBodyPoseRequest()
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
+        let handler = VNImageRequestHandler(
+            cvPixelBuffer: pixelBuffer,
+            orientation: visionOrientation(for: cameraPosition),
+            options: [:]
+        )
         try handler.perform([request])
 
         guard let observation = request.results?.first else {
@@ -62,12 +78,22 @@ private actor BodyPoseAnalyzerActor {
         return try feedback(from: observation, exercise: exercise)
     }
 
+    private func visionOrientation(for cameraPosition: CameraPosition) -> CGImagePropertyOrientation {
+        switch cameraPosition {
+        case .front:
+            return .left
+        case .back:
+            return .right
+        }
+    }
+
     private func feedback(from observation: VNHumanBodyPoseObservation, exercise: String) throws -> FormFeedback {
         let points = try observation.recognizedPoints(.all)
         let confidentPoints = points.values.filter { $0.confidence >= minimumConfidence }
         let confidence = averageConfidence(for: confidentPoints)
         let exerciseKey = normalizedExerciseName(exercise)
         let currentCount = counters[exerciseKey]?.count ?? 0
+        let skeleton = poseSkeleton(from: points)
 
         guard confidence >= minimumConfidence else {
             return FormFeedback(
@@ -76,7 +102,8 @@ private actor BodyPoseAnalyzerActor {
                 confidence: Double(confidence),
                 repCount: currentCount,
                 message: "Move fully into frame so the coach can read your form.",
-                detectedIssues: [ExerciseFormIssue.lowConfidence.rawValue]
+                detectedIssues: [ExerciseFormIssue.lowConfidence.rawValue],
+                skeleton: skeleton
             )
         }
 
@@ -95,8 +122,57 @@ private actor BodyPoseAnalyzerActor {
             confidence: Double(confidence),
             repCount: counter.count,
             message: message,
-            detectedIssues: issues.map(\.rawValue)
+            detectedIssues: issues.map(\.rawValue),
+            skeleton: skeleton
         )
+    }
+
+    private func poseSkeleton(
+        from points: [VNHumanBodyPoseObservation.JointName: VNRecognizedPoint]
+    ) -> PoseSkeleton {
+        let joints = PoseJointName.allCases.compactMap { jointName -> PoseJoint? in
+            let visionName = visionJointName(for: jointName)
+            guard let point = points[visionName], point.confidence >= 0.25 else {
+                return nil
+            }
+
+            return PoseJoint(
+                name: jointName,
+                point: point.location,
+                confidence: Double(point.confidence)
+            )
+        }
+
+        return PoseSkeleton(joints: joints)
+    }
+
+    private func visionJointName(for jointName: PoseJointName) -> VNHumanBodyPoseObservation.JointName {
+        switch jointName {
+        case .leftWrist:
+            return .leftWrist
+        case .rightWrist:
+            return .rightWrist
+        case .leftElbow:
+            return .leftElbow
+        case .rightElbow:
+            return .rightElbow
+        case .leftShoulder:
+            return .leftShoulder
+        case .rightShoulder:
+            return .rightShoulder
+        case .leftHip:
+            return .leftHip
+        case .rightHip:
+            return .rightHip
+        case .leftKnee:
+            return .leftKnee
+        case .rightKnee:
+            return .rightKnee
+        case .leftAnkle:
+            return .leftAnkle
+        case .rightAnkle:
+            return .rightAnkle
+        }
     }
 
     private func counterResult(

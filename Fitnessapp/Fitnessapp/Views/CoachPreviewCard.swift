@@ -7,6 +7,7 @@ struct CoachPreviewCard: View {
     let isRunning: Bool
     let selectedPosition: CameraPosition
     let liveRepCount: Int
+    let skeleton: PoseSkeleton?
     @Binding var selectedExercise: String
     let exercises: [ExerciseCatalogItem]
     let startAction: () -> Void
@@ -36,7 +37,11 @@ struct CoachPreviewCard: View {
                 }
 
                 ZStack {
-                    CameraPreviewView(session: session)
+                    CameraPreviewView(
+                        session: session,
+                        cameraPosition: selectedPosition,
+                        skeleton: isRunning ? skeleton : nil
+                    )
                         .opacity(isRunning ? 1 : 0)
 
                     if !isRunning {
@@ -45,7 +50,7 @@ struct CoachPreviewCard: View {
                         VStack(spacing: 12) {
                             Image(systemName: "figure.strengthtraining.traditional")
                                 .font(.largeTitle)
-                                .foregroundStyle(FitnessTheme.gold)
+                                .foregroundStyle(FitnessTheme.primary)
                                 .accessibilityHidden(true)
 
                             Text(cameraStatus == .authorized ? "Start the camera to begin form feedback." : "Allow camera access to use form feedback.")
@@ -97,17 +102,14 @@ struct CoachPreviewCard: View {
                 HStack(spacing: 10) {
                     Button(action: isRunning ? stopAction : startAction) {
                         Label(isRunning ? "Stop" : "Start", systemImage: isRunning ? "stop.fill" : "play.fill")
-                            .frame(maxWidth: .infinity, minHeight: 44)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(isRunning ? .red : FitnessTheme.primary)
+                    .buttonStyle(FitnessPrimaryButtonStyle())
 
                     Button(action: switchCameraAction) {
                         Image(systemName: "arrow.triangle.2.circlepath.camera")
-                            .frame(width: 48, height: 44)
+                            .frame(width: 48, height: 52)
                     }
-                    .buttonStyle(.bordered)
-                    .tint(FitnessTheme.primary)
+                    .buttonStyle(FitnessSecondaryButtonStyle())
                     .disabled(!isRunning)
                     .accessibilityLabel("Switch camera")
                 }
@@ -129,7 +131,7 @@ private struct CoachExerciseGuideCard: View {
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(FitnessTheme.primary)
                     .frame(width: 34, height: 34)
-                    .background(FitnessTheme.violetDeep, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
+                    .background(FitnessTheme.primaryTint, in: RoundedRectangle(cornerRadius: FitnessTheme.controlRadius))
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 5) {
@@ -154,7 +156,7 @@ private struct CoachExerciseGuideCard: View {
             if !exercise.bodyFocus.isEmpty {
                 Text("Focus: \(exercise.bodyFocus.map { $0.capitalized }.joined(separator: ", "))")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(FitnessTheme.gold)
+                    .foregroundStyle(FitnessTheme.primary)
                     .fixedSize(horizontal: false, vertical: true)
             }
         }

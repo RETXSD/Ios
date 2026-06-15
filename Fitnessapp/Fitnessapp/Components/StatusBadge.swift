@@ -10,7 +10,11 @@ struct StatusBadge: View {
             .foregroundStyle(status == .ready ? FitnessTheme.ink : color)
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
-            .background(backgroundColor, in: RoundedRectangle(cornerRadius: 6))
+            .background(backgroundColor, in: Capsule())
+            .overlay {
+                Capsule()
+                    .stroke(color.opacity(status == .ready ? 0 : 0.3), lineWidth: 1)
+            }
             .accessibilityElement(children: .combine)
     }
 
@@ -21,7 +25,7 @@ struct StatusBadge: View {
         case .needsAttention:
             return FitnessTheme.gold.opacity(0.18)
         case .blocked:
-            return .red.opacity(0.18)
+            return FitnessTheme.error.opacity(0.18)
         case .notChecked:
             return FitnessTheme.surface
         }
@@ -34,7 +38,7 @@ struct StatusBadge: View {
         case .needsAttention:
             return FitnessTheme.gold
         case .blocked:
-            return .red
+            return FitnessTheme.error
         case .notChecked:
             return FitnessTheme.textMuted
         }

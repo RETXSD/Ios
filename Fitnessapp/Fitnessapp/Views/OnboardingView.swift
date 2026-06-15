@@ -96,8 +96,7 @@ struct OnboardingView: View {
                         }
                         .frame(maxWidth: .infinity, minHeight: 44)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(FitnessTheme.primary)
+                    .buttonStyle(FitnessPrimaryButtonStyle())
                     .disabled(isSaving || !isFormValid)
                 }
                 .padding()

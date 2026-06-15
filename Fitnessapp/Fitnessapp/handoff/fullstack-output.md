@@ -36,7 +36,15 @@
   - `repCount: Int`
   - `message: String`
   - `detectedIssues: [String]`
+  - `skeleton: PoseSkeleton?`
   - `createdAt: Date`
+- `PoseSkeleton`
+  - `joints: [PoseJoint]`
+- `PoseJoint`
+  - `id: PoseJointName`
+  - `name: PoseJointName`
+  - `point: CGPoint`
+  - `confidence: Double`
 - `CompletedWorkout`
   - `id: UUID`
   - `workout: Workout`
@@ -143,11 +151,18 @@ Plain Swift models are used instead of SwiftData models because this project tar
   - Requests camera permission and starts/stops capture.
   - Supports front/back camera switching.
   - Emits `CMSampleBuffer` frames through `sampleBufferHandler` for Vision analysis.
+  - Keeps sample-buffer output unmirrored; front camera mirroring is handled by `AVCaptureVideoPreviewLayer` so Vision coordinates and displayed preview stay in sync.
 - `ExerciseFormAnalyzer`
   - Runs Vision body pose detection from `CMSampleBuffer`.
+  - Returns normalized body-pose skeleton joints through `FormFeedback.skeleton` for camera overlay rendering.
   - Counts supported workout reps with Vision joint angles and state machines.
   - Supports push-ups, squats, lunges, burpees, sit-ups, jumping jacks, mountain climbers, and plank feedback.
   - Uses the same broad approach described by Good-GYM: pose keypoints, joint-angle thresholds, and movement phases.
+- `FormAudioFeedbackManager`
+  - Uses `AVSpeechSynthesizer` to speak short correction cues when `FormFeedback` indicates low confidence, low score, or detected form issues.
+  - Speaks English coaching cues such as knee alignment, deeper squat/push-up range, straight body line, hip alignment, and full-camera-frame guidance.
+  - Configures `AVAudioSession` with `.playback` and `.spokenAudio` before speaking so voice cues are audible on physical iPhone even when the silent switch would mute normal app audio.
+  - Applies a 4-second repeated-cue cooldown and stops speaking when reset.
 - `AppReadinessService`
   - Returns checklist items for permissions, privacy, and app setup.
 - `FitnessDashboardManager`
@@ -168,7 +183,7 @@ Plain Swift models are used instead of SwiftData models because this project tar
   - Save/fetch latest recommendation are local no-ops while Firebase is paused.
 - `AIAssistantService`
   - Calls a backend/proxy boundary for AI chat and AI workout recommendations.
-  - Defaults to `http://127.0.0.1:8787` for local simulator development.
+  - Defaults to `http://127.0.0.1:8787` on simulator and `http://10.24.203.75:8787` on physical iPhone testing.
   - Does not store or send any AI API key from the iOS app.
 - `Fitnessapp/ai-proxy`
   - Node.js DeepSeek proxy.
@@ -213,7 +228,7 @@ final class RecommendationService {
 
 ```swift
 final class AIAssistantService {
-    init(baseURL: URL = URL(string: "http://127.0.0.1:8787")!, urlSession: URLSession = .shared)
+    init(baseURL: URL = AIAssistantService.defaultBaseURL, urlSession: URLSession = .shared)
     func generateAIRecommendation(profile: UserFitnessProfile, exercises: [ExerciseCatalogItem], planPreference: String?) async throws -> WorkoutRecommendation
     func sendMessage(_ message: String, userId: String) async throws -> AIMessage
 }
@@ -261,7 +276,16 @@ final class CameraSessionManager {
 
 ```swift
 final class ExerciseFormAnalyzer {
-    func analyzeFrame(_ sampleBuffer: CMSampleBuffer, exercise: String) async throws -> FormFeedback
+    func analyzeFrame(_ sampleBuffer: CMSampleBuffer, exercise: String, cameraPosition: CameraPosition = .front) async throws -> FormFeedback
+}
+```
+
+```swift
+@MainActor
+final class FormAudioFeedbackManager {
+    init(cooldownSeconds: TimeInterval = 4, minimumScoreForSilence: Double = 0.78)
+    func speakCorrectionIfNeeded(for feedback: FormFeedback)
+    func reset()
 }
 ```
 
@@ -310,12 +334,15 @@ final class FitnessDashboardManager {
   - `AIAssistantView` is now wired to `AIAssistantService` through `AIAssistantViewModel`.
   - Do not put the DeepSeek API key in Swift, plist files, Firebase client config, or any app bundle resource.
   - Use `Fitnessapp/ai-proxy` with `DEEPSEEK_API_KEY` in `.env` or backend environment only.
-  - For physical iPhone testing, replace the default `127.0.0.1` proxy URL with a reachable backend/LAN URL.
+  - For physical iPhone testing, the default LAN proxy URL is currently `http://10.24.203.75:8787`; update it if the Mac's Wi-Fi IP changes.
+  - Generated Info.plist build settings allow local HTTP testing with `NSLocalNetworkUsageDescription` and `NSAppTransportSecurity.NSAllowsArbitraryLoads`.
   - Local proxy health and a short `/chat` request were verified successfully.
-  - `/recommendation` now has an 18-second endpoint timeout and returns a fast rule-based fallback plan if DeepSeek is too slow.
-  - `AIAssistantService` uses a 120-second URLSession timeout so the UI can survive slower local proxy responses.
+  - `/recommendation` now has a 120-second endpoint timeout and returns a rule-based fallback plan if DeepSeek is too slow.
+  - `AIAssistantService` uses a 180-second URLSession timeout so the UI can survive slower local proxy responses.
   - AI proxy supports separate model routing: `DEEPSEEK_CHAT_MODEL` for chat and `DEEPSEEK_RECOMMENDATION_MODEL` for generated workout plans. Current `.env` maps chat `flash` to `deepseek-chat` and recommendation `pro` to `deepseek-v4-pro`.
   - AI workout plan requests now accept optional user preference text, e.g. no running or low impact.
+  - Plan preference is applied before calling DeepSeek and before generating fallback plans, so excluded exercises such as running/lari are removed even when the AI request times out.
+  - Chat now has a server-side fitness-topic guardrail. Off-topic messages are rejected before calling DeepSeek, while fitness/gym/workout/calorie/recovery/nutrition-adjacent questions are allowed.
 - Exercise catalog seed status:
   - `ExerciseCatalogService.defaultExercises` contains Running, Walking, Squats, Push-ups, Jumping Jacks, Plank, Lunges, Burpees, Mountain Climbers, and Sit-ups.
   - `seedDefaultExercisesIfNeeded()` is currently a no-op.

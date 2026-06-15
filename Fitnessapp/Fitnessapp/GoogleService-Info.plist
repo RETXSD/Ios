@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>368871935566-k3e3llfbehg5bc6pl6pjkncr1df6j9g7.apps.googleusercontent.com</string>
+	<string>368871935566-tqrqr1vj7gbbo61lohrl7p8dflqeaqp9.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.368871935566-k3e3llfbehg5bc6pl6pjkncr1df6j9g7</string>
+	<string>com.googleusercontent.apps.368871935566-tqrqr1vj7gbbo61lohrl7p8dflqeaqp9</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDdwTBNTLFjQw-1Nt7ji-IMCvg6mlJWEx8</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>cn.edu.njxzc.Fitnessapp</string>
+	<string>com.CorneliusAdrianPutraa.Fitnessapp</string>
 	<key>PROJECT_ID</key>
 	<string>fitnessapp2-c0d7c</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:368871935566:ios:dfdb8a4d1aa127fefabd1f</string>
+	<string>1:368871935566:ios:4073152f0187708bfabd1f</string>
 </dict>
 </plist>
