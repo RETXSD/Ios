@@ -1,0 +1,5733 @@
+[
+  {
+    "id": "1",
+    "character": "手",
+    "reading": "te",
+    "meaning": "hand",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "手紙",
+        "reading": "tegami",
+        "en": "letter"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "character": "水",
+    "reading": "mizu",
+    "meaning": "water",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "水を飲みます",
+        "reading": "mizu o nomimasu",
+        "en": "I drink water"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "character": "あ",
+    "reading": "a",
+    "meaning": "hiragana a",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "あめ",
+        "reading": "ame",
+        "en": "rain"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-1-い",
+    "character": "い",
+    "reading": "i",
+    "meaning": "hiragana i",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "い",
+        "reading": "i",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-2-う",
+    "character": "う",
+    "reading": "u",
+    "meaning": "hiragana u",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "う",
+        "reading": "u",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-3-え",
+    "character": "え",
+    "reading": "e",
+    "meaning": "hiragana e",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "え",
+        "reading": "e",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-4-お",
+    "character": "お",
+    "reading": "o",
+    "meaning": "hiragana o",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "お",
+        "reading": "o",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-5-か",
+    "character": "か",
+    "reading": "ka",
+    "meaning": "hiragana ka",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "か",
+        "reading": "ka",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-6-き",
+    "character": "き",
+    "reading": "ki",
+    "meaning": "hiragana ki",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "き",
+        "reading": "ki",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-7-く",
+    "character": "く",
+    "reading": "ku",
+    "meaning": "hiragana ku",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "く",
+        "reading": "ku",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-8-け",
+    "character": "け",
+    "reading": "ke",
+    "meaning": "hiragana ke",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "け",
+        "reading": "ke",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-9-こ",
+    "character": "こ",
+    "reading": "ko",
+    "meaning": "hiragana ko",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "こ",
+        "reading": "ko",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-10-さ",
+    "character": "さ",
+    "reading": "sa",
+    "meaning": "hiragana sa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "さ",
+        "reading": "sa",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-11-し",
+    "character": "し",
+    "reading": "shi",
+    "meaning": "hiragana shi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "し",
+        "reading": "shi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-12-す",
+    "character": "す",
+    "reading": "su",
+    "meaning": "hiragana su",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "す",
+        "reading": "su",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-13-せ",
+    "character": "せ",
+    "reading": "se",
+    "meaning": "hiragana se",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "せ",
+        "reading": "se",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-14-そ",
+    "character": "そ",
+    "reading": "so",
+    "meaning": "hiragana so",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "そ",
+        "reading": "so",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-15-た",
+    "character": "た",
+    "reading": "ta",
+    "meaning": "hiragana ta",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "た",
+        "reading": "ta",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-16-ち",
+    "character": "ち",
+    "reading": "chi",
+    "meaning": "hiragana chi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ち",
+        "reading": "chi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-17-つ",
+    "character": "つ",
+    "reading": "tsu",
+    "meaning": "hiragana tsu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "つ",
+        "reading": "tsu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-18-て",
+    "character": "て",
+    "reading": "te",
+    "meaning": "hiragana te",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "て",
+        "reading": "te",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-19-と",
+    "character": "と",
+    "reading": "to",
+    "meaning": "hiragana to",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "と",
+        "reading": "to",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-20-な",
+    "character": "な",
+    "reading": "na",
+    "meaning": "hiragana na",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "な",
+        "reading": "na",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-21-に",
+    "character": "に",
+    "reading": "ni",
+    "meaning": "hiragana ni",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "に",
+        "reading": "ni",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-22-ぬ",
+    "character": "ぬ",
+    "reading": "nu",
+    "meaning": "hiragana nu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぬ",
+        "reading": "nu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-23-ね",
+    "character": "ね",
+    "reading": "ne",
+    "meaning": "hiragana ne",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ね",
+        "reading": "ne",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-24-の",
+    "character": "の",
+    "reading": "no",
+    "meaning": "hiragana no",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "の",
+        "reading": "no",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-25-は",
+    "character": "は",
+    "reading": "ha",
+    "meaning": "hiragana ha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "は",
+        "reading": "ha",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-26-ひ",
+    "character": "ひ",
+    "reading": "hi",
+    "meaning": "hiragana hi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ひ",
+        "reading": "hi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-27-ふ",
+    "character": "ふ",
+    "reading": "fu",
+    "meaning": "hiragana fu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ふ",
+        "reading": "fu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-28-へ",
+    "character": "へ",
+    "reading": "he",
+    "meaning": "hiragana he",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "へ",
+        "reading": "he",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-29-ほ",
+    "character": "ほ",
+    "reading": "ho",
+    "meaning": "hiragana ho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ほ",
+        "reading": "ho",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-30-ま",
+    "character": "ま",
+    "reading": "ma",
+    "meaning": "hiragana ma",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ま",
+        "reading": "ma",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-31-み",
+    "character": "み",
+    "reading": "mi",
+    "meaning": "hiragana mi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "み",
+        "reading": "mi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-32-む",
+    "character": "む",
+    "reading": "mu",
+    "meaning": "hiragana mu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "む",
+        "reading": "mu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-33-め",
+    "character": "め",
+    "reading": "me",
+    "meaning": "hiragana me",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "め",
+        "reading": "me",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-34-も",
+    "character": "も",
+    "reading": "mo",
+    "meaning": "hiragana mo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "も",
+        "reading": "mo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-35-や",
+    "character": "や",
+    "reading": "ya",
+    "meaning": "hiragana ya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "や",
+        "reading": "ya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-36-ゆ",
+    "character": "ゆ",
+    "reading": "yu",
+    "meaning": "hiragana yu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゆ",
+        "reading": "yu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-37-よ",
+    "character": "よ",
+    "reading": "yo",
+    "meaning": "hiragana yo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "よ",
+        "reading": "yo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-38-ら",
+    "character": "ら",
+    "reading": "ra",
+    "meaning": "hiragana ra",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ら",
+        "reading": "ra",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-39-り",
+    "character": "り",
+    "reading": "ri",
+    "meaning": "hiragana ri",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "り",
+        "reading": "ri",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-40-る",
+    "character": "る",
+    "reading": "ru",
+    "meaning": "hiragana ru",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "る",
+        "reading": "ru",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-41-れ",
+    "character": "れ",
+    "reading": "re",
+    "meaning": "hiragana re",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "れ",
+        "reading": "re",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-42-ろ",
+    "character": "ろ",
+    "reading": "ro",
+    "meaning": "hiragana ro",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ろ",
+        "reading": "ro",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-43-わ",
+    "character": "わ",
+    "reading": "wa",
+    "meaning": "hiragana wa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "わ",
+        "reading": "wa",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-44-を",
+    "character": "を",
+    "reading": "wo",
+    "meaning": "hiragana wo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "を",
+        "reading": "wo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-45-ん",
+    "character": "ん",
+    "reading": "n",
+    "meaning": "hiragana n",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ん",
+        "reading": "n",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-46-が",
+    "character": "が",
+    "reading": "ga",
+    "meaning": "hiragana ga",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "が",
+        "reading": "ga",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-47-ぎ",
+    "character": "ぎ",
+    "reading": "gi",
+    "meaning": "hiragana gi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぎ",
+        "reading": "gi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-48-ぐ",
+    "character": "ぐ",
+    "reading": "gu",
+    "meaning": "hiragana gu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぐ",
+        "reading": "gu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-49-げ",
+    "character": "げ",
+    "reading": "ge",
+    "meaning": "hiragana ge",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "げ",
+        "reading": "ge",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-50-ご",
+    "character": "ご",
+    "reading": "go",
+    "meaning": "hiragana go",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ご",
+        "reading": "go",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-51-ざ",
+    "character": "ざ",
+    "reading": "za",
+    "meaning": "hiragana za",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ざ",
+        "reading": "za",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-52-じ",
+    "character": "じ",
+    "reading": "ji",
+    "meaning": "hiragana ji",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "じ",
+        "reading": "ji",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-53-ず",
+    "character": "ず",
+    "reading": "zu",
+    "meaning": "hiragana zu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ず",
+        "reading": "zu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-54-ぜ",
+    "character": "ぜ",
+    "reading": "ze",
+    "meaning": "hiragana ze",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぜ",
+        "reading": "ze",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-55-ぞ",
+    "character": "ぞ",
+    "reading": "zo",
+    "meaning": "hiragana zo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぞ",
+        "reading": "zo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-56-だ",
+    "character": "だ",
+    "reading": "da",
+    "meaning": "hiragana da",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "だ",
+        "reading": "da",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-57-ぢ",
+    "character": "ぢ",
+    "reading": "ji",
+    "meaning": "hiragana ji",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぢ",
+        "reading": "ji",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-58-づ",
+    "character": "づ",
+    "reading": "zu",
+    "meaning": "hiragana zu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "づ",
+        "reading": "zu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-59-で",
+    "character": "で",
+    "reading": "de",
+    "meaning": "hiragana de",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "で",
+        "reading": "de",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-60-ど",
+    "character": "ど",
+    "reading": "do",
+    "meaning": "hiragana do",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ど",
+        "reading": "do",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-61-ば",
+    "character": "ば",
+    "reading": "ba",
+    "meaning": "hiragana ba",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ば",
+        "reading": "ba",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-62-び",
+    "character": "び",
+    "reading": "bi",
+    "meaning": "hiragana bi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "び",
+        "reading": "bi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-63-ぶ",
+    "character": "ぶ",
+    "reading": "bu",
+    "meaning": "hiragana bu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぶ",
+        "reading": "bu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-64-べ",
+    "character": "べ",
+    "reading": "be",
+    "meaning": "hiragana be",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "べ",
+        "reading": "be",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-65-ぼ",
+    "character": "ぼ",
+    "reading": "bo",
+    "meaning": "hiragana bo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぼ",
+        "reading": "bo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-66-ぱ",
+    "character": "ぱ",
+    "reading": "pa",
+    "meaning": "hiragana pa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぱ",
+        "reading": "pa",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-67-ぴ",
+    "character": "ぴ",
+    "reading": "pi",
+    "meaning": "hiragana pi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぴ",
+        "reading": "pi",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-68-ぷ",
+    "character": "ぷ",
+    "reading": "pu",
+    "meaning": "hiragana pu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぷ",
+        "reading": "pu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-69-ぺ",
+    "character": "ぺ",
+    "reading": "pe",
+    "meaning": "hiragana pe",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぺ",
+        "reading": "pe",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-70-ぽ",
+    "character": "ぽ",
+    "reading": "po",
+    "meaning": "hiragana po",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぽ",
+        "reading": "po",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-71-ぁ",
+    "character": "ぁ",
+    "reading": "small a",
+    "meaning": "hiragana small a",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぁ",
+        "reading": "small a",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-72-ぃ",
+    "character": "ぃ",
+    "reading": "small i",
+    "meaning": "hiragana small i",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぃ",
+        "reading": "small i",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-73-ぅ",
+    "character": "ぅ",
+    "reading": "small u",
+    "meaning": "hiragana small u",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぅ",
+        "reading": "small u",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-74-ぇ",
+    "character": "ぇ",
+    "reading": "small e",
+    "meaning": "hiragana small e",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぇ",
+        "reading": "small e",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-75-ぉ",
+    "character": "ぉ",
+    "reading": "small o",
+    "meaning": "hiragana small o",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぉ",
+        "reading": "small o",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-76-ゃ",
+    "character": "ゃ",
+    "reading": "small ya",
+    "meaning": "hiragana small ya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゃ",
+        "reading": "small ya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-77-ゅ",
+    "character": "ゅ",
+    "reading": "small yu",
+    "meaning": "hiragana small yu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゅ",
+        "reading": "small yu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-78-ょ",
+    "character": "ょ",
+    "reading": "small yo",
+    "meaning": "hiragana small yo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ょ",
+        "reading": "small yo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-79-っ",
+    "character": "っ",
+    "reading": "small tsu",
+    "meaning": "hiragana small tsu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "っ",
+        "reading": "small tsu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-80-ゎ",
+    "character": "ゎ",
+    "reading": "small wa",
+    "meaning": "hiragana small wa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゎ",
+        "reading": "small wa",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-81-ゔ",
+    "character": "ゔ",
+    "reading": "vu",
+    "meaning": "hiragana vu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゔ",
+        "reading": "vu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-82-きゃ",
+    "character": "きゃ",
+    "reading": "kya",
+    "meaning": "hiragana kya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "きゃ",
+        "reading": "kya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-83-きゅ",
+    "character": "きゅ",
+    "reading": "kyu",
+    "meaning": "hiragana kyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "きゅ",
+        "reading": "kyu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-84-きょ",
+    "character": "きょ",
+    "reading": "kyo",
+    "meaning": "hiragana kyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "きょ",
+        "reading": "kyo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-85-しゃ",
+    "character": "しゃ",
+    "reading": "sha",
+    "meaning": "hiragana sha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "しゃ",
+        "reading": "sha",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-86-しゅ",
+    "character": "しゅ",
+    "reading": "shu",
+    "meaning": "hiragana shu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "しゅ",
+        "reading": "shu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-87-しょ",
+    "character": "しょ",
+    "reading": "sho",
+    "meaning": "hiragana sho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "しょ",
+        "reading": "sho",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-88-ちゃ",
+    "character": "ちゃ",
+    "reading": "cha",
+    "meaning": "hiragana cha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ちゃ",
+        "reading": "cha",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-89-ちゅ",
+    "character": "ちゅ",
+    "reading": "chu",
+    "meaning": "hiragana chu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ちゅ",
+        "reading": "chu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-90-ちょ",
+    "character": "ちょ",
+    "reading": "cho",
+    "meaning": "hiragana cho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ちょ",
+        "reading": "cho",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-91-にゃ",
+    "character": "にゃ",
+    "reading": "nya",
+    "meaning": "hiragana nya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "にゃ",
+        "reading": "nya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-92-にゅ",
+    "character": "にゅ",
+    "reading": "nyu",
+    "meaning": "hiragana nyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "にゅ",
+        "reading": "nyu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-93-にょ",
+    "character": "にょ",
+    "reading": "nyo",
+    "meaning": "hiragana nyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "にょ",
+        "reading": "nyo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-94-ひゃ",
+    "character": "ひゃ",
+    "reading": "hya",
+    "meaning": "hiragana hya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ひゃ",
+        "reading": "hya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-95-ひゅ",
+    "character": "ひゅ",
+    "reading": "hyu",
+    "meaning": "hiragana hyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ひゅ",
+        "reading": "hyu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-96-ひょ",
+    "character": "ひょ",
+    "reading": "hyo",
+    "meaning": "hiragana hyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ひょ",
+        "reading": "hyo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-97-みゃ",
+    "character": "みゃ",
+    "reading": "mya",
+    "meaning": "hiragana mya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "みゃ",
+        "reading": "mya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-98-みゅ",
+    "character": "みゅ",
+    "reading": "myu",
+    "meaning": "hiragana myu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "みゅ",
+        "reading": "myu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-99-みょ",
+    "character": "みょ",
+    "reading": "myo",
+    "meaning": "hiragana myo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "みょ",
+        "reading": "myo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-100-りゃ",
+    "character": "りゃ",
+    "reading": "rya",
+    "meaning": "hiragana rya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "りゃ",
+        "reading": "rya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-101-りゅ",
+    "character": "りゅ",
+    "reading": "ryu",
+    "meaning": "hiragana ryu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "りゅ",
+        "reading": "ryu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-102-りょ",
+    "character": "りょ",
+    "reading": "ryo",
+    "meaning": "hiragana ryo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "りょ",
+        "reading": "ryo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-103-ぎゃ",
+    "character": "ぎゃ",
+    "reading": "gya",
+    "meaning": "hiragana gya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぎゃ",
+        "reading": "gya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-104-ぎゅ",
+    "character": "ぎゅ",
+    "reading": "gyu",
+    "meaning": "hiragana gyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぎゅ",
+        "reading": "gyu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-105-ぎょ",
+    "character": "ぎょ",
+    "reading": "gyo",
+    "meaning": "hiragana gyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぎょ",
+        "reading": "gyo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-106-じゃ",
+    "character": "じゃ",
+    "reading": "ja",
+    "meaning": "hiragana ja",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "じゃ",
+        "reading": "ja",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-107-じゅ",
+    "character": "じゅ",
+    "reading": "ju",
+    "meaning": "hiragana ju",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "じゅ",
+        "reading": "ju",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-108-じょ",
+    "character": "じょ",
+    "reading": "jo",
+    "meaning": "hiragana jo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "じょ",
+        "reading": "jo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-109-びゃ",
+    "character": "びゃ",
+    "reading": "bya",
+    "meaning": "hiragana bya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "びゃ",
+        "reading": "bya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-110-びゅ",
+    "character": "びゅ",
+    "reading": "byu",
+    "meaning": "hiragana byu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "びゅ",
+        "reading": "byu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-111-びょ",
+    "character": "びょ",
+    "reading": "byo",
+    "meaning": "hiragana byo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "びょ",
+        "reading": "byo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-112-ぴゃ",
+    "character": "ぴゃ",
+    "reading": "pya",
+    "meaning": "hiragana pya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぴゃ",
+        "reading": "pya",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-113-ぴゅ",
+    "character": "ぴゅ",
+    "reading": "pyu",
+    "meaning": "hiragana pyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぴゅ",
+        "reading": "pyu",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "hiragana-114-ぴょ",
+    "character": "ぴょ",
+    "reading": "pyo",
+    "meaning": "hiragana pyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ぴょ",
+        "reading": "pyo",
+        "en": "hiragana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-115-ア",
+    "character": "ア",
+    "reading": "a",
+    "meaning": "katakana a",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ア",
+        "reading": "a",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-116-イ",
+    "character": "イ",
+    "reading": "i",
+    "meaning": "katakana i",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "イ",
+        "reading": "i",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-117-ウ",
+    "character": "ウ",
+    "reading": "u",
+    "meaning": "katakana u",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ウ",
+        "reading": "u",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-118-エ",
+    "character": "エ",
+    "reading": "e",
+    "meaning": "katakana e",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "エ",
+        "reading": "e",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-119-オ",
+    "character": "オ",
+    "reading": "o",
+    "meaning": "katakana o",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "オ",
+        "reading": "o",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-120-カ",
+    "character": "カ",
+    "reading": "ka",
+    "meaning": "katakana ka",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "カ",
+        "reading": "ka",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-121-キ",
+    "character": "キ",
+    "reading": "ki",
+    "meaning": "katakana ki",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "キ",
+        "reading": "ki",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-122-ク",
+    "character": "ク",
+    "reading": "ku",
+    "meaning": "katakana ku",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ク",
+        "reading": "ku",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-123-ケ",
+    "character": "ケ",
+    "reading": "ke",
+    "meaning": "katakana ke",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ケ",
+        "reading": "ke",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-124-コ",
+    "character": "コ",
+    "reading": "ko",
+    "meaning": "katakana ko",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "コ",
+        "reading": "ko",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-125-サ",
+    "character": "サ",
+    "reading": "sa",
+    "meaning": "katakana sa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "サ",
+        "reading": "sa",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-126-シ",
+    "character": "シ",
+    "reading": "shi",
+    "meaning": "katakana shi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "シ",
+        "reading": "shi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-127-ス",
+    "character": "ス",
+    "reading": "su",
+    "meaning": "katakana su",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ス",
+        "reading": "su",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-128-セ",
+    "character": "セ",
+    "reading": "se",
+    "meaning": "katakana se",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "セ",
+        "reading": "se",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-129-ソ",
+    "character": "ソ",
+    "reading": "so",
+    "meaning": "katakana so",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ソ",
+        "reading": "so",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-130-タ",
+    "character": "タ",
+    "reading": "ta",
+    "meaning": "katakana ta",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "タ",
+        "reading": "ta",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-131-チ",
+    "character": "チ",
+    "reading": "chi",
+    "meaning": "katakana chi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "チ",
+        "reading": "chi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-132-ツ",
+    "character": "ツ",
+    "reading": "tsu",
+    "meaning": "katakana tsu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ツ",
+        "reading": "tsu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-133-テ",
+    "character": "テ",
+    "reading": "te",
+    "meaning": "katakana te",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "テ",
+        "reading": "te",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-134-ト",
+    "character": "ト",
+    "reading": "to",
+    "meaning": "katakana to",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ト",
+        "reading": "to",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-135-ナ",
+    "character": "ナ",
+    "reading": "na",
+    "meaning": "katakana na",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ナ",
+        "reading": "na",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-136-ニ",
+    "character": "ニ",
+    "reading": "ni",
+    "meaning": "katakana ni",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ニ",
+        "reading": "ni",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-137-ヌ",
+    "character": "ヌ",
+    "reading": "nu",
+    "meaning": "katakana nu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヌ",
+        "reading": "nu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-138-ネ",
+    "character": "ネ",
+    "reading": "ne",
+    "meaning": "katakana ne",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ネ",
+        "reading": "ne",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-139-ノ",
+    "character": "ノ",
+    "reading": "no",
+    "meaning": "katakana no",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ノ",
+        "reading": "no",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-140-ハ",
+    "character": "ハ",
+    "reading": "ha",
+    "meaning": "katakana ha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ハ",
+        "reading": "ha",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-141-ヒ",
+    "character": "ヒ",
+    "reading": "hi",
+    "meaning": "katakana hi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヒ",
+        "reading": "hi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-142-フ",
+    "character": "フ",
+    "reading": "fu",
+    "meaning": "katakana fu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "フ",
+        "reading": "fu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-143-ヘ",
+    "character": "ヘ",
+    "reading": "he",
+    "meaning": "katakana he",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヘ",
+        "reading": "he",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-144-ホ",
+    "character": "ホ",
+    "reading": "ho",
+    "meaning": "katakana ho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ホ",
+        "reading": "ho",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-145-マ",
+    "character": "マ",
+    "reading": "ma",
+    "meaning": "katakana ma",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "マ",
+        "reading": "ma",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-146-ミ",
+    "character": "ミ",
+    "reading": "mi",
+    "meaning": "katakana mi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ミ",
+        "reading": "mi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-147-ム",
+    "character": "ム",
+    "reading": "mu",
+    "meaning": "katakana mu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ム",
+        "reading": "mu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-148-メ",
+    "character": "メ",
+    "reading": "me",
+    "meaning": "katakana me",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "メ",
+        "reading": "me",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-149-モ",
+    "character": "モ",
+    "reading": "mo",
+    "meaning": "katakana mo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "モ",
+        "reading": "mo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-150-ヤ",
+    "character": "ヤ",
+    "reading": "ya",
+    "meaning": "katakana ya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヤ",
+        "reading": "ya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-151-ユ",
+    "character": "ユ",
+    "reading": "yu",
+    "meaning": "katakana yu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ユ",
+        "reading": "yu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-152-ヨ",
+    "character": "ヨ",
+    "reading": "yo",
+    "meaning": "katakana yo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヨ",
+        "reading": "yo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-153-ラ",
+    "character": "ラ",
+    "reading": "ra",
+    "meaning": "katakana ra",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ラ",
+        "reading": "ra",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-154-リ",
+    "character": "リ",
+    "reading": "ri",
+    "meaning": "katakana ri",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "リ",
+        "reading": "ri",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-155-ル",
+    "character": "ル",
+    "reading": "ru",
+    "meaning": "katakana ru",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ル",
+        "reading": "ru",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-156-レ",
+    "character": "レ",
+    "reading": "re",
+    "meaning": "katakana re",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "レ",
+        "reading": "re",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-157-ロ",
+    "character": "ロ",
+    "reading": "ro",
+    "meaning": "katakana ro",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ロ",
+        "reading": "ro",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-158-ワ",
+    "character": "ワ",
+    "reading": "wa",
+    "meaning": "katakana wa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ワ",
+        "reading": "wa",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-159-ヲ",
+    "character": "ヲ",
+    "reading": "wo",
+    "meaning": "katakana wo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヲ",
+        "reading": "wo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-160-ン",
+    "character": "ン",
+    "reading": "n",
+    "meaning": "katakana n",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ン",
+        "reading": "n",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-161-ガ",
+    "character": "ガ",
+    "reading": "ga",
+    "meaning": "katakana ga",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ガ",
+        "reading": "ga",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-162-ギ",
+    "character": "ギ",
+    "reading": "gi",
+    "meaning": "katakana gi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ギ",
+        "reading": "gi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-163-グ",
+    "character": "グ",
+    "reading": "gu",
+    "meaning": "katakana gu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "グ",
+        "reading": "gu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-164-ゲ",
+    "character": "ゲ",
+    "reading": "ge",
+    "meaning": "katakana ge",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゲ",
+        "reading": "ge",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-165-ゴ",
+    "character": "ゴ",
+    "reading": "go",
+    "meaning": "katakana go",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゴ",
+        "reading": "go",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-166-ザ",
+    "character": "ザ",
+    "reading": "za",
+    "meaning": "katakana za",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ザ",
+        "reading": "za",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-167-ジ",
+    "character": "ジ",
+    "reading": "ji",
+    "meaning": "katakana ji",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ジ",
+        "reading": "ji",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-168-ズ",
+    "character": "ズ",
+    "reading": "zu",
+    "meaning": "katakana zu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ズ",
+        "reading": "zu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-169-ゼ",
+    "character": "ゼ",
+    "reading": "ze",
+    "meaning": "katakana ze",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゼ",
+        "reading": "ze",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-170-ゾ",
+    "character": "ゾ",
+    "reading": "zo",
+    "meaning": "katakana zo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゾ",
+        "reading": "zo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-171-ダ",
+    "character": "ダ",
+    "reading": "da",
+    "meaning": "katakana da",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ダ",
+        "reading": "da",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-172-ヂ",
+    "character": "ヂ",
+    "reading": "ji",
+    "meaning": "katakana ji",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヂ",
+        "reading": "ji",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-173-ヅ",
+    "character": "ヅ",
+    "reading": "zu",
+    "meaning": "katakana zu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヅ",
+        "reading": "zu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-174-デ",
+    "character": "デ",
+    "reading": "de",
+    "meaning": "katakana de",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "デ",
+        "reading": "de",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-175-ド",
+    "character": "ド",
+    "reading": "do",
+    "meaning": "katakana do",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ド",
+        "reading": "do",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-176-バ",
+    "character": "バ",
+    "reading": "ba",
+    "meaning": "katakana ba",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "バ",
+        "reading": "ba",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-177-ビ",
+    "character": "ビ",
+    "reading": "bi",
+    "meaning": "katakana bi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ビ",
+        "reading": "bi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-178-ブ",
+    "character": "ブ",
+    "reading": "bu",
+    "meaning": "katakana bu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ブ",
+        "reading": "bu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-179-ベ",
+    "character": "ベ",
+    "reading": "be",
+    "meaning": "katakana be",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ベ",
+        "reading": "be",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-180-ボ",
+    "character": "ボ",
+    "reading": "bo",
+    "meaning": "katakana bo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ボ",
+        "reading": "bo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-181-パ",
+    "character": "パ",
+    "reading": "pa",
+    "meaning": "katakana pa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "パ",
+        "reading": "pa",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-182-ピ",
+    "character": "ピ",
+    "reading": "pi",
+    "meaning": "katakana pi",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ピ",
+        "reading": "pi",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-183-プ",
+    "character": "プ",
+    "reading": "pu",
+    "meaning": "katakana pu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "プ",
+        "reading": "pu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-184-ペ",
+    "character": "ペ",
+    "reading": "pe",
+    "meaning": "katakana pe",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ペ",
+        "reading": "pe",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-185-ポ",
+    "character": "ポ",
+    "reading": "po",
+    "meaning": "katakana po",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ポ",
+        "reading": "po",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-186-ァ",
+    "character": "ァ",
+    "reading": "small a",
+    "meaning": "katakana small a",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ァ",
+        "reading": "small a",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-187-ィ",
+    "character": "ィ",
+    "reading": "small i",
+    "meaning": "katakana small i",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ィ",
+        "reading": "small i",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-188-ゥ",
+    "character": "ゥ",
+    "reading": "small u",
+    "meaning": "katakana small u",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ゥ",
+        "reading": "small u",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-189-ェ",
+    "character": "ェ",
+    "reading": "small e",
+    "meaning": "katakana small e",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ェ",
+        "reading": "small e",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-190-ォ",
+    "character": "ォ",
+    "reading": "small o",
+    "meaning": "katakana small o",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ォ",
+        "reading": "small o",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-191-ャ",
+    "character": "ャ",
+    "reading": "small ya",
+    "meaning": "katakana small ya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ャ",
+        "reading": "small ya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-192-ュ",
+    "character": "ュ",
+    "reading": "small yu",
+    "meaning": "katakana small yu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ュ",
+        "reading": "small yu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-193-ョ",
+    "character": "ョ",
+    "reading": "small yo",
+    "meaning": "katakana small yo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ョ",
+        "reading": "small yo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-194-ッ",
+    "character": "ッ",
+    "reading": "small tsu",
+    "meaning": "katakana small tsu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ッ",
+        "reading": "small tsu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-195-ヮ",
+    "character": "ヮ",
+    "reading": "small wa",
+    "meaning": "katakana small wa",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヮ",
+        "reading": "small wa",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-196-ヴ",
+    "character": "ヴ",
+    "reading": "vu",
+    "meaning": "katakana vu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヴ",
+        "reading": "vu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-197-キャ",
+    "character": "キャ",
+    "reading": "kya",
+    "meaning": "katakana kya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "キャ",
+        "reading": "kya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-198-キュ",
+    "character": "キュ",
+    "reading": "kyu",
+    "meaning": "katakana kyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "キュ",
+        "reading": "kyu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-199-キョ",
+    "character": "キョ",
+    "reading": "kyo",
+    "meaning": "katakana kyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "キョ",
+        "reading": "kyo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-200-シャ",
+    "character": "シャ",
+    "reading": "sha",
+    "meaning": "katakana sha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "シャ",
+        "reading": "sha",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-201-シュ",
+    "character": "シュ",
+    "reading": "shu",
+    "meaning": "katakana shu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "シュ",
+        "reading": "shu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-202-ショ",
+    "character": "ショ",
+    "reading": "sho",
+    "meaning": "katakana sho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ショ",
+        "reading": "sho",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-203-チャ",
+    "character": "チャ",
+    "reading": "cha",
+    "meaning": "katakana cha",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "チャ",
+        "reading": "cha",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-204-チュ",
+    "character": "チュ",
+    "reading": "chu",
+    "meaning": "katakana chu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "チュ",
+        "reading": "chu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-205-チョ",
+    "character": "チョ",
+    "reading": "cho",
+    "meaning": "katakana cho",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "チョ",
+        "reading": "cho",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-206-ニャ",
+    "character": "ニャ",
+    "reading": "nya",
+    "meaning": "katakana nya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ニャ",
+        "reading": "nya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-207-ニュ",
+    "character": "ニュ",
+    "reading": "nyu",
+    "meaning": "katakana nyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ニュ",
+        "reading": "nyu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-208-ニョ",
+    "character": "ニョ",
+    "reading": "nyo",
+    "meaning": "katakana nyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ニョ",
+        "reading": "nyo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-209-ヒャ",
+    "character": "ヒャ",
+    "reading": "hya",
+    "meaning": "katakana hya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヒャ",
+        "reading": "hya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-210-ヒュ",
+    "character": "ヒュ",
+    "reading": "hyu",
+    "meaning": "katakana hyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヒュ",
+        "reading": "hyu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-211-ヒョ",
+    "character": "ヒョ",
+    "reading": "hyo",
+    "meaning": "katakana hyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ヒョ",
+        "reading": "hyo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-212-ミャ",
+    "character": "ミャ",
+    "reading": "mya",
+    "meaning": "katakana mya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ミャ",
+        "reading": "mya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-213-ミュ",
+    "character": "ミュ",
+    "reading": "myu",
+    "meaning": "katakana myu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ミュ",
+        "reading": "myu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-214-ミョ",
+    "character": "ミョ",
+    "reading": "myo",
+    "meaning": "katakana myo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ミョ",
+        "reading": "myo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-215-リャ",
+    "character": "リャ",
+    "reading": "rya",
+    "meaning": "katakana rya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "リャ",
+        "reading": "rya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-216-リュ",
+    "character": "リュ",
+    "reading": "ryu",
+    "meaning": "katakana ryu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "リュ",
+        "reading": "ryu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-217-リョ",
+    "character": "リョ",
+    "reading": "ryo",
+    "meaning": "katakana ryo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "リョ",
+        "reading": "ryo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-218-ギャ",
+    "character": "ギャ",
+    "reading": "gya",
+    "meaning": "katakana gya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ギャ",
+        "reading": "gya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-219-ギュ",
+    "character": "ギュ",
+    "reading": "gyu",
+    "meaning": "katakana gyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ギュ",
+        "reading": "gyu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-220-ギョ",
+    "character": "ギョ",
+    "reading": "gyo",
+    "meaning": "katakana gyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ギョ",
+        "reading": "gyo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-221-ジャ",
+    "character": "ジャ",
+    "reading": "ja",
+    "meaning": "katakana ja",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ジャ",
+        "reading": "ja",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-222-ジュ",
+    "character": "ジュ",
+    "reading": "ju",
+    "meaning": "katakana ju",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ジュ",
+        "reading": "ju",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-223-ジョ",
+    "character": "ジョ",
+    "reading": "jo",
+    "meaning": "katakana jo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ジョ",
+        "reading": "jo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-224-ビャ",
+    "character": "ビャ",
+    "reading": "bya",
+    "meaning": "katakana bya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ビャ",
+        "reading": "bya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-225-ビュ",
+    "character": "ビュ",
+    "reading": "byu",
+    "meaning": "katakana byu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ビュ",
+        "reading": "byu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-226-ビョ",
+    "character": "ビョ",
+    "reading": "byo",
+    "meaning": "katakana byo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ビョ",
+        "reading": "byo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-227-ピャ",
+    "character": "ピャ",
+    "reading": "pya",
+    "meaning": "katakana pya",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ピャ",
+        "reading": "pya",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-228-ピュ",
+    "character": "ピュ",
+    "reading": "pyu",
+    "meaning": "katakana pyu",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ピュ",
+        "reading": "pyu",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "katakana-229-ピョ",
+    "character": "ピョ",
+    "reading": "pyo",
+    "meaning": "katakana pyo",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ピョ",
+        "reading": "pyo",
+        "en": "katakana character"
+      }
+    ]
+  },
+  {
+    "id": "kanji-0-日",
+    "character": "日",
+    "reading": "nichi / hi",
+    "meaning": "day; sun",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "日本",
+        "reading": "nihon",
+        "en": "Japan"
+      }
+    ]
+  },
+  {
+    "id": "kanji-1-一",
+    "character": "一",
+    "reading": "ichi",
+    "meaning": "one",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "一つ",
+        "reading": "hitotsu",
+        "en": "one thing"
+      }
+    ]
+  },
+  {
+    "id": "kanji-2-二",
+    "character": "二",
+    "reading": "ni",
+    "meaning": "two",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "二月",
+        "reading": "nigatsu",
+        "en": "February"
+      }
+    ]
+  },
+  {
+    "id": "kanji-3-三",
+    "character": "三",
+    "reading": "san",
+    "meaning": "three",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "三人",
+        "reading": "sannin",
+        "en": "three people"
+      }
+    ]
+  },
+  {
+    "id": "kanji-4-四",
+    "character": "四",
+    "reading": "yon / shi",
+    "meaning": "four",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "四月",
+        "reading": "shigatsu",
+        "en": "April"
+      }
+    ]
+  },
+  {
+    "id": "kanji-5-五",
+    "character": "五",
+    "reading": "go",
+    "meaning": "five",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "五日",
+        "reading": "itsuka",
+        "en": "fifth day"
+      }
+    ]
+  },
+  {
+    "id": "kanji-6-六",
+    "character": "六",
+    "reading": "roku",
+    "meaning": "six",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "六月",
+        "reading": "rokugatsu",
+        "en": "June"
+      }
+    ]
+  },
+  {
+    "id": "kanji-7-七",
+    "character": "七",
+    "reading": "nana / shichi",
+    "meaning": "seven",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "七時",
+        "reading": "shichiji",
+        "en": "seven o'clock"
+      }
+    ]
+  },
+  {
+    "id": "kanji-8-八",
+    "character": "八",
+    "reading": "hachi",
+    "meaning": "eight",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "八月",
+        "reading": "hachigatsu",
+        "en": "August"
+      }
+    ]
+  },
+  {
+    "id": "kanji-9-九",
+    "character": "九",
+    "reading": "kyuu / ku",
+    "meaning": "nine",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "九月",
+        "reading": "kugatsu",
+        "en": "September"
+      }
+    ]
+  },
+  {
+    "id": "kanji-10-十",
+    "character": "十",
+    "reading": "juu",
+    "meaning": "ten",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "十人",
+        "reading": "juunin",
+        "en": "ten people"
+      }
+    ]
+  },
+  {
+    "id": "kanji-11-百",
+    "character": "百",
+    "reading": "hyaku",
+    "meaning": "hundred",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "百円",
+        "reading": "hyakuen",
+        "en": "one hundred yen"
+      }
+    ]
+  },
+  {
+    "id": "kanji-12-千",
+    "character": "千",
+    "reading": "sen",
+    "meaning": "thousand",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "千円",
+        "reading": "sen'en",
+        "en": "one thousand yen"
+      }
+    ]
+  },
+  {
+    "id": "kanji-13-万",
+    "character": "万",
+    "reading": "man",
+    "meaning": "ten thousand",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "一万",
+        "reading": "ichiman",
+        "en": "ten thousand"
+      }
+    ]
+  },
+  {
+    "id": "kanji-14-円",
+    "character": "円",
+    "reading": "en",
+    "meaning": "yen; circle",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "百円",
+        "reading": "hyakuen",
+        "en": "one hundred yen"
+      }
+    ]
+  },
+  {
+    "id": "kanji-15-人",
+    "character": "人",
+    "reading": "hito / jin",
+    "meaning": "person",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "日本人",
+        "reading": "nihonjin",
+        "en": "Japanese person"
+      }
+    ]
+  },
+  {
+    "id": "kanji-16-子",
+    "character": "子",
+    "reading": "ko",
+    "meaning": "child",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "子ども",
+        "reading": "kodomo",
+        "en": "child"
+      }
+    ]
+  },
+  {
+    "id": "kanji-17-女",
+    "character": "女",
+    "reading": "onna / jo",
+    "meaning": "woman",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "女の人",
+        "reading": "onna no hito",
+        "en": "woman"
+      }
+    ]
+  },
+  {
+    "id": "kanji-18-男",
+    "character": "男",
+    "reading": "otoko / dan",
+    "meaning": "man",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "男の人",
+        "reading": "otoko no hito",
+        "en": "man"
+      }
+    ]
+  },
+  {
+    "id": "kanji-19-父",
+    "character": "父",
+    "reading": "chichi / tou",
+    "meaning": "father",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "父です",
+        "reading": "chichi desu",
+        "en": "my father"
+      }
+    ]
+  },
+  {
+    "id": "kanji-20-母",
+    "character": "母",
+    "reading": "haha / kaa",
+    "meaning": "mother",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "母です",
+        "reading": "haha desu",
+        "en": "my mother"
+      }
+    ]
+  },
+  {
+    "id": "kanji-21-友",
+    "character": "友",
+    "reading": "tomo",
+    "meaning": "friend",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "友だち",
+        "reading": "tomodachi",
+        "en": "friend"
+      }
+    ]
+  },
+  {
+    "id": "kanji-22-先",
+    "character": "先",
+    "reading": "saki / sen",
+    "meaning": "previous; ahead",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "先生",
+        "reading": "sensei",
+        "en": "teacher"
+      }
+    ]
+  },
+  {
+    "id": "kanji-23-生",
+    "character": "生",
+    "reading": "sei / i",
+    "meaning": "life; birth",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "学生",
+        "reading": "gakusei",
+        "en": "student"
+      }
+    ]
+  },
+  {
+    "id": "kanji-24-学",
+    "character": "学",
+    "reading": "gaku",
+    "meaning": "study",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "学校",
+        "reading": "gakkou",
+        "en": "school"
+      }
+    ]
+  },
+  {
+    "id": "kanji-25-校",
+    "character": "校",
+    "reading": "kou",
+    "meaning": "school",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "学校",
+        "reading": "gakkou",
+        "en": "school"
+      }
+    ]
+  },
+  {
+    "id": "kanji-26-本",
+    "character": "本",
+    "reading": "hon",
+    "meaning": "book; origin",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "本を読む",
+        "reading": "hon o yomu",
+        "en": "read a book"
+      }
+    ]
+  },
+  {
+    "id": "kanji-27-何",
+    "character": "何",
+    "reading": "nani / nan",
+    "meaning": "what",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "何ですか",
+        "reading": "nan desu ka",
+        "en": "what is it?"
+      }
+    ]
+  },
+  {
+    "id": "kanji-28-時",
+    "character": "時",
+    "reading": "ji / toki",
+    "meaning": "time",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "一時",
+        "reading": "ichiji",
+        "en": "one o'clock"
+      }
+    ]
+  },
+  {
+    "id": "kanji-29-分",
+    "character": "分",
+    "reading": "fun / bun",
+    "meaning": "minute; part",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "五分",
+        "reading": "gofun",
+        "en": "five minutes"
+      }
+    ]
+  },
+  {
+    "id": "kanji-30-半",
+    "character": "半",
+    "reading": "han",
+    "meaning": "half",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "三時半",
+        "reading": "sanji han",
+        "en": "three thirty"
+      }
+    ]
+  },
+  {
+    "id": "kanji-31-月",
+    "character": "月",
+    "reading": "getsu / tsuki",
+    "meaning": "moon; month",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "月曜日",
+        "reading": "getsuyoubi",
+        "en": "Monday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-32-火",
+    "character": "火",
+    "reading": "hi / ka",
+    "meaning": "fire",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "火曜日",
+        "reading": "kayoubi",
+        "en": "Tuesday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-33-水",
+    "character": "水",
+    "reading": "mizu / sui",
+    "meaning": "water",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "水を飲む",
+        "reading": "mizu o nomu",
+        "en": "drink water"
+      }
+    ]
+  },
+  {
+    "id": "kanji-34-木",
+    "character": "木",
+    "reading": "ki / moku",
+    "meaning": "tree; wood",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "木曜日",
+        "reading": "mokuyoubi",
+        "en": "Thursday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-35-金",
+    "character": "金",
+    "reading": "kane / kin",
+    "meaning": "gold; money",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "金曜日",
+        "reading": "kinyoubi",
+        "en": "Friday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-36-土",
+    "character": "土",
+    "reading": "tsuchi / do",
+    "meaning": "earth; soil",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "土曜日",
+        "reading": "doyoubi",
+        "en": "Saturday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-37-曜",
+    "character": "曜",
+    "reading": "you",
+    "meaning": "weekday",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "日曜日",
+        "reading": "nichiyoubi",
+        "en": "Sunday"
+      }
+    ]
+  },
+  {
+    "id": "kanji-38-年",
+    "character": "年",
+    "reading": "toshi / nen",
+    "meaning": "year",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "今年",
+        "reading": "kotoshi",
+        "en": "this year"
+      }
+    ]
+  },
+  {
+    "id": "kanji-39-今",
+    "character": "今",
+    "reading": "ima / kon",
+    "meaning": "now",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "今です",
+        "reading": "ima desu",
+        "en": "it is now"
+      }
+    ]
+  },
+  {
+    "id": "kanji-40-毎",
+    "character": "毎",
+    "reading": "mai",
+    "meaning": "every",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "毎日",
+        "reading": "mainichi",
+        "en": "every day"
+      }
+    ]
+  },
+  {
+    "id": "kanji-41-間",
+    "character": "間",
+    "reading": "aida / kan",
+    "meaning": "interval",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "時間",
+        "reading": "jikan",
+        "en": "time"
+      }
+    ]
+  },
+  {
+    "id": "kanji-42-午",
+    "character": "午",
+    "reading": "go",
+    "meaning": "noon",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "午後",
+        "reading": "gogo",
+        "en": "afternoon"
+      }
+    ]
+  },
+  {
+    "id": "kanji-43-前",
+    "character": "前",
+    "reading": "mae",
+    "meaning": "before; front",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "午前",
+        "reading": "gozen",
+        "en": "morning"
+      }
+    ]
+  },
+  {
+    "id": "kanji-44-後",
+    "character": "後",
+    "reading": "ato / go",
+    "meaning": "after; behind",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "午後",
+        "reading": "gogo",
+        "en": "afternoon"
+      }
+    ]
+  },
+  {
+    "id": "kanji-45-朝",
+    "character": "朝",
+    "reading": "asa",
+    "meaning": "morning",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "朝ごはん",
+        "reading": "asa gohan",
+        "en": "breakfast"
+      }
+    ]
+  },
+  {
+    "id": "kanji-46-昼",
+    "character": "昼",
+    "reading": "hiru",
+    "meaning": "noon",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "昼ごはん",
+        "reading": "hiru gohan",
+        "en": "lunch"
+      }
+    ]
+  },
+  {
+    "id": "kanji-47-夜",
+    "character": "夜",
+    "reading": "yoru",
+    "meaning": "night",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "夜です",
+        "reading": "yoru desu",
+        "en": "night"
+      }
+    ]
+  },
+  {
+    "id": "kanji-48-上",
+    "character": "上",
+    "reading": "ue",
+    "meaning": "up; above",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "机の上",
+        "reading": "tsukue no ue",
+        "en": "on the desk"
+      }
+    ]
+  },
+  {
+    "id": "kanji-49-下",
+    "character": "下",
+    "reading": "shita",
+    "meaning": "down; below",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "下にある",
+        "reading": "shita ni aru",
+        "en": "it is below"
+      }
+    ]
+  },
+  {
+    "id": "kanji-50-中",
+    "character": "中",
+    "reading": "naka / chuu",
+    "meaning": "inside; middle",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "中に入る",
+        "reading": "naka ni hairu",
+        "en": "go inside"
+      }
+    ]
+  },
+  {
+    "id": "kanji-51-外",
+    "character": "外",
+    "reading": "soto / gai",
+    "meaning": "outside",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "外へ行く",
+        "reading": "soto e iku",
+        "en": "go outside"
+      }
+    ]
+  },
+  {
+    "id": "kanji-52-右",
+    "character": "右",
+    "reading": "migi",
+    "meaning": "right",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "右へ曲がる",
+        "reading": "migi e magaru",
+        "en": "turn right"
+      }
+    ]
+  },
+  {
+    "id": "kanji-53-左",
+    "character": "左",
+    "reading": "hidari",
+    "meaning": "left",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "左へ曲がる",
+        "reading": "hidari e magaru",
+        "en": "turn left"
+      }
+    ]
+  },
+  {
+    "id": "kanji-54-東",
+    "character": "東",
+    "reading": "higashi / tou",
+    "meaning": "east",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "東京",
+        "reading": "toukyou",
+        "en": "Tokyo"
+      }
+    ]
+  },
+  {
+    "id": "kanji-55-西",
+    "character": "西",
+    "reading": "nishi / sei",
+    "meaning": "west",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "西口",
+        "reading": "nishiguchi",
+        "en": "west exit"
+      }
+    ]
+  },
+  {
+    "id": "kanji-56-南",
+    "character": "南",
+    "reading": "minami / nan",
+    "meaning": "south",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "南口",
+        "reading": "minamiguchi",
+        "en": "south exit"
+      }
+    ]
+  },
+  {
+    "id": "kanji-57-北",
+    "character": "北",
+    "reading": "kita / hoku",
+    "meaning": "north",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "北口",
+        "reading": "kitaguchi",
+        "en": "north exit"
+      }
+    ]
+  },
+  {
+    "id": "kanji-58-口",
+    "character": "口",
+    "reading": "kuchi / kou",
+    "meaning": "mouth; opening",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "入口",
+        "reading": "iriguchi",
+        "en": "entrance"
+      }
+    ]
+  },
+  {
+    "id": "kanji-59-目",
+    "character": "目",
+    "reading": "me",
+    "meaning": "eye",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "目を見る",
+        "reading": "me o miru",
+        "en": "look at eyes"
+      }
+    ]
+  },
+  {
+    "id": "kanji-60-耳",
+    "character": "耳",
+    "reading": "mimi",
+    "meaning": "ear",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "耳で聞く",
+        "reading": "mimi de kiku",
+        "en": "listen with ears"
+      }
+    ]
+  },
+  {
+    "id": "kanji-62-足",
+    "character": "足",
+    "reading": "ashi",
+    "meaning": "foot; leg",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "足が痛い",
+        "reading": "ashi ga itai",
+        "en": "my foot hurts"
+      }
+    ]
+  },
+  {
+    "id": "kanji-63-力",
+    "character": "力",
+    "reading": "chikara",
+    "meaning": "power",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "力がある",
+        "reading": "chikara ga aru",
+        "en": "have power"
+      }
+    ]
+  },
+  {
+    "id": "kanji-64-名",
+    "character": "名",
+    "reading": "na / mei",
+    "meaning": "name",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "名前",
+        "reading": "namae",
+        "en": "name"
+      }
+    ]
+  },
+  {
+    "id": "kanji-65-語",
+    "character": "語",
+    "reading": "go",
+    "meaning": "language",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "日本語",
+        "reading": "nihongo",
+        "en": "Japanese language"
+      }
+    ]
+  },
+  {
+    "id": "kanji-66-話",
+    "character": "話",
+    "reading": "hanashi / wa",
+    "meaning": "talk",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "話します",
+        "reading": "hanashimasu",
+        "en": "to speak"
+      }
+    ]
+  },
+  {
+    "id": "kanji-67-読",
+    "character": "読",
+    "reading": "yo",
+    "meaning": "read",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "本を読む",
+        "reading": "hon o yomu",
+        "en": "read a book"
+      }
+    ]
+  },
+  {
+    "id": "kanji-68-書",
+    "character": "書",
+    "reading": "ka",
+    "meaning": "write",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "字を書く",
+        "reading": "ji o kaku",
+        "en": "write a character"
+      }
+    ]
+  },
+  {
+    "id": "kanji-69-聞",
+    "character": "聞",
+    "reading": "ki",
+    "meaning": "listen; ask",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "音楽を聞く",
+        "reading": "ongaku o kiku",
+        "en": "listen to music"
+      }
+    ]
+  },
+  {
+    "id": "kanji-70-見",
+    "character": "見",
+    "reading": "mi",
+    "meaning": "see",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "映画を見る",
+        "reading": "eiga o miru",
+        "en": "watch a movie"
+      }
+    ]
+  },
+  {
+    "id": "kanji-71-行",
+    "character": "行",
+    "reading": "i / kou",
+    "meaning": "go",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "学校へ行く",
+        "reading": "gakkou e iku",
+        "en": "go to school"
+      }
+    ]
+  },
+  {
+    "id": "kanji-72-来",
+    "character": "来",
+    "reading": "ku / rai",
+    "meaning": "come",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "日本へ来る",
+        "reading": "nihon e kuru",
+        "en": "come to Japan"
+      }
+    ]
+  },
+  {
+    "id": "kanji-73-帰",
+    "character": "帰",
+    "reading": "kae",
+    "meaning": "return",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "家へ帰る",
+        "reading": "ie e kaeru",
+        "en": "go home"
+      }
+    ]
+  },
+  {
+    "id": "kanji-74-食",
+    "character": "食",
+    "reading": "ta / shoku",
+    "meaning": "eat; food",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "ご飯を食べる",
+        "reading": "gohan o taberu",
+        "en": "eat rice"
+      }
+    ]
+  },
+  {
+    "id": "kanji-75-飲",
+    "character": "飲",
+    "reading": "no",
+    "meaning": "drink",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "水を飲む",
+        "reading": "mizu o nomu",
+        "en": "drink water"
+      }
+    ]
+  },
+  {
+    "id": "kanji-76-買",
+    "character": "買",
+    "reading": "ka",
+    "meaning": "buy",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "本を買う",
+        "reading": "hon o kau",
+        "en": "buy a book"
+      }
+    ]
+  },
+  {
+    "id": "kanji-77-休",
+    "character": "休",
+    "reading": "yasu",
+    "meaning": "rest",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "休みます",
+        "reading": "yasumimasu",
+        "en": "to rest"
+      }
+    ]
+  },
+  {
+    "id": "kanji-78-会",
+    "character": "会",
+    "reading": "a / kai",
+    "meaning": "meet",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "友だちに会う",
+        "reading": "tomodachi ni au",
+        "en": "meet a friend"
+      }
+    ]
+  },
+  {
+    "id": "kanji-79-出",
+    "character": "出",
+    "reading": "de / shutsu",
+    "meaning": "exit; leave",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "出ます",
+        "reading": "demasu",
+        "en": "to leave"
+      }
+    ]
+  },
+  {
+    "id": "kanji-80-入",
+    "character": "入",
+    "reading": "hai / iri",
+    "meaning": "enter",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "入ります",
+        "reading": "hairimasu",
+        "en": "to enter"
+      }
+    ]
+  },
+  {
+    "id": "kanji-81-立",
+    "character": "立",
+    "reading": "ta",
+    "meaning": "stand",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "立ちます",
+        "reading": "tachimasu",
+        "en": "to stand"
+      }
+    ]
+  },
+  {
+    "id": "kanji-82-安",
+    "character": "安",
+    "reading": "yasu / an",
+    "meaning": "cheap; peace",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "安いです",
+        "reading": "yasui desu",
+        "en": "it is cheap"
+      }
+    ]
+  },
+  {
+    "id": "kanji-83-高",
+    "character": "高",
+    "reading": "taka / kou",
+    "meaning": "high; expensive",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "高いです",
+        "reading": "takai desu",
+        "en": "it is expensive"
+      }
+    ]
+  },
+  {
+    "id": "kanji-84-大",
+    "character": "大",
+    "reading": "oo / dai",
+    "meaning": "big",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "大きい犬",
+        "reading": "ookii inu",
+        "en": "big dog"
+      }
+    ]
+  },
+  {
+    "id": "kanji-85-小",
+    "character": "小",
+    "reading": "chii / shou",
+    "meaning": "small",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "小さい猫",
+        "reading": "chiisai neko",
+        "en": "small cat"
+      }
+    ]
+  },
+  {
+    "id": "kanji-86-新",
+    "character": "新",
+    "reading": "atara / shin",
+    "meaning": "new",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "新しい本",
+        "reading": "atarashii hon",
+        "en": "new book"
+      }
+    ]
+  },
+  {
+    "id": "kanji-87-古",
+    "character": "古",
+    "reading": "furu / ko",
+    "meaning": "old",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "古い家",
+        "reading": "furui ie",
+        "en": "old house"
+      }
+    ]
+  },
+  {
+    "id": "kanji-88-長",
+    "character": "長",
+    "reading": "naga / chou",
+    "meaning": "long",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "長い道",
+        "reading": "nagai michi",
+        "en": "long road"
+      }
+    ]
+  },
+  {
+    "id": "kanji-89-白",
+    "character": "白",
+    "reading": "shiro / haku",
+    "meaning": "white",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "白い紙",
+        "reading": "shiroi kami",
+        "en": "white paper"
+      }
+    ]
+  },
+  {
+    "id": "kanji-90-赤",
+    "character": "赤",
+    "reading": "aka / seki",
+    "meaning": "red",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "赤い花",
+        "reading": "akai hana",
+        "en": "red flower"
+      }
+    ]
+  },
+  {
+    "id": "kanji-91-青",
+    "character": "青",
+    "reading": "ao / sei",
+    "meaning": "blue",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "青い空",
+        "reading": "aoi sora",
+        "en": "blue sky"
+      }
+    ]
+  },
+  {
+    "id": "kanji-92-黒",
+    "character": "黒",
+    "reading": "kuro / koku",
+    "meaning": "black",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "黒い車",
+        "reading": "kuroi kuruma",
+        "en": "black car"
+      }
+    ]
+  },
+  {
+    "id": "kanji-93-気",
+    "character": "気",
+    "reading": "ki",
+    "meaning": "spirit; energy",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "元気",
+        "reading": "genki",
+        "en": "healthy"
+      }
+    ]
+  },
+  {
+    "id": "kanji-94-天",
+    "character": "天",
+    "reading": "ten",
+    "meaning": "heaven; sky",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "天気",
+        "reading": "tenki",
+        "en": "weather"
+      }
+    ]
+  },
+  {
+    "id": "kanji-95-空",
+    "character": "空",
+    "reading": "sora / kuu",
+    "meaning": "sky; empty",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "空を見る",
+        "reading": "sora o miru",
+        "en": "look at the sky"
+      }
+    ]
+  },
+  {
+    "id": "kanji-96-雨",
+    "character": "雨",
+    "reading": "ame / u",
+    "meaning": "rain",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "雨です",
+        "reading": "ame desu",
+        "en": "it is raining"
+      }
+    ]
+  },
+  {
+    "id": "kanji-97-電",
+    "character": "電",
+    "reading": "den",
+    "meaning": "electricity",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "電車",
+        "reading": "densha",
+        "en": "train"
+      }
+    ]
+  },
+  {
+    "id": "kanji-98-車",
+    "character": "車",
+    "reading": "kuruma / sha",
+    "meaning": "car",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "車に乗る",
+        "reading": "kuruma ni noru",
+        "en": "ride in a car"
+      }
+    ]
+  },
+  {
+    "id": "kanji-99-駅",
+    "character": "駅",
+    "reading": "eki",
+    "meaning": "station",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "駅へ行く",
+        "reading": "eki e iku",
+        "en": "go to the station"
+      }
+    ]
+  },
+  {
+    "id": "kanji-100-店",
+    "character": "店",
+    "reading": "mise / ten",
+    "meaning": "shop",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "店で買う",
+        "reading": "mise de kau",
+        "en": "buy at a shop"
+      }
+    ]
+  },
+  {
+    "id": "kanji-101-社",
+    "character": "社",
+    "reading": "sha",
+    "meaning": "company; shrine",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "会社",
+        "reading": "kaisha",
+        "en": "company"
+      }
+    ]
+  },
+  {
+    "id": "kanji-102-国",
+    "character": "国",
+    "reading": "kuni / koku",
+    "meaning": "country",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "国へ帰る",
+        "reading": "kuni e kaeru",
+        "en": "return to one's country"
+      }
+    ]
+  },
+  {
+    "id": "kanji-103-家",
+    "character": "家",
+    "reading": "ie / ka",
+    "meaning": "house; family",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "家にいる",
+        "reading": "ie ni iru",
+        "en": "be at home"
+      }
+    ]
+  },
+  {
+    "id": "kanji-104-町",
+    "character": "町",
+    "reading": "machi / chou",
+    "meaning": "town",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "町を歩く",
+        "reading": "machi o aruku",
+        "en": "walk in town"
+      }
+    ]
+  },
+  {
+    "id": "kanji-105-道",
+    "character": "道",
+    "reading": "michi / dou",
+    "meaning": "road; way",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "道を聞く",
+        "reading": "michi o kiku",
+        "en": "ask the way"
+      }
+    ]
+  },
+  {
+    "id": "kanji-106-花",
+    "character": "花",
+    "reading": "hana",
+    "meaning": "flower",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "花を見る",
+        "reading": "hana o miru",
+        "en": "look at flowers"
+      }
+    ]
+  },
+  {
+    "id": "kanji-107-山",
+    "character": "山",
+    "reading": "yama / san",
+    "meaning": "mountain",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "山に登る",
+        "reading": "yama ni noboru",
+        "en": "climb a mountain"
+      }
+    ]
+  },
+  {
+    "id": "kanji-108-川",
+    "character": "川",
+    "reading": "kawa",
+    "meaning": "river",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "川で泳ぐ",
+        "reading": "kawa de oyogu",
+        "en": "swim in a river"
+      }
+    ]
+  },
+  {
+    "id": "kanji-109-医",
+    "character": "医",
+    "reading": "i",
+    "meaning": "medicine",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "医者",
+        "reading": "isha",
+        "en": "doctor"
+      }
+    ]
+  },
+  {
+    "id": "kanji-110-者",
+    "character": "者",
+    "reading": "sha",
+    "meaning": "person",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "医者",
+        "reading": "isha",
+        "en": "doctor"
+      }
+    ]
+  },
+  {
+    "id": "kanji-111-員",
+    "character": "員",
+    "reading": "in",
+    "meaning": "member",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "会社員",
+        "reading": "kaishain",
+        "en": "company employee"
+      }
+    ]
+  },
+  {
+    "id": "kanji-112-室",
+    "character": "室",
+    "reading": "shitsu",
+    "meaning": "room",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "教室",
+        "reading": "kyoushitsu",
+        "en": "classroom"
+      }
+    ]
+  },
+  {
+    "id": "kanji-113-教",
+    "character": "教",
+    "reading": "oshie / kyou",
+    "meaning": "teach",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "教える",
+        "reading": "oshieru",
+        "en": "to teach"
+      }
+    ]
+  },
+  {
+    "id": "kanji-114-質",
+    "character": "質",
+    "reading": "shitsu",
+    "meaning": "quality; question",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "質問",
+        "reading": "shitsumon",
+        "en": "question"
+      }
+    ]
+  },
+  {
+    "id": "kanji-115-問",
+    "character": "問",
+    "reading": "mon / to",
+    "meaning": "question",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "質問する",
+        "reading": "shitsumon suru",
+        "en": "ask a question"
+      }
+    ]
+  },
+  {
+    "id": "kanji-116-答",
+    "character": "答",
+    "reading": "kota",
+    "meaning": "answer",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "答える",
+        "reading": "kotaeru",
+        "en": "to answer"
+      }
+    ]
+  },
+  {
+    "id": "kanji-117-試",
+    "character": "試",
+    "reading": "shi / tamesu",
+    "meaning": "try; test",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "試験",
+        "reading": "shiken",
+        "en": "exam"
+      }
+    ]
+  },
+  {
+    "id": "kanji-118-験",
+    "character": "験",
+    "reading": "ken",
+    "meaning": "test; experience",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "試験",
+        "reading": "shiken",
+        "en": "exam"
+      }
+    ]
+  },
+  {
+    "id": "kanji-119-勉",
+    "character": "勉",
+    "reading": "ben",
+    "meaning": "effort",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "勉強",
+        "reading": "benkyou",
+        "en": "study"
+      }
+    ]
+  },
+  {
+    "id": "kanji-120-強",
+    "character": "強",
+    "reading": "tsuyo / kyou",
+    "meaning": "strong",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "勉強する",
+        "reading": "benkyou suru",
+        "en": "to study"
+      }
+    ]
+  },
+  {
+    "id": "kanji-121-弱",
+    "character": "弱",
+    "reading": "yowa",
+    "meaning": "weak",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "弱い",
+        "reading": "yowai",
+        "en": "weak"
+      }
+    ]
+  },
+  {
+    "id": "kanji-122-悪",
+    "character": "悪",
+    "reading": "waru / aku",
+    "meaning": "bad",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "悪い",
+        "reading": "warui",
+        "en": "bad"
+      }
+    ]
+  },
+  {
+    "id": "kanji-123-好",
+    "character": "好",
+    "reading": "su / kou",
+    "meaning": "like",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "好き",
+        "reading": "suki",
+        "en": "like"
+      }
+    ]
+  },
+  {
+    "id": "kanji-124-楽",
+    "character": "楽",
+    "reading": "tano / gaku",
+    "meaning": "fun; music",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "楽しい",
+        "reading": "tanoshii",
+        "en": "fun"
+      }
+    ]
+  },
+  {
+    "id": "kanji-125-歌",
+    "character": "歌",
+    "reading": "uta",
+    "meaning": "song",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "歌う",
+        "reading": "utau",
+        "en": "to sing"
+      }
+    ]
+  },
+  {
+    "id": "kanji-126-運",
+    "character": "運",
+    "reading": "un",
+    "meaning": "luck; carry",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "運転",
+        "reading": "unten",
+        "en": "driving"
+      }
+    ]
+  },
+  {
+    "id": "kanji-127-転",
+    "character": "転",
+    "reading": "ten",
+    "meaning": "turn",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "運転する",
+        "reading": "unten suru",
+        "en": "to drive"
+      }
+    ]
+  },
+  {
+    "id": "kanji-128-動",
+    "character": "動",
+    "reading": "ugo / dou",
+    "meaning": "move",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "運動",
+        "reading": "undou",
+        "en": "exercise"
+      }
+    ]
+  },
+  {
+    "id": "kanji-129-働",
+    "character": "働",
+    "reading": "hatara",
+    "meaning": "work",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "働く",
+        "reading": "hataraku",
+        "en": "to work"
+      }
+    ]
+  },
+  {
+    "id": "kanji-130-始",
+    "character": "始",
+    "reading": "haji",
+    "meaning": "begin",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "始まる",
+        "reading": "hajimaru",
+        "en": "to begin"
+      }
+    ]
+  },
+  {
+    "id": "kanji-131-終",
+    "character": "終",
+    "reading": "o",
+    "meaning": "end",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "終わる",
+        "reading": "owaru",
+        "en": "to end"
+      }
+    ]
+  },
+  {
+    "id": "kanji-132-起",
+    "character": "起",
+    "reading": "o",
+    "meaning": "wake up",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "起きる",
+        "reading": "okiru",
+        "en": "to wake up"
+      }
+    ]
+  },
+  {
+    "id": "kanji-133-寝",
+    "character": "寝",
+    "reading": "ne",
+    "meaning": "sleep",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "寝る",
+        "reading": "neru",
+        "en": "to sleep"
+      }
+    ]
+  },
+  {
+    "id": "kanji-134-歩",
+    "character": "歩",
+    "reading": "aru / ho",
+    "meaning": "walk",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "歩く",
+        "reading": "aruku",
+        "en": "to walk"
+      }
+    ]
+  },
+  {
+    "id": "kanji-135-走",
+    "character": "走",
+    "reading": "hashi",
+    "meaning": "run",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "走る",
+        "reading": "hashiru",
+        "en": "to run"
+      }
+    ]
+  },
+  {
+    "id": "kanji-136-持",
+    "character": "持",
+    "reading": "mo",
+    "meaning": "hold",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "持つ",
+        "reading": "motsu",
+        "en": "to hold"
+      }
+    ]
+  },
+  {
+    "id": "kanji-137-待",
+    "character": "待",
+    "reading": "ma",
+    "meaning": "wait",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "待つ",
+        "reading": "matsu",
+        "en": "to wait"
+      }
+    ]
+  },
+  {
+    "id": "kanji-138-使",
+    "character": "使",
+    "reading": "tsuka",
+    "meaning": "use",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "使う",
+        "reading": "tsukau",
+        "en": "to use"
+      }
+    ]
+  },
+  {
+    "id": "kanji-139-作",
+    "character": "作",
+    "reading": "tsuku / saku",
+    "meaning": "make",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "作る",
+        "reading": "tsukuru",
+        "en": "to make"
+      }
+    ]
+  },
+  {
+    "id": "kanji-140-売",
+    "character": "売",
+    "reading": "u",
+    "meaning": "sell",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "売る",
+        "reading": "uru",
+        "en": "to sell"
+      }
+    ]
+  },
+  {
+    "id": "kanji-141-貸",
+    "character": "貸",
+    "reading": "ka",
+    "meaning": "lend",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "貸す",
+        "reading": "kasu",
+        "en": "to lend"
+      }
+    ]
+  },
+  {
+    "id": "kanji-142-借",
+    "character": "借",
+    "reading": "ka",
+    "meaning": "borrow",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "借りる",
+        "reading": "kariru",
+        "en": "to borrow"
+      }
+    ]
+  },
+  {
+    "id": "kanji-143-送",
+    "character": "送",
+    "reading": "oku",
+    "meaning": "send",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "送る",
+        "reading": "okuru",
+        "en": "to send"
+      }
+    ]
+  },
+  {
+    "id": "kanji-144-切",
+    "character": "切",
+    "reading": "ki / setsu",
+    "meaning": "cut; kind",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "切る",
+        "reading": "kiru",
+        "en": "to cut"
+      }
+    ]
+  },
+  {
+    "id": "kanji-145-開",
+    "character": "開",
+    "reading": "a / hira",
+    "meaning": "open",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "開ける",
+        "reading": "akeru",
+        "en": "to open"
+      }
+    ]
+  },
+  {
+    "id": "kanji-146-閉",
+    "character": "閉",
+    "reading": "shi",
+    "meaning": "close",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "閉める",
+        "reading": "shimeru",
+        "en": "to close"
+      }
+    ]
+  },
+  {
+    "id": "kanji-147-洗",
+    "character": "洗",
+    "reading": "ara",
+    "meaning": "wash",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "洗う",
+        "reading": "arau",
+        "en": "to wash"
+      }
+    ]
+  },
+  {
+    "id": "kanji-148-着",
+    "character": "着",
+    "reading": "ki / tsu",
+    "meaning": "wear; arrive",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "着る",
+        "reading": "kiru",
+        "en": "to wear"
+      }
+    ]
+  },
+  {
+    "id": "kanji-149-住",
+    "character": "住",
+    "reading": "su",
+    "meaning": "live",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "住む",
+        "reading": "sumu",
+        "en": "to live"
+      }
+    ]
+  },
+  {
+    "id": "kanji-150-所",
+    "character": "所",
+    "reading": "tokoro / sho",
+    "meaning": "place",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "場所",
+        "reading": "basho",
+        "en": "place"
+      }
+    ]
+  },
+  {
+    "id": "kanji-151-近",
+    "character": "近",
+    "reading": "chika / kin",
+    "meaning": "near",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "近い",
+        "reading": "chikai",
+        "en": "near"
+      }
+    ]
+  },
+  {
+    "id": "kanji-152-遠",
+    "character": "遠",
+    "reading": "too / en",
+    "meaning": "far",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "遠い",
+        "reading": "tooi",
+        "en": "far"
+      }
+    ]
+  },
+  {
+    "id": "kanji-153-早",
+    "character": "早",
+    "reading": "haya / sou",
+    "meaning": "early",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "早い",
+        "reading": "hayai",
+        "en": "early"
+      }
+    ]
+  },
+  {
+    "id": "kanji-154-遅",
+    "character": "遅",
+    "reading": "oso",
+    "meaning": "late",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "遅い",
+        "reading": "osoi",
+        "en": "late"
+      }
+    ]
+  },
+  {
+    "id": "kanji-155-多",
+    "character": "多",
+    "reading": "oo / ta",
+    "meaning": "many",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "多い",
+        "reading": "ooi",
+        "en": "many"
+      }
+    ]
+  },
+  {
+    "id": "kanji-156-少",
+    "character": "少",
+    "reading": "suku / shou",
+    "meaning": "few",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "少ない",
+        "reading": "sukunai",
+        "en": "few"
+      }
+    ]
+  },
+  {
+    "id": "kanji-157-同",
+    "character": "同",
+    "reading": "dou",
+    "meaning": "same",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "同じ",
+        "reading": "onaji",
+        "en": "same"
+      }
+    ]
+  },
+  {
+    "id": "kanji-158-別",
+    "character": "別",
+    "reading": "betsu",
+    "meaning": "separate",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "別の本",
+        "reading": "betsu no hon",
+        "en": "another book"
+      }
+    ]
+  },
+  {
+    "id": "kanji-159-便",
+    "character": "便",
+    "reading": "ben / bin",
+    "meaning": "convenient; mail",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "便利",
+        "reading": "benri",
+        "en": "convenient"
+      }
+    ]
+  },
+  {
+    "id": "kanji-160-利",
+    "character": "利",
+    "reading": "ri",
+    "meaning": "benefit",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "便利",
+        "reading": "benri",
+        "en": "convenient"
+      }
+    ]
+  },
+  {
+    "id": "kanji-161-親",
+    "character": "親",
+    "reading": "oya / shin",
+    "meaning": "parent",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "親切",
+        "reading": "shinsetsu",
+        "en": "kind"
+      }
+    ]
+  },
+  {
+    "id": "kanji-162-有",
+    "character": "有",
+    "reading": "a / yuu",
+    "meaning": "exist; have",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "有名",
+        "reading": "yuumei",
+        "en": "famous"
+      }
+    ]
+  },
+  {
+    "id": "kanji-163-料",
+    "character": "料",
+    "reading": "ryou",
+    "meaning": "fee; material",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "料理",
+        "reading": "ryouri",
+        "en": "cooking"
+      }
+    ]
+  },
+  {
+    "id": "kanji-164-理",
+    "character": "理",
+    "reading": "ri",
+    "meaning": "reason; logic",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "料理",
+        "reading": "ryouri",
+        "en": "cooking"
+      }
+    ]
+  },
+  {
+    "id": "kanji-165-病",
+    "character": "病",
+    "reading": "byou",
+    "meaning": "illness",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "病院",
+        "reading": "byouin",
+        "en": "hospital"
+      }
+    ]
+  },
+  {
+    "id": "kanji-166-院",
+    "character": "院",
+    "reading": "in",
+    "meaning": "institution",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "病院",
+        "reading": "byouin",
+        "en": "hospital"
+      }
+    ]
+  },
+  {
+    "id": "kanji-167-薬",
+    "character": "薬",
+    "reading": "kusuri / yaku",
+    "meaning": "medicine",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "薬を飲む",
+        "reading": "kusuri o nomu",
+        "en": "take medicine"
+      }
+    ]
+  },
+  {
+    "id": "kanji-168-族",
+    "character": "族",
+    "reading": "zoku",
+    "meaning": "family; tribe",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "家族",
+        "reading": "kazoku",
+        "en": "family"
+      }
+    ]
+  },
+  {
+    "id": "kanji-169-兄",
+    "character": "兄",
+    "reading": "ani / kyou",
+    "meaning": "older brother",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "兄です",
+        "reading": "ani desu",
+        "en": "my older brother"
+      }
+    ]
+  },
+  {
+    "id": "kanji-170-弟",
+    "character": "弟",
+    "reading": "otouto / dai",
+    "meaning": "younger brother",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "弟です",
+        "reading": "otouto desu",
+        "en": "my younger brother"
+      }
+    ]
+  },
+  {
+    "id": "kanji-171-姉",
+    "character": "姉",
+    "reading": "ane / shi",
+    "meaning": "older sister",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "姉です",
+        "reading": "ane desu",
+        "en": "my older sister"
+      }
+    ]
+  },
+  {
+    "id": "kanji-172-妹",
+    "character": "妹",
+    "reading": "imouto / mai",
+    "meaning": "younger sister",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "妹です",
+        "reading": "imouto desu",
+        "en": "my younger sister"
+      }
+    ]
+  },
+  {
+    "id": "vocab-phone-denwa",
+    "character": "電話",
+    "reading": "denwa",
+    "meaning": "phone; telephone; phone call",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "電話をします",
+        "reading": "denwa o shimasu",
+        "en": "make a phone call"
+      },
+      {
+        "jp": "電話番号",
+        "reading": "denwa bangou",
+        "en": "phone number"
+      }
+    ]
+  },
+  {
+    "id": "vocab-mobile-phone-keitai-denwa",
+    "character": "携帯電話",
+    "reading": "keitai denwa",
+    "meaning": "mobile phone; cell phone; cellphone",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "携帯電話を使います",
+        "reading": "keitai denwa o tsukaimasu",
+        "en": "I use a mobile phone"
+      }
+    ]
+  },
+  {
+    "id": "vocab-smartphone-sumaho",
+    "character": "スマホ",
+    "reading": "sumaho",
+    "meaning": "smartphone; phone",
+    "jlpt": "N5",
+    "examples": [
+      {
+        "jp": "スマホで写真を撮ります",
+        "reading": "sumaho de shashin o torimasu",
+        "en": "I take a photo with a smartphone"
+      }
+    ]
+  },
+  {
+    "id": "vocab-phone-number-bangou",
+    "character": "電話番号",
+    "reading": "denwa bangou",
+    "meaning": "phone number; telephone number",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "電話番号を教えてください",
+        "reading": "denwa bangou o oshiete kudasai",
+        "en": "Please tell me your phone number"
+      }
+    ]
+  },
+  {
+    "id": "vocab-call-kakeru",
+    "character": "電話をかける",
+    "reading": "denwa o kakeru",
+    "meaning": "to call; make a phone call",
+    "jlpt": "N4",
+    "examples": [
+      {
+        "jp": "友だちに電話をかけます",
+        "reading": "tomodachi ni denwa o kakemasu",
+        "en": "I call my friend"
+      }
+    ]
+  }
+]

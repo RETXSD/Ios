@@ -13,6 +13,53 @@
 		0F729B452FDFF2B800BDA2EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F729B442FDFF2B800BDA2EB /* Preview Assets.xcassets */; };
 		0F729B472FDFF2B800BDA2EB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F729B462FDFF2B800BDA2EB /* Persistence.swift */; };
 		0F729B4A2FDFF2B800BDA2EB /* Nihonggo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F729B482FDFF2B800BDA2EB /* Nihonggo.xcdatamodeld */; };
+		A11000000000000000000002 /* AppBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000001 /* AppBadge.swift */; };
+		A11000000000000000000004 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000003 /* AppButton.swift */; };
+		A11000000000000000000006 /* AppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000005 /* AppCard.swift */; };
+		A11000000000000000000008 /* AudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000007 /* AudioButton.swift */; };
+		A1100000000000000000000A /* CharacterDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000009 /* CharacterDisplay.swift */; };
+		A1100000000000000000000C /* ConfidenceBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000000B /* ConfidenceBadge.swift */; };
+		A1100000000000000000000E /* LockedOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000000D /* LockedOverlay.swift */; };
+		A11000000000000000000010 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000000F /* ProgressBar.swift */; };
+		A11000000000000000000012 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000011 /* ChatMessage.swift */; };
+		A11000000000000000000014 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000013 /* DictionaryEntry.swift */; };
+		A11000000000000000000016 /* FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000015 /* FlashCard.swift */; };
+		A11000000000000000000018 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000017 /* Lesson.swift */; };
+		A1100000000000000000001A /* ScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000019 /* ScanResult.swift */; };
+		A1100000000000000000001C /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000001B /* UserProgress.swift */; };
+		A1100000000000000000001E /* AIAssistantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000001D /* AIAssistantService.swift */; };
+		A11000000000000000000020 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000001F /* AudioService.swift */; };
+		A11000000000000000000022 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000021 /* CameraViewModel.swift */; };
+		A11000000000000000000024 /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000023 /* DictionaryService.swift */; };
+		A11000000000000000000026 /* MLInferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000025 /* MLInferenceService.swift */; };
+		A11000000000000000000028 /* VisionTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000027 /* VisionTextService.swift */; };
+		A1100000000000000000002A /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000029 /* ProgressService.swift */; };
+		A1100000000000000000002C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000002B /* AppTheme.swift */; };
+		A1100000000000000000002E /* AIAssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000002D /* AIAssistantViewModel.swift */; };
+		A11000000000000000000030 /* DictionaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000002F /* DictionaryViewModel.swift */; };
+		A11000000000000000000032 /* ExamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000031 /* ExamViewModel.swift */; };
+		A11000000000000000000034 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000033 /* HomeViewModel.swift */; };
+		A11000000000000000000036 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000035 /* LessonViewModel.swift */; };
+		A11000000000000000000038 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000037 /* ScanViewModel.swift */; };
+		A1100000000000000000003A /* AIAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000039 /* AIAssistantView.swift */; };
+		A1100000000000000000003C /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000003B /* DictionaryView.swift */; };
+		A1100000000000000000003E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000003D /* HomeView.swift */; };
+		A11000000000000000000040 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000003F /* ExamView.swift */; };
+		A11000000000000000000042 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000041 /* FlashcardView.swift */; };
+		A11000000000000000000044 /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000043 /* LessonDetailView.swift */; };
+		A11000000000000000000046 /* LessonGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000045 /* LessonGridView.swift */; };
+		A11000000000000000000048 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000047 /* OnboardingView.swift */; };
+		A1100000000000000000004A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000049 /* SplashView.swift */; };
+		A1100000000000000000004C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000004B /* ProfileView.swift */; };
+		A1100000000000000000004E /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000004D /* ScanView.swift */; };
+		A11000000000000000000050 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000004F /* dictionary.json */; };
+		A11000000000000000000052 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000051 /* lessons.json */; };
+		A11000000000000000000102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000101 /* ContentView.swift */; };
+		A11000000000000000000104 /* NihonggoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000103 /* NihonggoApp.swift */; };
+		A11000000000000000001002 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000001001 /* AppLanguage.swift */; };
+		A11000000000000000001004 /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000001003 /* AppText.swift */; };
+		A11000000000000000001006 /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000001005 /* LanguageSettings.swift */; };
+		A11000000000000000001008 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000001007 /* MoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +70,53 @@
 		0F729B442FDFF2B800BDA2EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F729B462FDFF2B800BDA2EB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0F729B492FDFF2B800BDA2EB /* Nihonggo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nihonggo.xcdatamodel; sourceTree = "<group>"; };
+		A11000000000000000000001 /* AppBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/AppBadge.swift; sourceTree = "<group>"; };
+		A11000000000000000000003 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/AppButton.swift; sourceTree = "<group>"; };
+		A11000000000000000000005 /* AppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/AppCard.swift; sourceTree = "<group>"; };
+		A11000000000000000000007 /* AudioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/AudioButton.swift; sourceTree = "<group>"; };
+		A11000000000000000000009 /* CharacterDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/CharacterDisplay.swift; sourceTree = "<group>"; };
+		A1100000000000000000000B /* ConfidenceBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/ConfidenceBadge.swift; sourceTree = "<group>"; };
+		A1100000000000000000000D /* LockedOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/LockedOverlay.swift; sourceTree = "<group>"; };
+		A1100000000000000000000F /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/ProgressBar.swift; sourceTree = "<group>"; };
+		A11000000000000000000011 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ChatMessage.swift; sourceTree = "<group>"; };
+		A11000000000000000000013 /* DictionaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/DictionaryEntry.swift; sourceTree = "<group>"; };
+		A11000000000000000000015 /* FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/FlashCard.swift; sourceTree = "<group>"; };
+		A11000000000000000000017 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Lesson.swift; sourceTree = "<group>"; };
+		A11000000000000000000019 /* ScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/ScanResult.swift; sourceTree = "<group>"; };
+		A1100000000000000000001B /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/UserProgress.swift; sourceTree = "<group>"; };
+		A1100000000000000000001D /* AIAssistantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AI/AIAssistantService.swift; sourceTree = "<group>"; };
+		A1100000000000000000001F /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Audio/AudioService.swift; sourceTree = "<group>"; };
+		A11000000000000000000021 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Camera/CameraViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000023 /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Dictionary/DictionaryService.swift; sourceTree = "<group>"; };
+		A11000000000000000000025 /* MLInferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ML/MLInferenceService.swift; sourceTree = "<group>"; };
+		A11000000000000000000027 /* VisionTextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ML/VisionTextService.swift; sourceTree = "<group>"; };
+		A11000000000000000000029 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Progress/ProgressService.swift; sourceTree = "<group>"; };
+		A1100000000000000000002B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme/AppTheme.swift; sourceTree = "<group>"; };
+		A1100000000000000000002D /* AIAssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/AIAssistantViewModel.swift; sourceTree = "<group>"; };
+		A1100000000000000000002F /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/DictionaryViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000031 /* ExamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ExamViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000033 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/HomeViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000035 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/LessonViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000037 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ScanViewModel.swift; sourceTree = "<group>"; };
+		A11000000000000000000039 /* AIAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AIAssistant/AIAssistantView.swift; sourceTree = "<group>"; };
+		A1100000000000000000003B /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Dictionary/DictionaryView.swift; sourceTree = "<group>"; };
+		A1100000000000000000003D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Home/HomeView.swift; sourceTree = "<group>"; };
+		A1100000000000000000003F /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Lesson/ExamView.swift; sourceTree = "<group>"; };
+		A11000000000000000000041 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Lesson/FlashcardView.swift; sourceTree = "<group>"; };
+		A11000000000000000000043 /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Lesson/LessonDetailView.swift; sourceTree = "<group>"; };
+		A11000000000000000000045 /* LessonGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Lesson/LessonGridView.swift; sourceTree = "<group>"; };
+		A11000000000000000000047 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Onboarding/OnboardingView.swift; sourceTree = "<group>"; };
+		A11000000000000000000049 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Onboarding/SplashView.swift; sourceTree = "<group>"; };
+		A1100000000000000000004B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Profile/ProfileView.swift; sourceTree = "<group>"; };
+		A1100000000000000000004D /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Scan/ScanView.swift; sourceTree = "<group>"; };
+		A1100000000000000000004F /* dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/dictionary.json; sourceTree = "<group>"; };
+		A11000000000000000000051 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/lessons.json; sourceTree = "<group>"; };
+		A11000000000000000000101 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
+		A11000000000000000000103 /* NihonggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NihonggoApp.swift; sourceTree = "<group>"; };
+		A11000000000000000001001 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Localization/AppLanguage.swift; sourceTree = "<group>"; };
+		A11000000000000000001003 /* AppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Localization/AppText.swift; sourceTree = "<group>"; };
+		A11000000000000000001005 /* LanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Localization/LanguageSettings.swift; sourceTree = "<group>"; };
+		A11000000000000000001007 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/More/MoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +149,53 @@
 		0F729B3C2FDFF2B600BDA2EB /* Nihonggo */ = {
 			isa = PBXGroup;
 			children = (
+				A11000000000000000001001 /* added */,
+				A11000000000000000001003 /* added */,
+				A11000000000000000001005 /* added */,
+				A11000000000000000001007 /* added */,
+				A11000000000000000000101 /* App entry */,
+				A11000000000000000000103 /* App entry */,
+				A11000000000000000000001 /* added */,
+				A11000000000000000000003 /* added */,
+				A11000000000000000000005 /* added */,
+				A11000000000000000000007 /* added */,
+				A11000000000000000000009 /* added */,
+				A1100000000000000000000B /* added */,
+				A1100000000000000000000D /* added */,
+				A1100000000000000000000F /* added */,
+				A11000000000000000000011 /* added */,
+				A11000000000000000000013 /* added */,
+				A11000000000000000000015 /* added */,
+				A11000000000000000000017 /* added */,
+				A11000000000000000000019 /* added */,
+				A1100000000000000000001B /* added */,
+				A1100000000000000000001D /* added */,
+				A1100000000000000000001F /* added */,
+				A11000000000000000000021 /* added */,
+				A11000000000000000000023 /* added */,
+				A11000000000000000000025 /* added */,
+				A11000000000000000000027 /* added */,
+				A11000000000000000000029 /* added */,
+				A1100000000000000000002B /* added */,
+				A1100000000000000000002D /* added */,
+				A1100000000000000000002F /* added */,
+				A11000000000000000000031 /* added */,
+				A11000000000000000000033 /* added */,
+				A11000000000000000000035 /* added */,
+				A11000000000000000000037 /* added */,
+				A11000000000000000000039 /* added */,
+				A1100000000000000000003B /* added */,
+				A1100000000000000000003D /* added */,
+				A1100000000000000000003F /* added */,
+				A11000000000000000000041 /* added */,
+				A11000000000000000000043 /* added */,
+				A11000000000000000000045 /* added */,
+				A11000000000000000000047 /* added */,
+				A11000000000000000000049 /* added */,
+				A1100000000000000000004B /* added */,
+				A1100000000000000000004D /* added */,
+				A1100000000000000000004F /* added */,
+				A11000000000000000000051 /* added */,
 				0F729B3D2FDFF2B600BDA2EB /* NihonggoApp.swift */,
 				0F729B3F2FDFF2B600BDA2EB /* ContentView.swift */,
 				0F729B412FDFF2B800BDA2EB /* Assets.xcassets */,
@@ -131,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11000000000000000000050 /* resource in Resources */,
+				A11000000000000000000052 /* resource in Resources */,
 				0F729B452FDFF2B800BDA2EB /* Preview Assets.xcassets in Resources */,
 				0F729B422FDFF2B800BDA2EB /* Assets.xcassets in Resources */,
 			);
@@ -143,10 +286,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11000000000000000001002 /* source in Sources */,
+				A11000000000000000001004 /* source in Sources */,
+				A11000000000000000001006 /* source in Sources */,
+				A11000000000000000001008 /* source in Sources */,
+				A11000000000000000000102 /* app entry in Sources */,
+				A11000000000000000000104 /* app entry in Sources */,
+				A11000000000000000000002 /* source in Sources */,
+				A11000000000000000000004 /* source in Sources */,
+				A11000000000000000000006 /* source in Sources */,
+				A11000000000000000000008 /* source in Sources */,
+				A1100000000000000000000A /* source in Sources */,
+				A1100000000000000000000C /* source in Sources */,
+				A1100000000000000000000E /* source in Sources */,
+				A11000000000000000000010 /* source in Sources */,
+				A11000000000000000000012 /* source in Sources */,
+				A11000000000000000000014 /* source in Sources */,
+				A11000000000000000000016 /* source in Sources */,
+				A11000000000000000000018 /* source in Sources */,
+				A1100000000000000000001A /* source in Sources */,
+				A1100000000000000000001C /* source in Sources */,
+				A1100000000000000000001E /* source in Sources */,
+				A11000000000000000000020 /* source in Sources */,
+				A11000000000000000000022 /* source in Sources */,
+				A11000000000000000000024 /* source in Sources */,
+				A11000000000000000000026 /* source in Sources */,
+				A11000000000000000000028 /* source in Sources */,
+				A1100000000000000000002A /* source in Sources */,
+				A1100000000000000000002C /* source in Sources */,
+				A1100000000000000000002E /* source in Sources */,
+				A11000000000000000000030 /* source in Sources */,
+				A11000000000000000000032 /* source in Sources */,
+				A11000000000000000000034 /* source in Sources */,
+				A11000000000000000000036 /* source in Sources */,
+				A11000000000000000000038 /* source in Sources */,
+				A1100000000000000000003A /* source in Sources */,
+				A1100000000000000000003C /* source in Sources */,
+				A1100000000000000000003E /* source in Sources */,
+				A11000000000000000000040 /* source in Sources */,
+				A11000000000000000000042 /* source in Sources */,
+				A11000000000000000000044 /* source in Sources */,
+				A11000000000000000000046 /* source in Sources */,
+				A11000000000000000000048 /* source in Sources */,
+				A1100000000000000000004A /* source in Sources */,
+				A1100000000000000000004C /* source in Sources */,
+				A1100000000000000000004E /* source in Sources */,
 				0F729B472FDFF2B800BDA2EB /* Persistence.swift in Sources */,
-				0F729B402FDFF2B600BDA2EB /* ContentView.swift in Sources */,
 				0F729B4A2FDFF2B800BDA2EB /* Nihonggo.xcdatamodeld in Sources */,
-				0F729B3E2FDFF2B600BDA2EB /* NihonggoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -278,6 +464,8 @@
 				DEVELOPMENT_TEAM = 97D5VZKT4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "KanaLearn uses your camera to recognize handwritten Japanese characters on device.";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CorneliusAdrianPutra.Nihonggo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanalearn.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -307,6 +495,8 @@
 				DEVELOPMENT_TEAM = 97D5VZKT4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "KanaLearn uses your camera to recognize handwritten Japanese characters on device.";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,7 +507,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CorneliusAdrianPutra.Nihonggo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanalearn.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

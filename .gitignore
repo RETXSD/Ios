@@ -3,3 +3,6 @@
 xcuserdata/
 .xcworkspace/xcuserdata/
 node_modules
+
+# Ignore local API keys and env files
+Nihonggo/Nihonggo/ai-proxy/.env
