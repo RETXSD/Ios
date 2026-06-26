@@ -4,17 +4,232 @@
     "level": "N5",
     "title": "Kana & Survival Words",
     "summary": "Basic hiragana, katakana, numbers, greetings, and daily survival words.",
-    "cards": [
-      { "id": "n5-a", "character": "あ", "reading": "a", "meaning": "hiragana a sound", "exampleJP": "あめ", "exampleReading": "ame", "exampleEN": "rain" },
-      { "id": "n5-ka", "character": "か", "reading": "ka", "meaning": "hiragana ka sound", "exampleJP": "かさ", "exampleReading": "kasa", "exampleEN": "umbrella" },
-      { "id": "n5-sa", "character": "さ", "reading": "sa", "meaning": "hiragana sa sound", "exampleJP": "さかな", "exampleReading": "sakana", "exampleEN": "fish" },
-      { "id": "n5-nichi", "character": "日", "reading": "nichi / hi", "meaning": "day; sun", "exampleJP": "日本", "exampleReading": "nihon", "exampleEN": "Japan" },
-      { "id": "n5-hito", "character": "人", "reading": "hito / jin", "meaning": "person", "exampleJP": "日本人", "exampleReading": "nihonjin", "exampleEN": "Japanese person" },
-      { "id": "n5-mizu", "character": "水", "reading": "mizu", "meaning": "water", "exampleJP": "水を飲みます", "exampleReading": "mizu o nomimasu", "exampleEN": "I drink water" },
-      { "id": "n5-hon", "character": "本", "reading": "hon", "meaning": "book", "exampleJP": "本を読みます", "exampleReading": "hon o yomimasu", "exampleEN": "I read a book" },
-      { "id": "n5-gakkou", "character": "学校", "reading": "gakkou", "meaning": "school", "exampleJP": "学校へ行きます", "exampleReading": "gakkou e ikimasu", "exampleEN": "I go to school" },
-      { "id": "n5-denwa", "character": "電話", "reading": "denwa", "meaning": "phone", "exampleJP": "電話をします", "exampleReading": "denwa o shimasu", "exampleEN": "I make a phone call" },
-      { "id": "n5-tabemasu", "character": "食", "reading": "ta / shoku", "meaning": "eat; food", "exampleJP": "ご飯を食べます", "exampleReading": "gohan o tabemasu", "exampleEN": "I eat rice" }
+    "stages": [
+      {
+        "id": "n5-stage-1",
+        "number": 1,
+        "title": "Kana Sounds",
+        "summary": "Read core hiragana and katakana sounds in simple words.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n5-a",
+            "character": "あ",
+            "reading": "a",
+            "meaning": "hiragana a sound",
+            "exampleJP": "あめ",
+            "exampleReading": "ame",
+            "exampleEN": "rain"
+          },
+          {
+            "id": "n5-ka",
+            "character": "か",
+            "reading": "ka",
+            "meaning": "hiragana ka sound",
+            "exampleJP": "かさ",
+            "exampleReading": "kasa",
+            "exampleEN": "umbrella"
+          },
+          {
+            "id": "n5-sa",
+            "character": "さ",
+            "reading": "sa",
+            "meaning": "hiragana sa sound",
+            "exampleJP": "さかな",
+            "exampleReading": "sakana",
+            "exampleEN": "fish"
+          },
+          {
+            "id": "n5-ta",
+            "character": "タ",
+            "reading": "ta",
+            "meaning": "katakana ta sound",
+            "exampleJP": "タクシー",
+            "exampleReading": "takushii",
+            "exampleEN": "taxi"
+          }
+        ]
+      },
+      {
+        "id": "n5-stage-2",
+        "number": 2,
+        "title": "Daily Objects",
+        "summary": "Translate common classroom and home words.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n5-nichi",
+            "character": "日",
+            "reading": "nichi / hi",
+            "meaning": "day; sun",
+            "exampleJP": "日本",
+            "exampleReading": "nihon",
+            "exampleEN": "Japan"
+          },
+          {
+            "id": "n5-hito",
+            "character": "人",
+            "reading": "hito / jin",
+            "meaning": "person",
+            "exampleJP": "日本人",
+            "exampleReading": "nihonjin",
+            "exampleEN": "Japanese person"
+          },
+          {
+            "id": "n5-mizu",
+            "character": "水",
+            "reading": "mizu",
+            "meaning": "water",
+            "exampleJP": "水を飲みます",
+            "exampleReading": "mizu o nomimasu",
+            "exampleEN": "I drink water"
+          },
+          {
+            "id": "n5-hon",
+            "character": "本",
+            "reading": "hon",
+            "meaning": "book",
+            "exampleJP": "本を読みます",
+            "exampleReading": "hon o yomimasu",
+            "exampleEN": "I read a book"
+          }
+        ]
+      },
+      {
+        "id": "n5-stage-3",
+        "number": 3,
+        "title": "People & Places",
+        "summary": "Practice basic nouns for people, places, and routines.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n5-gakkou",
+            "character": "学校",
+            "reading": "gakkou",
+            "meaning": "school",
+            "exampleJP": "学校へ行きます",
+            "exampleReading": "gakkou e ikimasu",
+            "exampleEN": "I go to school"
+          },
+          {
+            "id": "n5-denwa",
+            "character": "電話",
+            "reading": "denwa",
+            "meaning": "phone",
+            "exampleJP": "電話をします",
+            "exampleReading": "denwa o shimasu",
+            "exampleEN": "I make a phone call"
+          },
+          {
+            "id": "n5-tabemasu",
+            "character": "食",
+            "reading": "ta / shoku",
+            "meaning": "eat; food",
+            "exampleJP": "ご飯を食べます",
+            "exampleReading": "gohan o tabemasu",
+            "exampleEN": "I eat rice"
+          },
+          {
+            "id": "n5-nomimasu",
+            "character": "飲",
+            "reading": "no",
+            "meaning": "drink",
+            "exampleJP": "お茶を飲みます",
+            "exampleReading": "ocha o nomimasu",
+            "exampleEN": "I drink tea"
+          }
+        ]
+      },
+      {
+        "id": "n5-stage-4",
+        "number": 4,
+        "title": "Survival Sentences",
+        "summary": "Fill blanks in short beginner sentences.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n5-iku",
+            "character": "行",
+            "reading": "i / kou",
+            "meaning": "go",
+            "exampleJP": "駅へ行きます",
+            "exampleReading": "eki e ikimasu",
+            "exampleEN": "I go to the station"
+          },
+          {
+            "id": "n5-kuru",
+            "character": "来",
+            "reading": "ku / rai",
+            "meaning": "come",
+            "exampleJP": "友だちが来ます",
+            "exampleReading": "tomodachi ga kimasu",
+            "exampleEN": "A friend comes"
+          },
+          {
+            "id": "n5-miru",
+            "character": "見",
+            "reading": "mi / ken",
+            "meaning": "see; look",
+            "exampleJP": "映画を見ます",
+            "exampleReading": "eiga o mimasu",
+            "exampleEN": "I watch a movie"
+          },
+          {
+            "id": "n5-kaku",
+            "character": "書",
+            "reading": "ka / sho",
+            "meaning": "write",
+            "exampleJP": "名前を書きます",
+            "exampleReading": "namae o kakimasu",
+            "exampleEN": "I write my name"
+          }
+        ]
+      },
+      {
+        "id": "n5-stage-5",
+        "number": 5,
+        "title": "N5 Final Exam",
+        "summary": "Mixed review exam to unlock N4.",
+        "mode": "finalExam",
+        "cards": [
+          {
+            "id": "n5-yomu",
+            "character": "読",
+            "reading": "yo / doku",
+            "meaning": "read",
+            "exampleJP": "新聞を読みます",
+            "exampleReading": "shinbun o yomimasu",
+            "exampleEN": "I read a newspaper"
+          },
+          {
+            "id": "n5-kiku",
+            "character": "聞",
+            "reading": "ki / bun",
+            "meaning": "listen; ask",
+            "exampleJP": "音楽を聞きます",
+            "exampleReading": "ongaku o kikimasu",
+            "exampleEN": "I listen to music"
+          },
+          {
+            "id": "n5-ookii",
+            "character": "大",
+            "reading": "oo / dai",
+            "meaning": "big",
+            "exampleJP": "大きい家です",
+            "exampleReading": "ookii ie desu",
+            "exampleEN": "It is a big house"
+          },
+          {
+            "id": "n5-chiisai",
+            "character": "小",
+            "reading": "chii / shou",
+            "meaning": "small",
+            "exampleJP": "小さい犬です",
+            "exampleReading": "chiisai inu desu",
+            "exampleEN": "It is a small dog"
+          }
+        ]
+      }
     ]
   },
   {
@@ -22,17 +237,232 @@
     "level": "N4",
     "title": "Daily Kanji & Actions",
     "summary": "Practical verbs, family, locations, and common life phrases.",
-    "cards": [
-      { "id": "n4-te", "character": "手", "reading": "te", "meaning": "hand", "exampleJP": "手紙を書きます", "exampleReading": "tegami o kakimasu", "exampleEN": "I write a letter" },
-      { "id": "n4-isha", "character": "医者", "reading": "isha", "meaning": "doctor", "exampleJP": "医者に会います", "exampleReading": "isha ni aimasu", "exampleEN": "I meet a doctor" },
-      { "id": "n4-byouin", "character": "病院", "reading": "byouin", "meaning": "hospital", "exampleJP": "病院へ行きます", "exampleReading": "byouin e ikimasu", "exampleEN": "I go to the hospital" },
-      { "id": "n4-benkyou", "character": "勉強", "reading": "benkyou", "meaning": "study", "exampleJP": "日本語を勉強します", "exampleReading": "nihongo o benkyou shimasu", "exampleEN": "I study Japanese" },
-      { "id": "n4-shitsumon", "character": "質問", "reading": "shitsumon", "meaning": "question", "exampleJP": "先生に質問します", "exampleReading": "sensei ni shitsumon shimasu", "exampleEN": "I ask the teacher a question" },
-      { "id": "n4-hataraku", "character": "働", "reading": "hatara", "meaning": "work", "exampleJP": "会社で働きます", "exampleReading": "kaisha de hatarakimasu", "exampleEN": "I work at a company" },
-      { "id": "n4-tsukuru", "character": "作", "reading": "tsuku / saku", "meaning": "make", "exampleJP": "料理を作ります", "exampleReading": "ryouri o tsukurimasu", "exampleEN": "I make food" },
-      { "id": "n4-matsu", "character": "待", "reading": "ma", "meaning": "wait", "exampleJP": "駅で待ちます", "exampleReading": "eki de machimasu", "exampleEN": "I wait at the station" },
-      { "id": "n4-akeru", "character": "開", "reading": "a / hira", "meaning": "open", "exampleJP": "ドアを開けます", "exampleReading": "doa o akemasu", "exampleEN": "I open the door" },
-      { "id": "n4-shimeru", "character": "閉", "reading": "shi", "meaning": "close", "exampleJP": "窓を閉めます", "exampleReading": "mado o shimemasu", "exampleEN": "I close the window" }
+    "stages": [
+      {
+        "id": "n4-stage-1",
+        "number": 1,
+        "title": "People & Health",
+        "summary": "Use everyday words for people, health, and appointments.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n4-te",
+            "character": "手",
+            "reading": "te",
+            "meaning": "hand",
+            "exampleJP": "手紙を書きます",
+            "exampleReading": "tegami o kakimasu",
+            "exampleEN": "I write a letter"
+          },
+          {
+            "id": "n4-isha",
+            "character": "医者",
+            "reading": "isha",
+            "meaning": "doctor",
+            "exampleJP": "医者に会います",
+            "exampleReading": "isha ni aimasu",
+            "exampleEN": "I meet a doctor"
+          },
+          {
+            "id": "n4-byouin",
+            "character": "病院",
+            "reading": "byouin",
+            "meaning": "hospital",
+            "exampleJP": "病院へ行きます",
+            "exampleReading": "byouin e ikimasu",
+            "exampleEN": "I go to the hospital"
+          },
+          {
+            "id": "n4-kusuri",
+            "character": "薬",
+            "reading": "kusuri",
+            "meaning": "medicine",
+            "exampleJP": "薬を飲みます",
+            "exampleReading": "kusuri o nomimasu",
+            "exampleEN": "I take medicine"
+          }
+        ]
+      },
+      {
+        "id": "n4-stage-2",
+        "number": 2,
+        "title": "Study & Questions",
+        "summary": "Practice school, study, and asking for information.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n4-benkyou",
+            "character": "勉強",
+            "reading": "benkyou",
+            "meaning": "study",
+            "exampleJP": "日本語を勉強します",
+            "exampleReading": "nihongo o benkyou shimasu",
+            "exampleEN": "I study Japanese"
+          },
+          {
+            "id": "n4-shitsumon",
+            "character": "質問",
+            "reading": "shitsumon",
+            "meaning": "question",
+            "exampleJP": "先生に質問します",
+            "exampleReading": "sensei ni shitsumon shimasu",
+            "exampleEN": "I ask the teacher a question"
+          },
+          {
+            "id": "n4-kotae",
+            "character": "答",
+            "reading": "kota",
+            "meaning": "answer",
+            "exampleJP": "答えを書きます",
+            "exampleReading": "kotae o kakimasu",
+            "exampleEN": "I write the answer"
+          },
+          {
+            "id": "n4-oshieru",
+            "character": "教",
+            "reading": "oshi / kyou",
+            "meaning": "teach",
+            "exampleJP": "漢字を教えます",
+            "exampleReading": "kanji o oshiemasu",
+            "exampleEN": "I teach kanji"
+          }
+        ]
+      },
+      {
+        "id": "n4-stage-3",
+        "number": 3,
+        "title": "Work & Tasks",
+        "summary": "Translate action verbs for daily work.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n4-hataraku",
+            "character": "働",
+            "reading": "hatara",
+            "meaning": "work",
+            "exampleJP": "会社で働きます",
+            "exampleReading": "kaisha de hatarakimasu",
+            "exampleEN": "I work at a company"
+          },
+          {
+            "id": "n4-tsukuru",
+            "character": "作",
+            "reading": "tsuku / saku",
+            "meaning": "make",
+            "exampleJP": "料理を作ります",
+            "exampleReading": "ryouri o tsukurimasu",
+            "exampleEN": "I make food"
+          },
+          {
+            "id": "n4-matsu",
+            "character": "待",
+            "reading": "ma",
+            "meaning": "wait",
+            "exampleJP": "駅で待ちます",
+            "exampleReading": "eki de machimasu",
+            "exampleEN": "I wait at the station"
+          },
+          {
+            "id": "n4-hajimeru",
+            "character": "始",
+            "reading": "haji",
+            "meaning": "start",
+            "exampleJP": "授業を始めます",
+            "exampleReading": "jugyou o hajimemasu",
+            "exampleEN": "I start class"
+          }
+        ]
+      },
+      {
+        "id": "n4-stage-4",
+        "number": 4,
+        "title": "Places & Movement",
+        "summary": "Fill blanks in practical location sentences.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n4-akeru",
+            "character": "開",
+            "reading": "a / hira",
+            "meaning": "open",
+            "exampleJP": "ドアを開けます",
+            "exampleReading": "doa o akemasu",
+            "exampleEN": "I open the door"
+          },
+          {
+            "id": "n4-shimeru",
+            "character": "閉",
+            "reading": "shi",
+            "meaning": "close",
+            "exampleJP": "窓を閉めます",
+            "exampleReading": "mado o shimemasu",
+            "exampleEN": "I close the window"
+          },
+          {
+            "id": "n4-eki",
+            "character": "駅",
+            "reading": "eki",
+            "meaning": "station",
+            "exampleJP": "駅で友だちに会います",
+            "exampleReading": "eki de tomodachi ni aimasu",
+            "exampleEN": "I meet a friend at the station"
+          },
+          {
+            "id": "n4-mise",
+            "character": "店",
+            "reading": "mise / ten",
+            "meaning": "shop",
+            "exampleJP": "店でパンを買います",
+            "exampleReading": "mise de pan o kaimasu",
+            "exampleEN": "I buy bread at the shop"
+          }
+        ]
+      },
+      {
+        "id": "n4-stage-5",
+        "number": 5,
+        "title": "N4 Final Exam",
+        "summary": "Mixed review exam to unlock N3.",
+        "mode": "finalExam",
+        "cards": [
+          {
+            "id": "n4-omou",
+            "character": "思",
+            "reading": "omo",
+            "meaning": "think",
+            "exampleJP": "いい考えだと思います",
+            "exampleReading": "ii kangae da to omoimasu",
+            "exampleEN": "I think it is a good idea"
+          },
+          {
+            "id": "n4-wakaru",
+            "character": "分",
+            "reading": "wa / bun",
+            "meaning": "understand; minute",
+            "exampleJP": "意味が分かります",
+            "exampleReading": "imi ga wakarimasu",
+            "exampleEN": "I understand the meaning"
+          },
+          {
+            "id": "n4-kaeru",
+            "character": "帰",
+            "reading": "kae / ki",
+            "meaning": "return home",
+            "exampleJP": "家へ帰ります",
+            "exampleReading": "ie e kaerimasu",
+            "exampleEN": "I return home"
+          },
+          {
+            "id": "n4-aruku",
+            "character": "歩",
+            "reading": "aru / ho",
+            "meaning": "walk",
+            "exampleJP": "公園を歩きます",
+            "exampleReading": "kouen o arukimasu",
+            "exampleEN": "I walk in the park"
+          }
+        ]
+      }
     ]
   },
   {
@@ -40,15 +470,232 @@
     "level": "N3",
     "title": "Sentence Builder",
     "summary": "Intermediate vocabulary for explaining habits, plans, and reasons.",
-    "cards": [
-      { "id": "n3-keikaku", "character": "計画", "reading": "keikaku", "meaning": "plan", "exampleJP": "旅行の計画を立てます", "exampleReading": "ryokou no keikaku o tatemasu", "exampleEN": "I make a travel plan" },
-      { "id": "n3-riyuu", "character": "理由", "reading": "riyuu", "meaning": "reason", "exampleJP": "理由を説明します", "exampleReading": "riyuu o setsumei shimasu", "exampleEN": "I explain the reason" },
-      { "id": "n3-setsumei", "character": "説明", "reading": "setsumei", "meaning": "explanation", "exampleJP": "文法を説明します", "exampleReading": "bunpou o setsumei shimasu", "exampleEN": "I explain grammar" },
-      { "id": "n3-bunka", "character": "文化", "reading": "bunka", "meaning": "culture", "exampleJP": "日本の文化を学びます", "exampleReading": "nihon no bunka o manabimasu", "exampleEN": "I learn Japanese culture" },
-      { "id": "n3-yoyaku", "character": "予約", "reading": "yoyaku", "meaning": "reservation", "exampleJP": "ホテルを予約します", "exampleReading": "hoteru o yoyaku shimasu", "exampleEN": "I reserve a hotel" },
-      { "id": "n3-kekka", "character": "結果", "reading": "kekka", "meaning": "result", "exampleJP": "試験の結果を見ます", "exampleReading": "shiken no kekka o mimasu", "exampleEN": "I check the exam result" },
-      { "id": "n3-hitsuyou", "character": "必要", "reading": "hitsuyou", "meaning": "necessary", "exampleJP": "練習が必要です", "exampleReading": "renshuu ga hitsuyou desu", "exampleEN": "Practice is necessary" },
-      { "id": "n3-tokubetsu", "character": "特別", "reading": "tokubetsu", "meaning": "special", "exampleJP": "今日は特別な日です", "exampleReading": "kyou wa tokubetsu na hi desu", "exampleEN": "Today is a special day" }
+    "stages": [
+      {
+        "id": "n3-stage-1",
+        "number": 1,
+        "title": "Plans & Reasons",
+        "summary": "Explain plans, reasons, and short arguments.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n3-keikaku",
+            "character": "計画",
+            "reading": "keikaku",
+            "meaning": "plan",
+            "exampleJP": "旅行の計画を立てます",
+            "exampleReading": "ryokou no keikaku o tatemasu",
+            "exampleEN": "I make a travel plan"
+          },
+          {
+            "id": "n3-riyuu",
+            "character": "理由",
+            "reading": "riyuu",
+            "meaning": "reason",
+            "exampleJP": "理由を説明します",
+            "exampleReading": "riyuu o setsumei shimasu",
+            "exampleEN": "I explain the reason"
+          },
+          {
+            "id": "n3-yotei",
+            "character": "予定",
+            "reading": "yotei",
+            "meaning": "schedule; plan",
+            "exampleJP": "明日の予定を確認します",
+            "exampleReading": "ashita no yotei o kakunin shimasu",
+            "exampleEN": "I check tomorrow's schedule"
+          },
+          {
+            "id": "n3-mokuteki",
+            "character": "目的",
+            "reading": "mokuteki",
+            "meaning": "purpose",
+            "exampleJP": "目的をはっきり言います",
+            "exampleReading": "mokuteki o hakkiri iimasu",
+            "exampleEN": "I state the purpose clearly"
+          }
+        ]
+      },
+      {
+        "id": "n3-stage-2",
+        "number": 2,
+        "title": "Culture & Learning",
+        "summary": "Translate words used in study and culture topics.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n3-setsumei",
+            "character": "説明",
+            "reading": "setsumei",
+            "meaning": "explanation",
+            "exampleJP": "文法を説明します",
+            "exampleReading": "bunpou o setsumei shimasu",
+            "exampleEN": "I explain grammar"
+          },
+          {
+            "id": "n3-bunka",
+            "character": "文化",
+            "reading": "bunka",
+            "meaning": "culture",
+            "exampleJP": "日本の文化を学びます",
+            "exampleReading": "nihon no bunka o manabimasu",
+            "exampleEN": "I learn Japanese culture"
+          },
+          {
+            "id": "n3-yoyaku",
+            "character": "予約",
+            "reading": "yoyaku",
+            "meaning": "reservation",
+            "exampleJP": "ホテルを予約します",
+            "exampleReading": "hoteru o yoyaku shimasu",
+            "exampleEN": "I reserve a hotel"
+          },
+          {
+            "id": "n3-keiken",
+            "character": "経験",
+            "reading": "keiken",
+            "meaning": "experience",
+            "exampleJP": "日本で働いた経験があります",
+            "exampleReading": "nihon de hataraita keiken ga arimasu",
+            "exampleEN": "I have experience working in Japan"
+          }
+        ]
+      },
+      {
+        "id": "n3-stage-3",
+        "number": 3,
+        "title": "Results & Needs",
+        "summary": "Practice intermediate sentence blanks.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n3-kekka",
+            "character": "結果",
+            "reading": "kekka",
+            "meaning": "result",
+            "exampleJP": "試験の結果を見ます",
+            "exampleReading": "shiken no kekka o mimasu",
+            "exampleEN": "I check the exam result"
+          },
+          {
+            "id": "n3-hitsuyou",
+            "character": "必要",
+            "reading": "hitsuyou",
+            "meaning": "necessary",
+            "exampleJP": "練習が必要です",
+            "exampleReading": "renshuu ga hitsuyou desu",
+            "exampleEN": "Practice is necessary"
+          },
+          {
+            "id": "n3-tokubetsu",
+            "character": "特別",
+            "reading": "tokubetsu",
+            "meaning": "special",
+            "exampleJP": "今日は特別な日です",
+            "exampleReading": "kyou wa tokubetsu na hi desu",
+            "exampleEN": "Today is a special day"
+          },
+          {
+            "id": "n3-futsuu",
+            "character": "普通",
+            "reading": "futsuu",
+            "meaning": "normal; ordinary",
+            "exampleJP": "普通の生活に戻ります",
+            "exampleReading": "futsuu no seikatsu ni modorimasu",
+            "exampleEN": "I return to normal life"
+          }
+        ]
+      },
+      {
+        "id": "n3-stage-4",
+        "number": 4,
+        "title": "Communication",
+        "summary": "Use words for reports, advice, and decisions.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n3-renraku",
+            "character": "連絡",
+            "reading": "renraku",
+            "meaning": "contact",
+            "exampleJP": "あとで連絡します",
+            "exampleReading": "ato de renraku shimasu",
+            "exampleEN": "I will contact you later"
+          },
+          {
+            "id": "n3-soudan",
+            "character": "相談",
+            "reading": "soudan",
+            "meaning": "consultation",
+            "exampleJP": "先生に相談します",
+            "exampleReading": "sensei ni soudan shimasu",
+            "exampleEN": "I consult the teacher"
+          },
+          {
+            "id": "n3-kimeru",
+            "character": "決",
+            "reading": "ki / ketsu",
+            "meaning": "decide",
+            "exampleJP": "進路を決めます",
+            "exampleReading": "shinro o kimemasu",
+            "exampleEN": "I decide my path"
+          },
+          {
+            "id": "n3-houkoku",
+            "character": "報告",
+            "reading": "houkoku",
+            "meaning": "report",
+            "exampleJP": "結果を報告します",
+            "exampleReading": "kekka o houkoku shimasu",
+            "exampleEN": "I report the result"
+          }
+        ]
+      },
+      {
+        "id": "n3-stage-5",
+        "number": 5,
+        "title": "N3 Final Exam",
+        "summary": "Mixed review exam to unlock N2.",
+        "mode": "finalExam",
+        "cards": [
+          {
+            "id": "n3-shiraberu",
+            "character": "調",
+            "reading": "shira / chou",
+            "meaning": "investigate",
+            "exampleJP": "意味を調べます",
+            "exampleReading": "imi o shirabemasu",
+            "exampleEN": "I look up the meaning"
+          },
+          {
+            "id": "n3-kuraberu",
+            "character": "比",
+            "reading": "kura / hi",
+            "meaning": "compare",
+            "exampleJP": "二つの方法を比べます",
+            "exampleReading": "futatsu no houhou o kurabemasu",
+            "exampleEN": "I compare two methods"
+          },
+          {
+            "id": "n3-kaizen",
+            "character": "改善",
+            "reading": "kaizen",
+            "meaning": "improvement",
+            "exampleJP": "勉強方法を改善します",
+            "exampleReading": "benkyou houhou o kaizen shimasu",
+            "exampleEN": "I improve my study method"
+          },
+          {
+            "id": "n3-shuukan",
+            "character": "習慣",
+            "reading": "shuukan",
+            "meaning": "habit",
+            "exampleJP": "早起きの習慣があります",
+            "exampleReading": "hayaoki no shuukan ga arimasu",
+            "exampleEN": "I have a habit of waking early"
+          }
+        ]
+      }
     ]
   },
   {
@@ -56,15 +703,232 @@
     "level": "N2",
     "title": "Nuance & Abstract Kanji",
     "summary": "Higher-level words for opinions, society, conditions, and change.",
-    "cards": [
-      { "id": "n2-shakai", "character": "社会", "reading": "shakai", "meaning": "society", "exampleJP": "社会問題について話します", "exampleReading": "shakai mondai ni tsuite hanashimasu", "exampleEN": "I talk about social issues" },
-      { "id": "n2-iken", "character": "意見", "reading": "iken", "meaning": "opinion", "exampleJP": "自分の意見を言います", "exampleReading": "jibun no iken o iimasu", "exampleEN": "I state my opinion" },
-      { "id": "n2-jouken", "character": "条件", "reading": "jouken", "meaning": "condition", "exampleJP": "条件を確認します", "exampleReading": "jouken o kakunin shimasu", "exampleEN": "I confirm the conditions" },
-      { "id": "n2-henkou", "character": "変更", "reading": "henkou", "meaning": "change; modification", "exampleJP": "予定を変更します", "exampleReading": "yotei o henkou shimasu", "exampleEN": "I change the schedule" },
-      { "id": "n2-kankei", "character": "関係", "reading": "kankei", "meaning": "relationship", "exampleJP": "言葉の関係を考えます", "exampleReading": "kotoba no kankei o kangaemasu", "exampleEN": "I think about word relationships" },
-      { "id": "n2-eikyou", "character": "影響", "reading": "eikyou", "meaning": "influence", "exampleJP": "天気の影響を受けます", "exampleReading": "tenki no eikyou o ukemasu", "exampleEN": "It is affected by the weather" },
-      { "id": "n2-kakunin", "character": "確認", "reading": "kakunin", "meaning": "confirmation", "exampleJP": "答えを確認します", "exampleReading": "kotae o kakunin shimasu", "exampleEN": "I confirm the answer" },
-      { "id": "n2-kadai", "character": "課題", "reading": "kadai", "meaning": "assignment; issue", "exampleJP": "課題を提出します", "exampleReading": "kadai o teishutsu shimasu", "exampleEN": "I submit the assignment" }
+    "stages": [
+      {
+        "id": "n2-stage-1",
+        "number": 1,
+        "title": "Society & Opinion",
+        "summary": "Discuss social topics and personal views.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n2-shakai",
+            "character": "社会",
+            "reading": "shakai",
+            "meaning": "society",
+            "exampleJP": "社会問題について話します",
+            "exampleReading": "shakai mondai ni tsuite hanashimasu",
+            "exampleEN": "I talk about social issues"
+          },
+          {
+            "id": "n2-iken",
+            "character": "意見",
+            "reading": "iken",
+            "meaning": "opinion",
+            "exampleJP": "自分の意見を言います",
+            "exampleReading": "jibun no iken o iimasu",
+            "exampleEN": "I state my opinion"
+          },
+          {
+            "id": "n2-seido",
+            "character": "制度",
+            "reading": "seido",
+            "meaning": "system",
+            "exampleJP": "新しい制度を導入します",
+            "exampleReading": "atarashii seido o dounyuu shimasu",
+            "exampleEN": "We introduce a new system"
+          },
+          {
+            "id": "n2-kadai",
+            "character": "課題",
+            "reading": "kadai",
+            "meaning": "assignment; issue",
+            "exampleJP": "課題を提出します",
+            "exampleReading": "kadai o teishutsu shimasu",
+            "exampleEN": "I submit the assignment"
+          }
+        ]
+      },
+      {
+        "id": "n2-stage-2",
+        "number": 2,
+        "title": "Conditions & Change",
+        "summary": "Use abstract nouns in practical clauses.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n2-jouken",
+            "character": "条件",
+            "reading": "jouken",
+            "meaning": "condition",
+            "exampleJP": "条件を確認します",
+            "exampleReading": "jouken o kakunin shimasu",
+            "exampleEN": "I confirm the conditions"
+          },
+          {
+            "id": "n2-henkou",
+            "character": "変更",
+            "reading": "henkou",
+            "meaning": "change; modification",
+            "exampleJP": "予定を変更します",
+            "exampleReading": "yotei o henkou shimasu",
+            "exampleEN": "I change the schedule"
+          },
+          {
+            "id": "n2-kakunin",
+            "character": "確認",
+            "reading": "kakunin",
+            "meaning": "confirmation",
+            "exampleJP": "答えを確認します",
+            "exampleReading": "kotae o kakunin shimasu",
+            "exampleEN": "I confirm the answer"
+          },
+          {
+            "id": "n2-teian",
+            "character": "提案",
+            "reading": "teian",
+            "meaning": "proposal",
+            "exampleJP": "新しい案を提案します",
+            "exampleReading": "atarashii an o teian shimasu",
+            "exampleEN": "I propose a new idea"
+          }
+        ]
+      },
+      {
+        "id": "n2-stage-3",
+        "number": 3,
+        "title": "Relations & Influence",
+        "summary": "Match nuanced words in longer examples.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n2-kankei",
+            "character": "関係",
+            "reading": "kankei",
+            "meaning": "relationship",
+            "exampleJP": "言葉の関係を考えます",
+            "exampleReading": "kotoba no kankei o kangaemasu",
+            "exampleEN": "I think about word relationships"
+          },
+          {
+            "id": "n2-eikyou",
+            "character": "影響",
+            "reading": "eikyou",
+            "meaning": "influence",
+            "exampleJP": "天気の影響を受けます",
+            "exampleReading": "tenki no eikyou o ukemasu",
+            "exampleEN": "It is affected by the weather"
+          },
+          {
+            "id": "n2-genin",
+            "character": "原因",
+            "reading": "genin",
+            "meaning": "cause",
+            "exampleJP": "失敗の原因を探します",
+            "exampleReading": "shippai no genin o sagashimasu",
+            "exampleEN": "I look for the cause of failure"
+          },
+          {
+            "id": "n2-kekka",
+            "character": "結果",
+            "reading": "kekka",
+            "meaning": "result",
+            "exampleJP": "努力の結果が出ます",
+            "exampleReading": "doryoku no kekka ga demasu",
+            "exampleEN": "The result of effort appears"
+          }
+        ]
+      },
+      {
+        "id": "n2-stage-4",
+        "number": 4,
+        "title": "Work & Evaluation",
+        "summary": "Practice formal words for tasks and review.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n2-hyouka",
+            "character": "評価",
+            "reading": "hyouka",
+            "meaning": "evaluation",
+            "exampleJP": "作品を評価します",
+            "exampleReading": "sakuhin o hyouka shimasu",
+            "exampleEN": "I evaluate the work"
+          },
+          {
+            "id": "n2-sekinin",
+            "character": "責任",
+            "reading": "sekinin",
+            "meaning": "responsibility",
+            "exampleJP": "責任を持って働きます",
+            "exampleReading": "sekinin o motte hatarakimasu",
+            "exampleEN": "I work responsibly"
+          },
+          {
+            "id": "n2-taio",
+            "character": "対応",
+            "reading": "taiou",
+            "meaning": "response; handling",
+            "exampleJP": "問題に対応します",
+            "exampleReading": "mondai ni taiou shimasu",
+            "exampleEN": "I respond to the problem"
+          },
+          {
+            "id": "n2-jisshi",
+            "character": "実施",
+            "reading": "jisshi",
+            "meaning": "implementation",
+            "exampleJP": "計画を実施します",
+            "exampleReading": "keikaku o jisshi shimasu",
+            "exampleEN": "We carry out the plan"
+          }
+        ]
+      },
+      {
+        "id": "n2-stage-5",
+        "number": 5,
+        "title": "N2 Final Exam",
+        "summary": "Mixed review exam to unlock N1.",
+        "mode": "finalExam",
+        "cards": [
+          {
+            "id": "n2-kouritsu",
+            "character": "効率",
+            "reading": "kouritsu",
+            "meaning": "efficiency",
+            "exampleJP": "効率を上げます",
+            "exampleReading": "kouritsu o agemasu",
+            "exampleEN": "I improve efficiency"
+          },
+          {
+            "id": "n2-sentaku",
+            "character": "選択",
+            "reading": "sentaku",
+            "meaning": "selection; choice",
+            "exampleJP": "正しい選択をします",
+            "exampleReading": "tadashii sentaku o shimasu",
+            "exampleEN": "I make the correct choice"
+          },
+          {
+            "id": "n2-katsudou",
+            "character": "活動",
+            "reading": "katsudou",
+            "meaning": "activity",
+            "exampleJP": "地域の活動に参加します",
+            "exampleReading": "chiiki no katsudou ni sanka shimasu",
+            "exampleEN": "I join local activities"
+          },
+          {
+            "id": "n2-kenshuu",
+            "character": "研修",
+            "reading": "kenshuu",
+            "meaning": "training",
+            "exampleJP": "会社の研修を受けます",
+            "exampleReading": "kaisha no kenshuu o ukemasu",
+            "exampleEN": "I take company training"
+          }
+        ]
+      }
     ]
   },
   {
@@ -72,15 +936,232 @@
     "level": "N1",
     "title": "Advanced Reading",
     "summary": "Dense academic and formal words for advanced Japanese reading.",
-    "cards": [
-      { "id": "n1-gainen", "character": "概念", "reading": "gainen", "meaning": "concept", "exampleJP": "新しい概念を理解します", "exampleReading": "atarashii gainen o rikai shimasu", "exampleEN": "I understand a new concept" },
-      { "id": "n1-ronri", "character": "論理", "reading": "ronri", "meaning": "logic", "exampleJP": "論理的に説明します", "exampleReading": "ronriteki ni setsumei shimasu", "exampleEN": "I explain logically" },
-      { "id": "n1-kouchiku", "character": "構築", "reading": "kouchiku", "meaning": "construction; building", "exampleJP": "知識を構築します", "exampleReading": "chishiki o kouchiku shimasu", "exampleEN": "I build knowledge" },
-      { "id": "n1-saiyou", "character": "採用", "reading": "saiyou", "meaning": "adoption; hiring", "exampleJP": "新しい方法を採用します", "exampleReading": "atarashii houhou o saiyou shimasu", "exampleEN": "I adopt a new method" },
-      { "id": "n1-kentou", "character": "検討", "reading": "kentou", "meaning": "consideration; review", "exampleJP": "計画を検討します", "exampleReading": "keikaku o kentou shimasu", "exampleEN": "I review the plan" },
-      { "id": "n1-soutai", "character": "相対", "reading": "soutai", "meaning": "relative", "exampleJP": "相対的に考えます", "exampleReading": "soutaiteki ni kangaemasu", "exampleEN": "I think relatively" },
-      { "id": "n1-chuushou", "character": "抽象", "reading": "chuushou", "meaning": "abstract", "exampleJP": "抽象的な表現です", "exampleReading": "chuushouteki na hyougen desu", "exampleEN": "It is an abstract expression" },
-      { "id": "n1-hihan", "character": "批判", "reading": "hihan", "meaning": "criticism", "exampleJP": "文章を批判的に読みます", "exampleReading": "bunshou o hihanteki ni yomimasu", "exampleEN": "I read the text critically" }
+    "stages": [
+      {
+        "id": "n1-stage-1",
+        "number": 1,
+        "title": "Concepts & Logic",
+        "summary": "Read academic words around ideas and reasoning.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n1-gainen",
+            "character": "概念",
+            "reading": "gainen",
+            "meaning": "concept",
+            "exampleJP": "新しい概念を理解します",
+            "exampleReading": "atarashii gainen o rikai shimasu",
+            "exampleEN": "I understand a new concept"
+          },
+          {
+            "id": "n1-ronri",
+            "character": "論理",
+            "reading": "ronri",
+            "meaning": "logic",
+            "exampleJP": "論理的に説明します",
+            "exampleReading": "ronriteki ni setsumei shimasu",
+            "exampleEN": "I explain logically"
+          },
+          {
+            "id": "n1-genri",
+            "character": "原理",
+            "reading": "genri",
+            "meaning": "principle",
+            "exampleJP": "基本原理を学びます",
+            "exampleReading": "kihon genri o manabimasu",
+            "exampleEN": "I learn the basic principle"
+          },
+          {
+            "id": "n1-kasetsu",
+            "character": "仮説",
+            "reading": "kasetsu",
+            "meaning": "hypothesis",
+            "exampleJP": "仮説を立てます",
+            "exampleReading": "kasetsu o tatemasu",
+            "exampleEN": "I form a hypothesis"
+          }
+        ]
+      },
+      {
+        "id": "n1-stage-2",
+        "number": 2,
+        "title": "Methods & Review",
+        "summary": "Practice formal words for analysis and adoption.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n1-kouchiku",
+            "character": "構築",
+            "reading": "kouchiku",
+            "meaning": "construction; building",
+            "exampleJP": "知識を構築します",
+            "exampleReading": "chishiki o kouchiku shimasu",
+            "exampleEN": "I build knowledge"
+          },
+          {
+            "id": "n1-saiyou",
+            "character": "採用",
+            "reading": "saiyou",
+            "meaning": "adoption; hiring",
+            "exampleJP": "新しい方法を採用します",
+            "exampleReading": "atarashii houhou o saiyou shimasu",
+            "exampleEN": "I adopt a new method"
+          },
+          {
+            "id": "n1-kentou",
+            "character": "検討",
+            "reading": "kentou",
+            "meaning": "consideration; review",
+            "exampleJP": "計画を検討します",
+            "exampleReading": "keikaku o kentou shimasu",
+            "exampleEN": "I review the plan"
+          },
+          {
+            "id": "n1-bunseki",
+            "character": "分析",
+            "reading": "bunseki",
+            "meaning": "analysis",
+            "exampleJP": "データを分析します",
+            "exampleReading": "deeta o bunseki shimasu",
+            "exampleEN": "I analyze data"
+          }
+        ]
+      },
+      {
+        "id": "n1-stage-3",
+        "number": 3,
+        "title": "Abstract Expression",
+        "summary": "Translate abstract nouns and critical phrasing.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n1-soutai",
+            "character": "相対",
+            "reading": "soutai",
+            "meaning": "relative",
+            "exampleJP": "相対的に考えます",
+            "exampleReading": "soutaiteki ni kangaemasu",
+            "exampleEN": "I think relatively"
+          },
+          {
+            "id": "n1-chuushou",
+            "character": "抽象",
+            "reading": "chuushou",
+            "meaning": "abstract",
+            "exampleJP": "抽象的な表現です",
+            "exampleReading": "chuushouteki na hyougen desu",
+            "exampleEN": "It is an abstract expression"
+          },
+          {
+            "id": "n1-hihan",
+            "character": "批判",
+            "reading": "hihan",
+            "meaning": "criticism",
+            "exampleJP": "文章を批判的に読みます",
+            "exampleReading": "bunshou o hihanteki ni yomimasu",
+            "exampleEN": "I read the text critically"
+          },
+          {
+            "id": "n1-dakyou",
+            "character": "妥協",
+            "reading": "dakyou",
+            "meaning": "compromise",
+            "exampleJP": "現実的な妥協を探します",
+            "exampleReading": "genjitsuteki na dakyou o sagashimasu",
+            "exampleEN": "I look for a realistic compromise"
+          }
+        ]
+      },
+      {
+        "id": "n1-stage-4",
+        "number": 4,
+        "title": "Policy & Interpretation",
+        "summary": "Use advanced reading words in context.",
+        "mode": "mixedPractice",
+        "cards": [
+          {
+            "id": "n1-seisaku",
+            "character": "政策",
+            "reading": "seisaku",
+            "meaning": "policy",
+            "exampleJP": "政策の効果を調べます",
+            "exampleReading": "seisaku no kouka o shirabemasu",
+            "exampleEN": "I examine the effect of the policy"
+          },
+          {
+            "id": "n1-kaishaku",
+            "character": "解釈",
+            "reading": "kaishaku",
+            "meaning": "interpretation",
+            "exampleJP": "文章を正しく解釈します",
+            "exampleReading": "bunshou o tadashiku kaishaku shimasu",
+            "exampleEN": "I interpret the text correctly"
+          },
+          {
+            "id": "n1-kijun",
+            "character": "基準",
+            "reading": "kijun",
+            "meaning": "standard; criterion",
+            "exampleJP": "評価の基準を決めます",
+            "exampleReading": "hyouka no kijun o kimemasu",
+            "exampleEN": "We decide the evaluation criteria"
+          },
+          {
+            "id": "n1-jittai",
+            "character": "実態",
+            "reading": "jittai",
+            "meaning": "actual situation",
+            "exampleJP": "実態を明らかにします",
+            "exampleReading": "jittai o akiraka ni shimasu",
+            "exampleEN": "We clarify the actual situation"
+          }
+        ]
+      },
+      {
+        "id": "n1-stage-5",
+        "number": 5,
+        "title": "N1 Final Exam",
+        "summary": "Capstone mixed review for advanced mastery.",
+        "mode": "finalExam",
+        "cards": [
+          {
+            "id": "n1-yokusei",
+            "character": "抑制",
+            "reading": "yokusei",
+            "meaning": "control; restraint",
+            "exampleJP": "費用を抑制します",
+            "exampleReading": "hiyou o yokusei shimasu",
+            "exampleEN": "We control costs"
+          },
+          {
+            "id": "n1-kousatsu",
+            "character": "考察",
+            "reading": "kousatsu",
+            "meaning": "consideration; discussion",
+            "exampleJP": "結果を考察します",
+            "exampleReading": "kekka o kousatsu shimasu",
+            "exampleEN": "I discuss the results"
+          },
+          {
+            "id": "n1-haikei",
+            "character": "背景",
+            "reading": "haikei",
+            "meaning": "background",
+            "exampleJP": "問題の背景を説明します",
+            "exampleReading": "mondai no haikei o setsumei shimasu",
+            "exampleEN": "I explain the background of the problem"
+          },
+          {
+            "id": "n1-doukou",
+            "character": "動向",
+            "reading": "doukou",
+            "meaning": "trend",
+            "exampleJP": "市場の動向を分析します",
+            "exampleReading": "shijou no doukou o bunseki shimasu",
+            "exampleEN": "I analyze market trends"
+          }
+        ]
+      }
     ]
   }
 ]

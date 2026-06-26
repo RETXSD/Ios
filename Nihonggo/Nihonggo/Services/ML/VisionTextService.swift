@@ -31,7 +31,7 @@ actor VisionTextService {
                 mode: .sentence,
                 detectedText: text,
                 confidence: confidence,
-                meaning: "Terjemahan tersedia melalui kamus atau AI tutor."
+                meaning: "Terjemahan tersedia melalui kamus atau KANAI."
             )
         } catch let error as ScanError {
             throw error

@@ -18,7 +18,10 @@ struct LessonGridView: View {
                                 AppCard {
                                     HStack(alignment: .top) {
                                         VStack(alignment: .leading, spacing: 8) {
-                                            AppBadge(lesson.level, color: AppTheme.kinkakuGold, systemImage: "flag.fill")
+                                            HStack {
+                                                AppBadge(lesson.level, color: AppTheme.kinkakuGold, systemImage: "flag.fill")
+                                                AppBadge(languageSettings.language.text(.fiveInternalLevels), color: AppTheme.sakuraBlush, systemImage: "square.grid.2x2.fill")
+                                            }
                                             Text(lesson.title)
                                                 .font(.title3)
                                                 .bold()

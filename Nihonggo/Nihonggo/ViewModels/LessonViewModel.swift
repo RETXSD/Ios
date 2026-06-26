@@ -25,6 +25,14 @@ final class LessonViewModel: ObservableObject {
         progressService.completion(for: lesson.level)
     }
 
+    func completion(for lesson: Lesson, stage: LessonStage) -> Double {
+        progressService.completion(level: lesson.level, stageNumber: stage.number)
+    }
+
+    func isStageUnlocked(_ stage: LessonStage, in lesson: Lesson) -> Bool {
+        progressService.isStageUnlocked(level: lesson.level, stageNumber: stage.number)
+    }
+
     func resetFlashcards() {
         selectedCardIndex = 0
         isShowingBack = false

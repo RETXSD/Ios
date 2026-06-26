@@ -15,6 +15,7 @@ final class CameraViewModel: NSObject, ObservableObject {
     private let sessionQueue = DispatchQueue(label: "com.kanalearn.camera.session")
     private let mlServiceProvider: () throws -> MLInferenceService
     private let textService = VisionTextService()
+    private var mlService: MLInferenceService?
     private var photoContinuation: CheckedContinuation<UIImage, Error>?
     private var isConfigured = false
 
@@ -96,7 +97,7 @@ final class CameraViewModel: NSObject, ObservableObject {
             let result: ScanResult
             switch mode {
             case .character:
-                let mlService = try mlServiceProvider()
+                let mlService = try kanaMLService()
                 result = try await mlService.classify(image: image)
             case .sentence:
                 result = try await textService.recognizeSentence(in: image)
@@ -130,7 +131,7 @@ final class CameraViewModel: NSObject, ObservableObject {
             captureSession.sessionPreset = .photo
 
             do {
-                guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+                guard let device = Self.bestAvailableCamera() else {
                     throw ScanError.cameraUnavailable
                 }
 
@@ -162,6 +163,22 @@ final class CameraViewModel: NSObject, ObservableObject {
             settings.flashMode = .off
             photoOutput.capturePhoto(with: settings, delegate: self)
         }
+    }
+
+    private func kanaMLService() throws -> MLInferenceService {
+        if let mlService {
+            return mlService
+        }
+
+        let service = try mlServiceProvider()
+        mlService = service
+        return service
+    }
+
+    nonisolated private static func bestAvailableCamera() -> AVCaptureDevice? {
+        AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+            ?? AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
+            ?? AVCaptureDevice.default(for: .video)
     }
 }
 

@@ -19,18 +19,23 @@ final class ExamViewModel: ObservableObject {
         self.progressService = progressService
     }
 
-    func submit(lesson: Lesson, selectedAnswer: String) {
-        guard lesson.cards.indices.contains(answeredCount) else { return }
-        let card = lesson.cards[answeredCount]
+    func submit(lesson: Lesson, stage: LessonStage, selectedAnswer: String) {
+        guard stage.cards.indices.contains(answeredCount) else { return }
+        let card = stage.cards[answeredCount]
         if selectedAnswer == expectedAnswer(for: card, kind: questionKind) {
             score += 1
         }
         answeredCount += 1
 
-        if answeredCount == lesson.cards.count {
-            let percent = percentage(total: lesson.cards.count)
+        if answeredCount == stage.cards.count {
+            let percent = percentage(total: stage.cards.count)
             didPass = percent >= 70
-            progressService.recordExam(level: lesson.level, score: percent)
+            if stage.isExam && didPass {
+                progressService.markStageProgress(level: lesson.level, stageNumber: stage.number, completion: 1)
+                progressService.recordExam(level: lesson.level, score: percent)
+            } else if didPass {
+                progressService.markStageProgress(level: lesson.level, stageNumber: stage.number, completion: 1)
+            }
         }
     }
 
@@ -49,9 +54,9 @@ final class ExamViewModel: ObservableObject {
         ExamQuestionKind.allCases[answeredCount % ExamQuestionKind.allCases.count]
     }
 
-    func currentCard(in lesson: Lesson) -> FlashCard? {
-        guard lesson.cards.indices.contains(answeredCount) else { return nil }
-        return lesson.cards[answeredCount]
+    func currentCard(in stage: LessonStage) -> FlashCard? {
+        guard stage.cards.indices.contains(answeredCount) else { return nil }
+        return stage.cards[answeredCount]
     }
 
     func expectedAnswer(for card: FlashCard, kind: ExamQuestionKind) -> String {
@@ -72,17 +77,17 @@ final class ExamViewModel: ObservableObject {
         return "___  \(card.exampleJP)"
     }
 
-    func options(for lesson: Lesson, card: FlashCard, kind: ExamQuestionKind) -> [String] {
+    func options(for stage: LessonStage, card: FlashCard, kind: ExamQuestionKind) -> [String] {
         let correct = expectedAnswer(for: card, kind: kind)
         let distractors: [String]
 
         switch kind {
         case .reading:
-            distractors = lesson.cards.map(\.reading) + ["ka", "te", "mizu", "gakkou", "sensei"]
+            distractors = stage.cards.map(\.reading) + ["ka", "te", "mizu", "gakkou", "sensei"]
         case .meaning, .flashcardRecall:
-            distractors = lesson.cards.map(\.meaning) + ["station", "teacher", "to study", "beautiful", "important"]
+            distractors = stage.cards.map(\.meaning) + ["station", "teacher", "to study", "beautiful", "important"]
         case .blank:
-            distractors = lesson.cards.map(\.character) + ["日", "人", "語", "水", "学"]
+            distractors = stage.cards.map(\.character) + ["日", "人", "語", "水", "学"]
         }
 
         return Array(Set([correct] + distractors.filter { $0 != correct }))

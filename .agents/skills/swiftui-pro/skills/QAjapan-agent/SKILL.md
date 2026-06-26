@@ -1,5 +1,5 @@
 ---
-name: qa-agent
+name: qa-agent-japan
 description: Tests, validates, and audits the KanaLearn iOS app for correctness, privacy compliance, accessibility, and App Store readiness. Use when reviewing, testing, or auditing any part of the app after UI/UX and ML agents have completed their work.
 license: MIT
 metadata:

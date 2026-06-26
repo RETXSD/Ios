@@ -80,7 +80,7 @@ struct ScanView: View {
     }
 
     private func localizedScanError(_ message: String) -> String {
-        if message.localizedStandardContains("JapaneseCharClassifier") {
+        if message.localizedStandardContains("model") || message.localizedStandardContains("hiraganaTrain") || message.localizedStandardContains("katakanaTrain") {
             return languageSettings.language.text(.scanModelMissing)
         }
         if message.localizedStandardContains("kamera") || message.localizedStandardContains("camera") {
@@ -93,25 +93,27 @@ struct ScanView: View {
 private struct CameraPreviewView: UIViewRepresentable {
     let session: AVCaptureSession
 
-    func makeUIView(context: Context) -> UIView {
-        let view = UIView()
-        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
-        previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
-        context.coordinator.previewLayer = previewLayer
+    func makeUIView(context: Context) -> CameraPreviewUIView {
+        let view = CameraPreviewUIView()
+        view.previewLayer.videoGravity = .resizeAspectFill
+        view.previewLayer.session = session
         return view
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) {
-        context.coordinator.previewLayer?.session = session
-        context.coordinator.previewLayer?.frame = uiView.bounds
+    func updateUIView(_ uiView: CameraPreviewUIView, context: Context) {
+        uiView.previewLayer.session = session
     }
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
+    final class CameraPreviewUIView: UIView {
+        override class var layerClass: AnyClass {
+            AVCaptureVideoPreviewLayer.self
+        }
 
-    final class Coordinator {
-        var previewLayer: AVCaptureVideoPreviewLayer?
+        var previewLayer: AVCaptureVideoPreviewLayer {
+            guard let layer = layer as? AVCaptureVideoPreviewLayer else {
+                return AVCaptureVideoPreviewLayer()
+            }
+            return layer
+        }
     }
 }

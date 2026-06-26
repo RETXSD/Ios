@@ -5,8 +5,8 @@
 - `Views/Onboarding/SplashView.swift`: branded splash-style display.
 - `Views/Onboarding/OnboardingView.swift`: first-run overview and start button.
 - `Views/Home/HomeView.swift`: current level, XP, streak, and daily route summary.
-- `Views/Lesson/LessonGridView.swift`: JLPT level list with lock overlays and progress.
-- `Views/Lesson/LessonDetailView.swift`: flashcard stack and exam entry.
+- `Views/Lesson/LessonGridView.swift`: JLPT level list with lock overlays, progress, and 5-level badge.
+- `Views/Lesson/LessonDetailView.swift`: five internal stages per JLPT level; stages 1-4 are practice and stage 5 is the final exam.
 - `Views/Lesson/FlashcardView.swift`: front/back flashcard display with audio.
 - `Views/Lesson/ExamView.swift`: mixed exam with reading choice, meaning matching, fill-blank sentence, flashcard recall, pass/fail result, unlock trigger.
 - `Views/Scan/ScanView.swift`: camera preview, Huruf/Kalimat segmented picker, capture, results, confidence badge, Settings link on denied permission.
@@ -18,8 +18,8 @@
 ## Navigation Flow
 - `ContentView` shows `OnboardingView` first, then switches to a six-tab `TabView`.
 - Tabs: Home, Lessons, Scan, Kamus, AI, More.
-- Lessons tab uses `NavigationStack` with `Lesson` value navigation into `LessonDetailView`, then an exam push into `ExamView`.
-- `LessonDetailView` owns flashcard flip/index as local `@State`; it no longer mutates the grid `LessonViewModel` during navigation.
+- Lessons tab uses `NavigationStack` with `Lesson` value navigation into `LessonDetailView`, then a stage-specific push into `ExamView`.
+- `LessonDetailView` now shows stage cards instead of mutating a flat flashcard index; this removes the old progress write path that could trigger Swift exclusivity issues.
 - Home “Open Lesson” now pushes `LessonGridView` directly; it no longer uses an unhandled value navigation route.
 - Dictionary tab uses a `sheet(item:)` for entry details.
 - Scan and AI are single-screen `NavigationStack` flows.
@@ -38,6 +38,9 @@
 - Home/Profile bind to `ProgressService.$progress`.
 - Lessons bind to `LessonViewModel.lessons`, `unlockedLevels`, and `ProgressService` completion.
 - Exam records scores through shared `ProgressService`; pass threshold is 70%.
+- Stage progress is stored as `N5-L1` style keys and summarized into the parent JLPT level completion.
+- Only stage 1 is open inside an unlocked JLPT level; stages 2-5 require the previous stage to be complete.
+- Final exam completion and next JLPT unlock only happen on scores >= 70%.
 - Exam rotates question modes from `ExamQuestionKind`: reading, meaning, blank, flashcard recall.
 - Scan binds to `ScanViewModel` and its `CameraViewModel` handoff contract.
 - Dictionary binds to `DictionaryViewModel.entries`, `query`, and `selectedEntry`.
@@ -55,5 +58,5 @@
 - AI chat sends text only to `http://localhost:3000/chat`; proxy errors should show `Koneksi AI bermasalah. Pastikan proxy server berjalan.`
 - Verify Dynamic Type around cards, dictionary rows, and the scan overlay; text uses system styles but dense horizontal rows may wrap on very small widths.
 - Verify language switching updates tab labels, screen titles, scan error text, AI greeting, AI proxy error, and AI system prompt language without relaunch.
-- Verify lesson buttons: Home open lesson, Lesson detail start exam, locked levels, and mixed exam answer submission.
-- Regression check: tap N5 from the lesson grid and verify there is no Swift exclusivity crash.
+- Verify lesson buttons: Home open lesson, N-level detail stage cards, locked internal stages, final exam unlock, and mixed exam answer submission.
+- Regression check: tap N5 from the lesson grid and open Level 1; previous simultaneous-access runtime crash should no longer reproduce.

@@ -54,6 +54,8 @@
 		A1100000000000000000004E /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000004D /* ScanView.swift */; };
 		A11000000000000000000050 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1100000000000000000004F /* dictionary.json */; };
 		A11000000000000000000052 /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000051 /* lessons.json */; };
+		A11000000000000000000054 /* hiraganaTrain.mlmodel in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000053 /* hiraganaTrain.mlmodel */; };
+		A11000000000000000000056 /* katakanaTrain.mlmodel in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000055 /* katakanaTrain.mlmodel */; };
 		A11000000000000000000102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000101 /* ContentView.swift */; };
 		A11000000000000000000104 /* NihonggoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000103 /* NihonggoApp.swift */; };
 		A11000000000000000001002 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11000000000000000001001 /* AppLanguage.swift */; };
@@ -111,6 +113,8 @@
 		A1100000000000000000004D /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Scan/ScanView.swift; sourceTree = "<group>"; };
 		A1100000000000000000004F /* dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/dictionary.json; sourceTree = "<group>"; };
 		A11000000000000000000051 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/lessons.json; sourceTree = "<group>"; };
+		A11000000000000000000053 /* hiraganaTrain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resources/hiraganaTrain.mlmodel; sourceTree = "<group>"; };
+		A11000000000000000000055 /* katakanaTrain.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resources/katakanaTrain.mlmodel; sourceTree = "<group>"; };
 		A11000000000000000000101 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
 		A11000000000000000000103 /* NihonggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NihonggoApp.swift; sourceTree = "<group>"; };
 		A11000000000000000001001 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Localization/AppLanguage.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				A1100000000000000000004D /* added */,
 				A1100000000000000000004F /* added */,
 				A11000000000000000000051 /* added */,
+				A11000000000000000000053 /* added */,
+				A11000000000000000000055 /* added */,
 				0F729B3D2FDFF2B600BDA2EB /* NihonggoApp.swift */,
 				0F729B3F2FDFF2B600BDA2EB /* ContentView.swift */,
 				0F729B412FDFF2B800BDA2EB /* Assets.xcassets */,
@@ -274,6 +280,8 @@
 			files = (
 				A11000000000000000000050 /* resource in Resources */,
 				A11000000000000000000052 /* resource in Resources */,
+				A11000000000000000000054 /* hiraganaTrain.mlmodel in Resources */,
+				A11000000000000000000056 /* katakanaTrain.mlmodel in Resources */,
 				0F729B452FDFF2B800BDA2EB /* Preview Assets.xcassets in Resources */,
 				0F729B422FDFF2B800BDA2EB /* Assets.xcassets in Resources */,
 			);

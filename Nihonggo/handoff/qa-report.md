@@ -2,11 +2,11 @@
 
 ## Test Coverage
 - Unit tests written in `Tests/KanaLearnTests/ScanResultTests.swift` for low-confidence threshold and fallback message behavior.
-- Unit tests written in `Tests/KanaLearnTests/ProgressServiceTests.swift` for exam pass unlock, score persistence, and failed-exam locked state.
+- Unit tests written in `Tests/KanaLearnTests/ProgressServiceTests.swift` for exam pass unlock, score persistence, failed-exam locked state, internal stage unlock rules, and legacy flat progress migration.
 - Unit tests written in `Tests/KanaLearnTests/DictionaryServiceTests.swift` for English, Japanese, and empty-query dictionary lookup.
 - Unit test written in `Tests/KanaLearnTests/AIAssistantServiceTests.swift` for graceful AI proxy connection error.
 - Unit tests written in `Tests/KanaLearnTests/LanguageSettingsTests.swift` for Indonesian, Simplified Chinese, and English UI/error strings.
-- Unit test written in `Tests/KanaLearnTests/LessonResourceTests.swift` to verify all JLPT levels exist and contain cards.
+- Unit test written in `Tests/KanaLearnTests/LessonResourceTests.swift` to verify all JLPT levels exist, each contains five internal stages, stages 1-4 are practice, and stage 5 is final exam.
 - UI tests written in `Tests/KanaLearnUITests/KanaLearnUITests.swift` for onboarding, lesson locked state, scan controls, and dictionary search.
 - Project blocker: the original `Nihonggo.xcodeproj` has no XCTest/UI test targets yet, so these files are present but not wired into an executable test scheme.
 
@@ -43,7 +43,9 @@
 - Verify camera permission and camera capture on a physical device.
 - Verify all remaining static lesson/dictionary content is acceptable as learning content even when UI language changes.
 - Verify mixed exam modes manually on simulator/device until XCTest target is wired: reading, meaning match, fill blank, and flashcard recall.
-- Verify lesson grid to N5 detail navigation does not trigger simultaneous-access runtime crashes.
+- Verify each JLPT level contains 5 internal levels in the UI and only unlocks the next internal level after passing the previous one.
+- Verify old `Documents/userProgress.json` files with flat `N5: 1` progress no longer show N5 as complete before stage progress exists.
+- Verify lesson grid to N5 detail navigation and opening N5 Level 1 does not trigger simultaneous-access runtime crashes.
 - Configure launch screen and Privacy Policy URL before App Store submission.
 
 ## Nice to Have

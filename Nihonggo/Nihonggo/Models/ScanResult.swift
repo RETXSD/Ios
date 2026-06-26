@@ -60,7 +60,7 @@ enum ScanError: LocalizedError, Equatable {
         case .captureFailed:
             return "Gagal mengambil gambar. Coba lagi."
         case .modelNotFound:
-            return "Model JapaneseCharClassifier belum tersedia."
+            return "Model hiraganaTrain atau katakanaTrain belum tersedia."
         case .modelLoadFailed(let reason):
             return "Gagal memuat model: \(reason)"
         case .preprocessingFailed:
